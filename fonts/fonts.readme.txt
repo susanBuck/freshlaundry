@@ -1,0 +1,9 @@
+2014-01-20
+Link to old Icomoo app: http://icomoon.io/app-old/
+
+
+
+
+
+FYI - No need to convert fonts ala http://www.fontsquirrel.com/fontface/generator; everything you need is available from the icomoon download
+

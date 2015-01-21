@@ -1,0 +1,466 @@
+/*---------------------------------------------------
+    LESS Elements 0.6
+  ---------------------------------------------------
+    A set of useful LESS mixins by Dmitry Fadeyev
+    Special thanks for mixin suggestions to:
+      Kris Van Herzeele,
+      Benoit Adam,
+      Portenart Emile-Victor,
+      Ryan Faerman 
+
+    More info at: http://lesselements.com
+-----------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------
+General 
+-------------------------------------------------------------------------------------------------*/
+* {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+
+  box-sizing: border-box;
+}
+html {
+  /* 
+	http://snook.ca/archives/html_and_css/font-size-with-rem
+	The rem unit is relative to the root - the html element 
+	
+	Because all browsers have a default font-size of 16px, setting the font-size to 62.5% on the html 
+	element gives it a font-size of 10px (10 / 16 * 100 = 62.5) 
+	
+	*/
+
+  font-size: 62.5%;
+  /* base 10 */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+/*
+This 1.6rem is causing zoome issues in chrome
+Disabling for now in favor of body > div selector
+Notes: http://stackoverflow.com/questions/20099844/chrome-not-respecting-rem-font-size-on-body-tag
+https://bountify.co/identify-the-source-of-this-odd-text-sizing-issue-chrome
+*/
+/*
+body {
+	font-size:16px;
+	font-size:1.6rem;
+	background-color:white;
+}
+*/
+body > div {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+/* Settings for sticky footer ala http://mystrd.at/modern-clean-css-sticky-footer/ */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  color: #333333;
+}
+/* http://nicolasgallagher.com/micro-clearfix-hack/ */
+.cf:before, .cf:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  *zoom: 1;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Karla';
+  font-weight: 600;
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 10px;
+  color: #333333;
+}
+h1 {
+  font-size: 40px;
+  font-size: 4rem;
+}
+h2 {
+  font-size: 30px;
+  font-size: 3.0rem;
+}
+h3 {
+  font-size: 20px;
+  font-size: 2.0rem;
+}
+h4 {
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+/* Text selection */
+::selection {
+  background: #baffc0;
+  /* Safari */
+
+}
+::-moz-selection {
+  background: #baffc0;
+  /* Firefox */
+
+}
+::-webkit-selection {
+  background: #baffc0;
+  /* Firefox */
+
+}
+@font-face {
+  font-family: 'IcoMoonRegular';
+  src: url('/shared/fonts/icomoon.eot');
+  src: url('/shared/fonts/icomoon.eot?#iefix') format('embedded-opentype'), url('/shared/fonts/icomoon.woff') format('woff'), url('/shared/fonts/icomoon.ttf') format('truetype'), url('/shared/fonts/icomoon.svg#IcoMoonRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+img {
+  border: 0;
+}
+a:link {
+  color: #333333;
+}
+a:visited {
+  color: #333333;
+}
+a:hover {
+  color: #333333;
+}
+a:active {
+  color: #333333;
+}
+.icon {
+  font-family: 'IcoMoonRegular';
+}
+#flash_message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  z-index: 9999;
+  width: 100%;
+  padding: 7px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  background-color: #fd6a62;
+}
+#flash_message.pass {
+  background-color: #3ffc45;
+}
+#flash_message.pass .icon {
+  color: #22a826;
+}
+#flash_message.error {
+  background-color: #fd6a62;
+}
+#flash_message .icon {
+  color: #333333;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 10px;
+  font-size: 1.0rem;
+}
+/* Make sure to set a width on ele to make this work */
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+a.back-link {
+  color: #808080;
+  padding-bottom: 3px;
+  text-decoration: none;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+a.back-link:hover {
+  color: #333333;
+}
+/* All caps, small label that goes about input widgets */
+.label {
+  font-size: 12px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+label {
+  font-size: 12px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+table {
+  /*width: 100%;*/
+
+  border-collapse: collapse;
+}
+table td, table th {
+  border: 1px solid #ddd;
+  color: #444;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 21px;
+  padding: 5px 8px;
+}
+table th {
+  border-color: #aaa;
+  border-width: 1px;
+  border-style: solid;
+  background-color: #76dee4;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: #000;
+  font-weight: bold;
+  text-align: left;
+  padding: 3px 8px;
+  white-space: nowrap;
+}
+.clear {
+  clear: both;
+}
+/*-------------------------------------------------------------------------------------------------
+Widgets
+-------------------------------------------------------------------------------------------------*/
+/* We can apply the button class to a button or a link, ex: <a href='' class='button'> */
+a.button:link,
+a.button:visited,
+a.button:active,
+a.button:hover {
+  color: white;
+  text-decoration: none;
+}
+button, .button {
+  background-color: #45bcd2;
+  border: 0px;
+  color: white;
+  font-family: Helvetica;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  cursor: pointer;
+  padding: 5px 13px;
+  /* rounded edges */
+
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+button:hover, .button:hover {
+  background-color: #10889e;
+}
+button.small, .button.small {
+  font-size: 10px;
+  font-size: 1.0rem;
+}
+button.medium, .button.medium {
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+button.large, .button.large {
+  font-size: 25px;
+  font-size: 2.5rem;
+}
+button.disabled, .button.disabled {
+  background-color: #cccccc;
+}
+button.ajax-loading, .button.ajax-loading {
+  background-image: url('/shared/images/ajax-orange-stripe-bar.gif');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  cursor: wait;
+  background-color: #fff478;
+  color: #deb100;
+}
+button.ajax-complete, .button.ajax-complete {
+  background-color: #3ffc45;
+  color: #22a826;
+  /* darker green */
+
+}
+button.delete, .button.delete {
+  background-color: #ff0569;
+}
+button.delete:hover, .button.delete:hover {
+  background-color: #d60000;
+}
+/*-------------------------------------------------------------------------------------------------
+3d buttons
+http://tympanus.net/Development/CreativeButtons/
+-------------------------------------------------------------------------------------------------*/
+.button-3d {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  padding: 10px 30px;
+  display: inline-block;
+  margin: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+/* Button 3d */
+.button-3d {
+  background: #27db2d;
+  box-shadow: 0 6px #22a826;
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+  border-radius: 5px;
+}
+.button-3d:hover {
+  background: #27db2d;
+  box-shadow: 0 4px #22a826;
+  top: 2px;
+}
+.button-3d:active {
+  box-shadow: 0 0 #22a826;
+  top: 6px;
+}
+/* Placeholder attribute styling */
+/* This class is imported in the following styles */
+.placeholder {
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+::-webkit-input-placeholder {
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+:-ms-input-placeholder {
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+.little-rectangle-link {
+  text-decoration: none;
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', arial, helvetica, sans-serif;
+  float: left;
+  background-color: #ffffe3;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 5px;
+  font-size: 11px;
+  font-size: 1.1rem;
+  border: 1px solid #f2f2f2;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.little-rectangle-link a {
+  text-decoration: none;
+  color: #333333;
+}
+.little-rectangle-link:hover {
+  background-color: #fff478;
+}
+/* Prevent misalignment of radios and checkboxes */
+input[type="radio"], input[type="checkbox"] {
+  vertical-align: middle;
+  margin-top: -2px;
+}
+/* Text inputs */
+input[type='text'],
+input[type='checkbox'],
+input[type='password'],
+select {
+  border: 1px solid #cccccc;
+  padding: 3px;
+}
+input[type='text'].small,
+input[type='checkbox'].small,
+input[type='password'].small,
+select.small {
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+input[type='text'].medium,
+input[type='checkbox'].medium,
+input[type='password'].medium,
+select.medium {
+  font-size: 20px;
+  font-size: 2.0rem;
+}
+input[type='text'].large,
+input[type='checkbox'].large,
+input[type='password'].large,
+select.large {
+  font-size: 27px;
+  font-size: 2.7rem;
+}
+textarea {
+  border: 1px solid #cccccc;
+  padding: 5px;
+}
+textarea.large {
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+.radios {
+  margin: 4px;
+  margin-left: 0px;
+  border: 1px solid #cccccc;
+  overflow: auto;
+  float: left;
+  /* Checked */
+
+}
+.radios label {
+  float: left;
+  cursor: pointer;
+  /* Both checked and unchecked */
+
+}
+.radios label span {
+  text-align: center;
+  padding: 13px 13px;
+  display: block;
+  color: #f2f2f2;
+}
+.radios label input {
+  position: absolute;
+  top: -20px;
+}
+.radios input:checked + span {
+  background-color: #10889e;
+  color: #333333;
+}
