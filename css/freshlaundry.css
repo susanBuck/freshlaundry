@@ -1,17 +1,8 @@
 /*---------------------------------------------------
-    LESS Elements 0.6
-  ---------------------------------------------------
-    A set of useful LESS mixins by Dmitry Fadeyev
-    Special thanks for mixin suggestions to:
-      Kris Van Herzeele,
-      Benoit Adam,
-      Portenart Emile-Victor,
-      Ryan Faerman 
-
-    More info at: http://lesselements.com
+More info at: http://lesselements.com
 -----------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------
-General 
+General
 -------------------------------------------------------------------------------------------------*/
 * {
   -webkit-box-sizing: border-box;
@@ -23,17 +14,18 @@ General
   box-sizing: border-box;
 }
 html {
-  /* 
+  /*
 	http://snook.ca/archives/html_and_css/font-size-with-rem
-	The rem unit is relative to the root - the html element 
-	
-	Because all browsers have a default font-size of 16px, setting the font-size to 62.5% on the html 
-	element gives it a font-size of 10px (10 / 16 * 100 = 62.5) 
-	
+	The rem unit is relative to the root - the html element
+
+	Because all browsers have a default font-size of 16px, setting the font-size to 62.5% on the html
+	element gives it a font-size of 10px (10 / 16 * 100 = 62.5)
+
 	*/
 
   font-size: 62.5%;
   /* base 10 */
+
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 /*

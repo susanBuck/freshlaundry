@@ -1,8 +1,8 @@
 @import "colors";
-@import "../mixins.less"; 
+@import "mixins.less";
 
 /*-------------------------------------------------------------------------------------------------
-General 
+General
 -------------------------------------------------------------------------------------------------*/
 * {
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -10,17 +10,17 @@ General
 	box-sizing: border-box;
 }
 
- 
+
 html {
-	/* 
+	/*
 	http://snook.ca/archives/html_and_css/font-size-with-rem
-	The rem unit is relative to the root - the html element 
-	
-	Because all browsers have a default font-size of 16px, setting the font-size to 62.5% on the html 
-	element gives it a font-size of 10px (10 / 16 * 100 = 62.5) 
-	
+	The rem unit is relative to the root - the html element
+
+	Because all browsers have a default font-size of 16px, setting the font-size to 62.5% on the html
+	element gives it a font-size of 10px (10 / 16 * 100 = 62.5)
+
 	*/
-	font-size:62.5%; /* base 10 */ 
+	font-size:62.5%; /* base 10 */
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -38,7 +38,7 @@ body {
 }
 */
 
-body > div { 
+body > div {
 	font-size:16px;
 	font-size:1.6rem;
 }
@@ -48,11 +48,11 @@ html {
 	position: relative;
     min-height: 100%;
 }
- 
+
 body {
 	margin:0;
 	padding:0;
-	color:@darkgrey; 
+	color:@darkgrey;
 }
 
 /* http://nicolasgallagher.com/micro-clearfix-hack/ */
@@ -70,7 +70,7 @@ body {
 
 
 
-h1, h2, h3, h4 {	
+h1, h2, h3, h4 {
 	font-family: 'Karla';
 	font-weight: 600;
 	margin: 0px;
@@ -80,9 +80,9 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-	font-size:40px; 
+	font-size:40px;
 	font-size:4rem;
-} 
+}
 
 h2 {
 	font-size:30px;
@@ -99,7 +99,7 @@ h4 {
 	font-size:1.5rem;
 }
 
- 
+
 /* Text selection */
 ::selection {
 	background: @mintgreen; /* Safari */
@@ -108,7 +108,7 @@ h4 {
 	background: @mintgreen; /* Firefox */
 }
 
-::-webkit-selection { 
+::-webkit-selection {
 	background: @mintgreen; /* Firefox */
 }
 
@@ -132,22 +132,22 @@ img {
 a:link {
 	color:@darkgrey;
 }
-     
+
 a:visited {
 	color:@darkgrey;
-}  
+}
 
 a:hover {
 	color:@darkgrey;
-}   
+}
 
 a:active {
 	color:@darkgrey;
-} 
- 
+}
+
 .icon {
 	font-family:'IcoMoonRegular';
-} 
+}
 
 #flash_message {
 	position:absolute;
@@ -161,19 +161,19 @@ a:active {
 	padding-bottom:15px;
 	text-align:center;
 	background-color:@salmon;
-	
+
 	&.pass {
 		background-color:@green;
-		
+
 		.icon {
 			color:@darkgreen;
 		}
-	} 
-	
+	}
+
 	&.error {
 		background-color:@salmon;
 	}
-	
+
 	.icon {
 		color:@darkgrey;
 		position:absolute;
@@ -186,8 +186,8 @@ a:active {
 
 /* Make sure to set a width on ele to make this work */
 .truncate {
-	white-space: nowrap; 
-	overflow: hidden; 
+	white-space: nowrap;
+	overflow: hidden;
 	text-overflow: ellipsis;
 }
 
@@ -195,11 +195,11 @@ a.back-link {
 	color:lighten(@grey, 50%);
 	padding-bottom:3px;
 	text-decoration:none;
-	
+
 	position:absolute;
 	top:5px;
 	left:5px;
-	
+
 	&:hover {
 		color:@darkgrey;
 	}
@@ -216,11 +216,11 @@ a.back-link {
 label {
 	.label
 }
-	
+
 table {
 	/*width: 100%;*/
 	border-collapse: collapse;
-	
+
 	td, th {
 		border: 1px solid #ddd;
 		color: #444;
@@ -229,7 +229,7 @@ table {
 		line-height: 21px;
 		padding: 5px 8px;
 	}
-	
+
 	th {
 		border-color: #aaa;
 		border-width: 1px;
@@ -260,70 +260,70 @@ a.button:link, a.button:visited, a.button:active, a.button:hover {
 	text-decoration:none;
 }
 
-button, .button { 
-	background-color:@teel; 
+button, .button {
+	background-color:@teel;
 	border:0px;
-	color:white; 
+	color:white;
 	font-family:Helvetica;
 	letter-spacing:1.5px;
 	font-weight:800;
 	cursor:pointer;
-	padding:5px 13px; 
-	 
+	padding:5px 13px;
+
 	/* rounded edges */
-	-webkit-border-radius: 12px; 
-	-moz-border-radius: 12px; 
-	border-radius: 12px; 	
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
 	-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
 
 	&:hover {
-		background-color:@darkteel; 
+		background-color:@darkteel;
 	}
-			
+
 	&.small {
 		font-size:10px;
 		font-size:1.0rem;
 	}
-	
+
 	&.medium {
 		font-size:15px;
 		font-size:1.5rem;
 	}
-	
+
 	&.large {
 		font-size:25px;
 		font-size:2.5rem;
 	}
-	
+
 	&.disabled {
 		background-color:@mediumgrey;
 	}
-	
+
 	&.ajax-loading {
 		background-image:url('/shared/images/ajax-orange-stripe-bar.gif');
 		background-repeat:no-repeat;
 		background-position:50% 50%;
-		
+
 		cursor:wait;
-		
+
 		background-color:@manilla;
 		color:@darkmanilla;
-	} 
-	
-	
+	}
+
+
 	&.ajax-complete {
-		background-color:@green; 
+		background-color:@green;
 		color: @darkgreen; /* darker green */
 	}
-	
+
 	&.delete {
 		background-color:@red;
-		
+
 		&:hover {
 			background-color:@darkred;
 		}
 	}
-				
+
 }
 
 
@@ -350,7 +350,7 @@ http://tympanus.net/Development/CreativeButtons/
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
 	text-decoration:none;
-	
+
 }
 
 /* Button 3d */
@@ -385,8 +385,8 @@ http://tympanus.net/Development/CreativeButtons/
 .placeholder {
 	font-size:12px;
 	font-size:1.2rem;
-} 
-  
+}
+
 ::-webkit-input-placeholder {
 	.placeholder;
 }
@@ -399,9 +399,9 @@ http://tympanus.net/Development/CreativeButtons/
 	.placeholder;
 }
 
-:-ms-input-placeholder {  
+:-ms-input-placeholder {
 	.placeholder;
-} 
+}
 
 .little-rectangle-link {
 	text-decoration:none;
@@ -414,23 +414,23 @@ http://tympanus.net/Development/CreativeButtons/
 	font-size:11px;
 	font-size:1.1rem;
 	border:1px solid @lightgrey;
-	
+
 	a {
 		text-decoration:none;
 		color:@darkgrey;
-	}	
-			
+	}
+
 	.drop-shadow;
-	
+
 	&:hover {
 		background-color:@manilla;
 	}
-}	
+}
 
- 
+
 /* Prevent misalignment of radios and checkboxes */
-input[type="radio"], input[type="checkbox"] { 
-	vertical-align: middle; 
+input[type="radio"], input[type="checkbox"] {
+	vertical-align: middle;
 	margin-top: -2px;
 }
 
@@ -438,37 +438,37 @@ input[type="radio"], input[type="checkbox"] {
 input[type='text'], input[type='checkbox'], input[type='password'], select {
 	border:1px solid @mediumgrey;
 	padding:3px;
-	
+
 	&.small {
 		font-size:15px;
 		font-size:1.5rem;
 	}
-	
+
 	&.medium {
 		font-size:20px;
 		font-size:2.0rem;
 	}
-	
+
 	&.large {
 		font-size:27px;
 		font-size:2.7rem;
 	}
-	
+
 }
 
 
 textarea {
 	border:1px solid @mediumgrey;
 	padding:5px;
-	
+
 	&.small {
-	
+
 	}
-	
+
 	&.medium {
-	
+
 	}
-	
+
 	&.large {
 		font-size:15px;
 		font-size:1.5rem;
@@ -482,31 +482,30 @@ textarea {
     border:1px solid @mediumgrey;
     overflow:auto;
     float:left;
-    
+
     label {
     	float:left;
     	cursor:pointer;
-    
+
     	/* Both checked and unchecked */
     	span {
    			text-align:center;
 	    	padding:13px 13px;
-	    	display:block;   
-			color:@lightgrey; 
+	    	display:block;
+			color:@lightgrey;
 		}
-		
+
 		input {
     		position:absolute;
     		top:-20px;
-		} 
+		}
 	}
-	
+
 	/* Checked */
-	input:checked + span { 
-		background-color:@darkteel; 
+	input:checked + span {
+		background-color:@darkteel;
 	    color:@darkgrey;
-	}	
-	
+	}
+
 }
-	
-	 		
+
