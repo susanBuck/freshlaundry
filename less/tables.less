@@ -1,0 +1,51 @@
+// Tables
+table, th, td {
+   border: none;
+   font-size:15px;
+   font-size:1.5rem;
+   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+table {
+  width:100%;
+  display: table;
+
+  &.bordered tr {
+    border-bottom: 1px solid #999;
+  }
+
+  &.striped {
+    tbody tr:nth-child(odd) {
+      background-color: #333;
+    }
+  }
+
+  &.hoverable {
+
+    tbody tr {
+      &:hover {
+        background-color: #333;
+      }
+    }
+  }
+
+  &.centered {
+    thead tr th, tbody tr td {
+      text-align: center;
+
+    }
+  }
+
+}
+
+thead {
+  border-bottom: 1px solid #999;
+}
+
+td, th{
+  padding: 15px 5px;
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  border-radius: 2px;
+}

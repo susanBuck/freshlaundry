@@ -1,0 +1,68 @@
+html {
+  /*
+  http://snook.ca/archives/html_and_css/font-size-with-rem
+  The rem unit is relative to the root - the html element
+
+  Because all browsers have a default font-size of 16px, setting the font-size to 62.5% on the html
+  element gives it a font-size of 10px (10 / 16 * 100 = 62.5)
+
+  */
+  font-size:62.5%; /* base 10 */
+  font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+  color:rgba(0,0,0,0.8);
+}
+
+/*
+This 1.6rem is causing zoome issues in chrome
+Disabling in favor of body > div selector
+Notes: http://stackoverflow.com/questions/20099844/chrome-not-respecting-rem-font-size-on-body-tag
+https://bountify.co/identify-the-source-of-this-odd-text-sizing-issue-chrome
+*/
+/*
+body {
+  font-size:16px;
+  font-size:1.6rem;
+  background-color:white;
+}
+*/
+
+body > div {
+  font-size:20px;
+  font-size:2.0rem;
+}
+
+
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin-bottom: 0;
+  padding-bottom:0;
+  margin-top: 5rem;
+  padding-top:0;
+  line-height:1;
+}
+h1 {
+  font-size: 6.0rem;
+}
+h2 {
+  font-size: 5.0rem;
+}
+h3 {
+  font-size: 4.0rem;
+}
+h4 {
+  font-size: 3.0rem;
+}
+h5 {
+  font-size: 3.0rem;
+}
+h6 {
+  font-size: 3.0rem;
+}
+
+/* Copy */
+p {
+  line-height: 1.3;
+  margin:0;
+}
