@@ -14,8 +14,8 @@ gulp.task('default', ['less','watch']);
     // Set up watch task
     gulp.task('watch', function() {
 
-        // Watch the css folder, and upon updates run the css task
-        gulp.watch('/less/*.less', ['less']);
+        // Watch the less folder, and upon updates run the less task
+        gulp.watch('less/*.less', ['less']);
     }
 );
 
