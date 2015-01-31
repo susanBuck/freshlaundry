@@ -8,8 +8,8 @@ html {
 
   */
   font-size:62.5%; /* base 10 */
-  color:rgba(0,0,0,0.8);
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color:@grey;
+  font-family: 'Karla','Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 /*
@@ -35,34 +35,49 @@ body > div {
 
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
-  margin-bottom: 0;
-  padding-bottom:0;
-  margin-top: 5rem;
-  padding-top:0;
+  margin:0;
+  margin-bottom:1rem;
+  padding:0;
   line-height:1;
 }
 h1 {
-  font-size: 6.0rem;
-}
-h2 {
-  font-size: 5.0rem;
-}
-h3 {
   font-size: 4.0rem;
 }
-h4 {
+h2 {
   font-size: 3.0rem;
+}
+h3 {
+  font-size: 2.0rem;
+}
+h4 {
+  font-size: 2.0rem;
 }
 h5 {
-  font-size: 3.0rem;
+  font-size: 2.0rem;
 }
 h6 {
-  font-size: 3.0rem;
+  font-size: 2.0rem;
 }
 
 /* Copy */
 p {
-  line-height: 1.3;
+  line-height: 1.7;
   margin:0;
   font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+
+a:link {
+  color:@grey;
+}
+
+a:visited {
+  color:@grey;
+}
+
+a:hover {
+  color:@grey;
+}
+
+a:active {
+  color:@grey;
 }
