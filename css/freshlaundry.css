@@ -556,6 +556,71 @@ It works in all browsers since IE6.
     margin: 1% 0 1% 0%;
   }
 }
+.validate-field-error {
+  background-color: #fef0ef;
+}
+.validate-results {
+  text-align: center;
+  display: none;
+  padding: 3px;
+  color: grey;
+  color: red;
+  font-weight: bold;
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', arial, helvetica, sans-serif;
+}
+.validate-error {
+  z-index: 999;
+  font-family: Helvetica;
+  display: inline-block;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-size: 1.1rem;
+  color: white;
+  padding: 10px;
+  background-color: #CC0000;
+  position: absolute;
+}
+#notifybar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  padding: 1em;
+  width: 100%;
+  text-align: center !important;
+  color: rgba(0, 0, 0, 0.5);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+/* Close x */
+#notifybar > i {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+.notifybar-default {
+  background: #7db8f5;
+  /* blue */
+}
+.notifybar-success {
+  background: #82CF85;
+  /* green */
+}
+.notifybar-error {
+  background: #F57E7D;
+}
+.notifybar-warning {
+  background: #FFAC69;
+}
+.notifybar-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+}
 /*  GRID OF TWO   ============================================================================= */
 .span_2_of_2 {
   width: 100%;

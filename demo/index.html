@@ -28,9 +28,12 @@
 <div class='layout-wrapper'>
 
 	<section>
-		<h2>Colors</h2>
+		<h2>Notify Bar</h2>
 
-
+		<button onClick='Freshlaundry.notifybar("This is a default message","default")'>Default</button>
+		<button onClick='Freshlaundry.notifybar("This is an error message","error")'>Error</button>
+		<button onClick='Freshlaundry.notifybar("This is a success message","success")'>Success</button>
+		<button onClick='Freshlaundry.notifybar("This is a warning message","warning")'>Warning</button>
 
 	</section>
 
@@ -95,6 +98,10 @@
 	<footer>
 		Footer
 	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="../bower_components/jquery.popup.overlay/jquery.popupoverlay.js"></script>
+	<script src='../js/freshlaundry.js'></script>
 
 
 </body>
