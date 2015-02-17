@@ -258,7 +258,7 @@ button,
 input[type=submit],
 input[type=button] {
   background-color: #39cccc;
-  color: white;
+  color: rgba(0, 0, 0, 0.5);
   letter-spacing: .15rem;
   text-transform: uppercase;
   text-align: center;
@@ -725,18 +725,16 @@ body.rtl .formError .formErrorArrow {
   right: 1em;
 }
 .notifybar-default {
-  background: #7db8f5;
-  /* blue */
+  background: #39cccc;
 }
 .notifybar-success {
-  background: #82CF85;
-  /* green */
+  background: #2ecc40;
 }
 .notifybar-error {
-  background: #F57E7D;
+  background: #ff4136;
 }
 .notifybar-warning {
-  background: #FFAC69;
+  background: #ff851b;
 }
 .notifybar-background {
   position: fixed;
