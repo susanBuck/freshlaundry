@@ -178,7 +178,6 @@ td,
 th {
   padding: 0;
 }
-/* ----- */
 * {
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
@@ -221,7 +220,7 @@ menu {
 Main content of the page goes here;
 Default to classic centered container, may be overwritten on individual pages
 */
-.layout-wrapper {
+#layout-wrapper {
   margin: auto;
   max-width: 960px;
   width: 85%;
@@ -258,7 +257,7 @@ input[type="submit"]:focus {
 button,
 input[type=submit],
 input[type=button] {
-  background-color: #ac193d;
+  background-color: #39cccc;
   color: white;
   letter-spacing: .15rem;
   text-transform: uppercase;
@@ -290,12 +289,12 @@ button.large {
 button:hover,
 input[type=submit]:hover,
 input[type=button]:hover {
-  background-color: #8a1431;
+  background-color: #2ea3a3;
 }
 button:active,
 input[type=submit]:active,
 input[type=button]:active {
-  background-color: #78122b;
+  background-color: #288f8f;
 }
 html {
   /*
@@ -308,7 +307,7 @@ html {
   */
   font-size: 62.5%;
   /* base 10 */
-  color: rgba(0, 0, 0, 0.8);
+  color: #111111;
   font-family: 'Karla', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 /*
@@ -365,16 +364,16 @@ p {
   font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
 }
 a:link {
-  color: rgba(0, 0, 0, 0.8);
+  color: #111111;
 }
 a:visited {
-  color: rgba(0, 0, 0, 0.8);
+  color: #111111;
 }
 a:hover {
-  color: rgba(0, 0, 0, 0.8);
+  color: #111111;
 }
 a:active {
-  color: rgba(0, 0, 0, 0.8);
+  color: #111111;
 }
 /* Placeholder attribute styling */
 /* This class is imported in the following styles */
@@ -468,6 +467,18 @@ Mixins
 }
 .cf {
   *zoom: 1;
+}
+/* Some CSS is required to get some smooth ass scrolling. */
+/* src: https://github.com/jakiestfu/Snap.js#installation */
+.scrollable {
+  overflow: auto;
+  -webkit-transition-property: top, bottom;
+  transition-property: top, bottom;
+  -webkit-transition-duration: .2s, .2s;
+  transition-duration: .2s, .2s;
+  -webkit-transition-timing-function: linear, linear;
+  transition-timing-function: linear, linear;
+  -webkit-overflow-scrolling: touch;
 }
 /*-------------------------------------------------------------------------------------------------
 freshlaundry-grid
