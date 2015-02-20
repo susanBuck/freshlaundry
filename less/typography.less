@@ -37,12 +37,15 @@ body > div {
 h1,h2,h3,h4,h5,h6 {
   margin:0;
   margin-bottom:1rem;
+  margin-top:5rem;
   padding:0;
   line-height:1;
 }
+
 h1 {
   font-size: 4.0rem;
 }
+
 h2 {
   font-size: 3.0rem;
 }
@@ -60,12 +63,14 @@ h6 {
 }
 
 /* Copy */
-p {
+p,ul {
   line-height: 1.7;
   margin:0;
   font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
 }
 
+
+/* Links */
 a:link {
   color:@black;
 }
@@ -73,11 +78,36 @@ a:link {
 a:visited {
   color:@black;
 }
-
+ 
 a:hover {
   color:@black;
 }
 
 a:active {
   color:@black;
+}
+
+/* Lists */
+ul,
+ol {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+ul li,
+ol li {
+  line-height: 1.7;
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Quotes */
+blockquote {
+  line-height: 110%;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
