@@ -6,6 +6,7 @@
 	<meta charset='utf-8'>
 	<link rel='stylesheet' href='../css/freshlaundry.css' type='text/css'>
 
+
 	<style>
 		/* Demo specific styles */
 		section {
@@ -63,6 +64,13 @@
 		<div id='results'></div>
 	</section>
 
+	<section>
+		<h2>Fonts</h2>
+		<p class='font heading'>.heading: </p>
+		<p class='font serf'>.serif: </p>
+		<p class='font sans'>.sans: </p>
+	</section>
+
 
 	<section>
 		<h2>Typography</h2>
@@ -77,6 +85,12 @@
 		<p>
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis vulputate orci, et placerat orci porttitor id. Suspendisse semper bibendum eleifend. Nullam gravida tempor elit, et fermentum urna commodo nec. Vivamus venenatis orci dui, in suscipit magna laoreet id. Donec et erat libero. Phasellus viverra enim vitae justo ultricies, vitae volutpat enim elementum. Duis eleifend risus eget porttitor congue. Maecenas et tortor eget mauris condimentum maximus et non ante. Sed eleifend molestie magna vel tincidunt. Integer viverra sollicitudin lectus facilisis lobortis.
 		</p>
+
+		
+		<h2>Blockquote</h2>
+		<blockquote>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in pulvinar libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+		</blockquote>
 
 		<h2>Short list</h2>
 		<ul>
@@ -179,6 +193,13 @@
 			}
 
 			$('#results').html(content)
+
+
+
+			$('.font').each(function() {
+				$(this).append($(this).css('font-family'));
+			});
+
 		</script>
 
 

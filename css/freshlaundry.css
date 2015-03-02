@@ -178,6 +178,15 @@ td,
 th {
   padding: 0;
 }
+.serif {
+  font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+.sans {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.heading {
+  font-family: Karla;
+}
 * {
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
@@ -339,6 +348,7 @@ h6 {
   margin-top: 5rem;
   padding: 0;
   line-height: 1;
+  font-family: Karla;
 }
 h1 {
   font-size: 4.0rem;
@@ -360,7 +370,8 @@ h6 {
 }
 /* Copy */
 p,
-ul {
+ul,
+ol {
   line-height: 1.7;
   margin: 0;
   font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
@@ -397,9 +408,11 @@ ol ol {
 }
 /* Quotes */
 blockquote {
-  line-height: 110%;
+  line-height: 1.7;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  font-style: italic;
+  font-family: Karla;
 }
 /* Placeholder attribute styling */
 /* This class is imported in the following styles */

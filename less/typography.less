@@ -40,6 +40,7 @@ h1,h2,h3,h4,h5,h6 {
   margin-top:5rem;
   padding:0;
   line-height:1;
+  font-family: @heading;
 }
 
 h1 {
@@ -63,10 +64,10 @@ h6 {
 }
 
 /* Copy */
-p,ul {
+p,ul,ol {
   line-height: 1.7;
   margin:0;
-  font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+  font-family: @serif;
 }
 
 
@@ -107,7 +108,9 @@ ol ol {
 
 /* Quotes */
 blockquote {
-  line-height: 110%;
+  line-height:1.7;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  font-style:italic;
+  font-family: @heading;
 }
