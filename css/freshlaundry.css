@@ -459,6 +459,7 @@ label {
 }
 /* Text inputs and text areas */
 input[type='text'],
+input[type='password'],
 textarea {
   width: 200px;
   border: 1px solid #dddddd;
@@ -493,9 +494,8 @@ input[type='checkbox'] {
 }
 /* Descriptive text under an individual field */
 .fine-print {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-style: italic;
   margin-top: .1rem;
 }
 table,
@@ -1364,7 +1364,7 @@ img {
 code {
   vertical-align: bottom;
 }
-/* Clear both class */
+/* Clear both */
 .clear {
   clear: both;
 }
