@@ -1,6 +1,12 @@
-@import "colors";
-@import "fonts";
-
+.serif {
+  font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+.sans {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.heading {
+  font-family: Karla;
+}
 html {
   /*
   http://snook.ca/archives/html_and_css/font-size-with-rem
@@ -10,11 +16,11 @@ html {
   element gives it a font-size of 10px (10 / 16 * 100 = 62.5)
 
   */
-  font-size:62.5%; /* base 10 */
-  color:@black;
-  font-family: @sans;
+  font-size: 62.5%;
+  /* base 10 */
+  color: #111111;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-
 /*
 This 1.6rem is causing zoome issues in chrome
 Disabling in favor of body > div selector
@@ -28,28 +34,27 @@ body {
   background-color:white;
 }
 */
-
 body > div {
-  font-size:20px;
-  font-size:2.0rem;
+  font-size: 20px;
+  font-size: 2.0rem;
 }
-
-
-
 /* Headings */
-h1,h2,h3,h4,h5,h6 {
-  margin:0;
-  margin-bottom:1rem;
-  margin-top:5rem;
-  padding:0;
-  line-height:1;
-  font-family: @heading;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  margin-bottom: 1rem;
+  margin-top: 5rem;
+  padding: 0;
+  line-height: 1;
+  font-family: Karla;
 }
-
 h1 {
   font-size: 4.0rem;
 }
-
 h2 {
   font-size: 3.0rem;
 }
@@ -65,32 +70,27 @@ h5 {
 h6 {
   font-size: 2.0rem;
 }
-
 /* Copy */
-p,ul,ol {
+p,
+ul,
+ol {
   line-height: 1.7;
-  margin:0;
-  font-family: @serif;
+  margin: 0;
+  font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
 }
-
-
 /* Links */
 a:link {
-  color:@black;
+  color: #111111;
 }
-
 a:visited {
-  color:@black;
+  color: #111111;
 }
- 
 a:hover {
-  color:@black;
+  color: #111111;
 }
-
 a:active {
-  color:@black;
+  color: #111111;
 }
-
 /* Lists */
 ul,
 ol {
@@ -108,12 +108,11 @@ ol ol {
   margin-top: 0;
   margin-bottom: 0;
 }
-
 /* Quotes */
 blockquote {
-  line-height:1.7;
+  line-height: 1.7;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-  font-style:italic;
-  font-family: @heading;
+  font-style: italic;
+  font-family: Karla;
 }
