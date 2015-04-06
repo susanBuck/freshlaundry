@@ -66,6 +66,11 @@
 
 	<section>
 		<h2>Fonts</h2>
+
+		Need this Google font:<br>
+		<pre>&lt;link href='http://fonts.googleapis.com/css?family=Karla:700,400' rel='stylesheet' type='text/css'></pre>
+		
+
 		<p class='font heading'>.heading: </p>
 		<p class='font serf'>.serif: </p>
 		<p class='font sans'>.sans: </p>
@@ -109,6 +114,44 @@
 
 	</section>
 
+
+	<section>
+
+		<h2>Forms</h2>
+
+		<fieldset>
+			<label class='required'>Text input</label>
+			<input type='text'>
+		</fieldset>
+
+		<fieldset>
+			<label for='radio'>Choose one</label>
+			<label class='radio'><input type='radio' name='radio'>Yes</label>
+			<label class='radio'><input type='radio' name='radio'>No</label>
+		</fieldset>
+
+		<fieldset>
+			<label for='checkbox'>Choose</label>
+			<label class='checkbox'><input type='checkbox' name='radio'>Yes</label>
+			<label class='checkbox'><input type='checkbox' name='radio'>No</label>
+		</fieldset>
+
+		<fieldset>
+			<label>Description</label>
+			<textarea></textarea>
+		</fieldset>
+
+		<input type='submit' value='Submit'>
+
+		<ul>
+			<li>Indicate a field is required by adding the class "required" to its label.
+			<li>Wrap fields and their labels in &lt;fieldset>s
+			<li>Add the class "radio" or "checkbox" to labels for checkboxes/radios so they don't have the typical label styles.
+		</ul>
+
+
+	<section>
+
 	<section>
 		<h2>Tables</h2>
 
@@ -139,7 +182,7 @@
 				</tr>
 			</tbody>
 		</table>
-		</section>
+	</section>
 
 	</div> <!-- /.layout-wrapper -->
 

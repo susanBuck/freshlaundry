@@ -1,0 +1,77 @@
+/* Placeholder attribute styling */
+/* This class is imported in the following styles */
+.placeholder {
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+::-webkit-input-placeholder {
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+:-ms-input-placeholder {
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+fieldset {
+  margin-bottom: 10px;
+  border: 0;
+  margin-left: 0;
+  padding: 0;
+}
+/* Labels */
+label.required::after {
+  content: "*";
+}
+label {
+  display: block;
+  font-size: 12px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: #aaaaaa;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* Text inputs and text areas */
+input[type='text'],
+textarea {
+  width: 200px;
+  border: 1px solid #dddddd;
+  display: block;
+  outline: none !important;
+  /* Kill default fuzzy blue outline on focus */
+  padding: 5px;
+  border-radius: 3px;
+}
+input:focus,
+textarea:focus {
+  background-color: #fff8cc;
+  border: 1px solid #aaaaaa;
+}
+/* Radios and checkboxes */
+label.radio,
+label.checkbox {
+  color: #111111;
+  margin-bottom: 5px;
+  text-transform: none;
+  font-weight: normal;
+  padding: 0;
+  font-size: 13px;
+  font-size: 1.3rem;
+}
+input[type='radio'],
+input[type='checkbox'] {
+  margin-right: 5px;
+  /* Next two lines prevent misalignment with text */
+  vertical-align: middle;
+  margin-top: -2px;
+}

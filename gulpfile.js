@@ -1,31 +1,42 @@
-var gulp   = require('gulp');
-var less   = require('gulp-less');
-var path   = require('path');
-var notify = require('gulp-notify');
-var gutil  = require('gulp-util');
+var gulp = require('gulp'),
+plumber = require('gulp-plumber'),
+less = require('gulp-less'),
+notify = require("gulp-notify"),
+changed = require('gulp-changed'),
+debug = require('gulp-debug');
 
-/* PARAMS */
-var target = './less/freshlaundry.less';
 
-// Specify what your default tasks are... i.e what should run when you run 'gulp' in CL
-// Our tasks here are 'less' and 'watch'
-gulp.task('default', ['less','watch']);
-
-    // Set up watch task
-    gulp.task('watch', function() {
-
-        // Watch the less folder, and upon updates run the less task
-        gulp.watch('less/*.less', ['less']);
-    }
-);
-
-/* TASKS */
 gulp.task('less', function () {
-  gulp.src(target)
-    .pipe(less({compress: false}).on('error', gutil.log))
-    .pipe(gulp.dest('css/'))
-    .pipe(notify('Less Compiled'));
+
+  var onError = function(err) {
+      notify.onError({
+          title:    "Error compiling less file",
+          subtitle: "<%= error.filename.replace(/^.*[\\\/]/, '') %>",
+          message:  "Error: <%= error.message %>",
+          sound:    "Beep"
+        })(err);
+      this.emit('end')
+    };
+
+  return gulp.src('less/**/*.less')
+    .pipe(changed( '/css', {extension: '.css'}))
+    .pipe(plumber({errorHandler: onError}))
+    .pipe(less({
+      paths: [ './less/' ]
+    }))
+    .pipe(debug({title: 'Succesfully compiled '}))
+    .pipe(notify("Succesfully compiled <%= file.relative %>!"))
+    .pipe(gulp.dest('./css'));
 });
+
+
+gulp.task('watch', function() {
+  gulp.watch("less/**/*.less", ["less"]);
+});
+
+gulp.task('default', ['watch']);
+
+
 
 
 
