@@ -10,7 +10,7 @@ gulp.task('less', function () {
 
   var onError = function(err) {
       notify.onError({
-          title:    "Error compiling less file",
+          title:    "Error compiling less file in ",
           subtitle: "<%= error.filename.replace(/^.*[\\\/]/, '') %>",
           message:  "Error: <%= error.message %>",
           sound:    "Beep"
@@ -19,12 +19,12 @@ gulp.task('less', function () {
     };
 
   return gulp.src('less/**/*.less')
-    .pipe(changed( '/css', {extension: '.css'}))
+    .pipe(changed( 'css', {extension: '.css'}))
     .pipe(plumber({errorHandler: onError}))
     .pipe(less({
       paths: [ './less/' ]
     }))
-    .pipe(debug({title: 'Succesfully compiled '}))
+    .pipe(debug({title: 'Succesfully compiled: '}))
     .pipe(notify("Succesfully compiled <%= file.relative %>!"))
     .pipe(gulp.dest('./css'));
 });
@@ -35,8 +35,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['watch']);
-
-
-
-
 
