@@ -1,3 +1,12 @@
+.serif {
+  font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+.sans {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.heading {
+  font-family: Karla;
+}
 /* Placeholder attribute styling */
 /* This class is imported in the following styles */
 .placeholder {
@@ -43,6 +52,7 @@ label {
 }
 /* Text inputs and text areas */
 input[type='text'],
+input[type='password'],
 textarea {
   width: 200px;
   border: 1px solid #dddddd;
@@ -74,4 +84,11 @@ input[type='checkbox'] {
   /* Next two lines prevent misalignment with text */
   vertical-align: middle;
   margin-top: -2px;
+}
+/* Descriptive text under an individual field */
+.fine-print {
+  font-size: 1.4rem;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: block;
+  margin-top: .2rem;
 }

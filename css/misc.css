@@ -19,3 +19,7 @@ img {
 code {
   vertical-align: bottom;
 }
+/* Clear both */
+.clear {
+  clear: both;
+}
