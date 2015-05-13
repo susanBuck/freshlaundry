@@ -3,25 +3,18 @@
 <head>
 
 	<title>freshlaundry demo</title>
+
 	<meta charset='utf-8'>
-	<link rel='stylesheet' href='../css/freshlaundry.css' type='text/css'>
 
+	<link rel='stylesheet' href='/../css/freshlaundry.css'>
+	<link rel='stylesheet' href='/bower_components/font-awesome/css/font-awesome.css'>
+	<link rel='stylesheet' href='/../css/modal.css'>
+	<link rel='stylesheet' href='/../css/demo.css'>
+	<link href='http://fonts.googleapis.com/css?family=Karla:700,400' rel='stylesheet' type='text/css'>
 
-	<style>
-		/* Demo specific styles */
-		section {
-			margin-bottom:50px;
-		}
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-		.color {
-			width:300px;
-
-			margin-bottom:5px;
-			padding:5px;
-			color:rgba(0, 0, 0, 0.5);
-		}
-	</style>
-
+	
 </head>
 <body>
 
@@ -32,20 +25,56 @@
 <div id='layout-wrapper'>
 
 	<section>
-		<a href='https://github.com/susanBuck/freshlaundry'>https://github.com/susanBuck/freshlaundry</a>
+		<a href='https://github.com/susanBuck/freshlaundry'>github.com/susanBuck/freshlaundry</a>
 	</section>
 
 	<section>
+		<h2>Notes</h2>
+		<p>View source to see specifics of how different elements are coded.</p>
+
+		<p>
+			Freshlaundry needs the following components:
+			<ul>
+				<li>font-awesome</li>
+				<li>Karla Google Font (see details below)</li>
+			</ul>
+		</p>
+
+
+	</section>
+
+	<section>
+		
 		<h2>Notify Bar</h2>
 
-		<button onClick='Freshlaundry.notifybar("This is a default message","default")'>Default</button>
-		<button onClick='Freshlaundry.notifybar("This is an error message","error")'>Error</button>
-		<button onClick='Freshlaundry.notifybar("This is a success message","success")'>Success</button>
-		<button onClick='Freshlaundry.notifybar("This is a warning message","warning")'>Warning</button>
+		<ul>
+		<li><a href='javascript:void(0)' onClick='Freshlaundry.notifybar("This is a default message","default")'>Default</a>
+		<li><a href='javascript:void(0)' onClick='Freshlaundry.notifybar("This is an error message","error")'>Error</a>
+		<li><a href='javascript:void(0)' onClick='Freshlaundry.notifybar("This is a success message","success")'>Success</a>
+		<li><a href='javascript:void(0)' onClick='Freshlaundry.notifybar("This is a warning message","warning")'>Warning</a>
+		</ul>
 
 	</section>
 
 	<section>
+		
+		<h2>Modal</h2>
+
+		<div class='fl-modal-content'>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in pulvinar libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+		</div>
+
+		<ul>
+			
+			<li><a href='javascript:void(0)' onClick='Freshlaundry.modal("A little content","default")'>A little content</a>
+			<li><a href='javascript:void(0)' onClick='Freshlaundry.modal($(".fl-modal-content").html(),"default")'>More content</a>
+			<li><a href='javascript:void(0)' onClick='Freshlaundry.modal($(".fl-modal-content").html(),"default",500,500)'>Set width/height</a>
+		</li>
+
+		
+	</section>
+
+	<section id='buttons'>
 		<h2>Buttons</h2>
 
 		<button class='small'>Small Button</button>
@@ -68,12 +97,13 @@
 		<h2>Fonts</h2>
 
 		Need this Google font:<br>
-		<pre>&lt;link href='http://fonts.googleapis.com/css?family=Karla:700,400' rel='stylesheet' type='text/css'></pre>
+		<pre class='google-font'>&lt;link href='http://fonts.googleapis.com/css?family=Karla:700,400' rel='stylesheet' type='text/css'></pre>
 		
 
 		<p class='font heading'>.heading: </p>
-		<p class='font serf'>.serif: </p>
+		<p class='font serif'>.serif: </p>
 		<p class='font sans'>.sans: </p>
+		<p class='font code'>.code: </p>
 	</section>
 
 

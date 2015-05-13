@@ -1,0 +1,47 @@
+#fl-modal {
+  position: fixed;
+  top: 50px;
+  z-index: 999;
+  padding: 20px;
+  padding-top: 30px;
+  color: #111111;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}
+/* Optional - used on a page before the modal trigger. The model trigger can than take content from this box */
+.fl-modal-content {
+  display: none;
+}
+/* Close x */
+#fl-modal-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #aaaaaa;
+}
+#fl-modal-close:hover {
+  color: #111111;
+  cursor: pointer;
+}
+.fl-modal-default {
+  background: white;
+}
+.fl-modal-success {
+  background: #2ecc40;
+}
+.fl-modal-error {
+  background: #ff4136;
+}
+.fl-modal-warning {
+  background: #ff851b;
+}
+.fl-modal-background {
+  background-color: #dddddd;
+  opacity: .5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+}

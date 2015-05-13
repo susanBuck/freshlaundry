@@ -1,0 +1,24 @@
+section {
+  margin-bottom: 50px;
+}
+.color {
+  width: 300px;
+  margin-bottom: 5px;
+  padding: 5px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.google-font {
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+/* Overwrite default centered container with a responsive 100% */
+#layout-wrapper {
+  width: 100%;
+  padding: 20px;
+}
+/* Make buttons stack */
+#buttons button,
+#buttons input {
+  margin-top: 10px;
+  display: block;
+}

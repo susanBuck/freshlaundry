@@ -187,6 +187,9 @@ th {
 .heading {
   font-family: Karla;
 }
+.code {
+  font-family: Consolas, courier, monospace;
+}
 * {
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
@@ -497,7 +500,7 @@ input[type='checkbox'] {
   font-size: 1.4rem;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   display: block;
-  margin-top: .1rem;
+  margin-top: .2rem;
 }
 table,
 th,
