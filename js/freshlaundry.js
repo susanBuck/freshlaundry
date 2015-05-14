@@ -11,106 +11,100 @@ jQuery.fn.center = function () {
 
 var Freshlaundry = {
 
-	/**
-	* 
-	*/
-	modal: function(message,type,width,height) {
+    /**
+    *
+    */
+    modal: function(message,addClass) {
 
-		/* Modal bar already exsits... Update it */
-		if($('#fl-modal').length > 0) {
+        /* Modal bar already exists... Update it */
+        if($('#fl-modal').length > 0) {
 
-			// Update the message
-			$('#fl-modal > span').html(message);
+            // Update the message
+            $('#fl-modal > span').html(message);
 
-			// Turn on the background
-			$('.fl-modal-background').show();
+            // Turn on the background
+            $('.fl-modal-background').show();
 
-			$('#fl-modal').show();
+            $('#fl-modal').show();
 
-			// Remove all previous class and add this class
-			$('#fl-modal').attr('class', '').addClass('fl-modal-' + type);
-		}
-		/* Modal bar does not exist... Add it */
-		else {
+            // Remove all previous classes
+            $('#fl-modal').attr('class', '').addClass('fl-modal-default');
 
-			// Create the 100x100 background - this makes it so we can click off the bar to close it
-			var background = "<div class='fl-modal-background'></div>";
-			$('body').append(background);
+        }
+        /* Modal bar does not exist... Add it */
+        else {
 
-			// Create the modal
-			var modal  = "<div id='fl-modal' class='fl-modal-" + type + "'>";
-			modal += "<i id='fl-modal-close' class='fa fa-times'></i>";
-			modal += "<span>" + message + "</span>";
-			modal += "</div>";
+            // Create the 100x100 background - this makes it so we can click off the bar to close it
+            var background = "<div class='fl-modal-background'></div>";
+            $('body').append(background);
 
-			$('body').append(modal);
+            // Create the modal
+            var modal  = "<div id='fl-modal' class='fl-modal-default'>";
+            modal += "<i id='fl-modal-close' class='fa fa-times'></i>";
+            modal += "<span>" + message + "</span>";
+            modal += "</div>";
 
-			// If the bar or background is clicked, close both
-			$('#fl-modal, .fl-modal-background').click(function() {
-				$('#fl-modal, .fl-modal-background').hide();
-			});
+            $('body').append(modal);
 
-		}
+            // If the bar or background is clicked, close both
+            $('#fl-modal, .fl-modal-background').click(function() {
+                $('#fl-modal, .fl-modal-background').hide();
+            });
 
-		if(!width) {
-			width = '75%';
-		}
-		if(!height) {
-			height = '';
-			
-		}
+        }
 
-		$('#fl-modal').css('width',width);
-		$('#fl-modal').css('height',height);
-		
-		$('#fl-modal').center();
+        if(addClass) {
+            $('#fl-modal').attr('class', addClass);
+        }
+
+        $('#fl-modal').center();
 
 
 
-	},
+    },
 
-	/**
-	* 
-	*/
-	notifybar: function(message, type) {
+    /**
+    *
+    */
+    notifybar: function(message, type) {
 
-		/* Notify bar already exsits... Update it */
-		if($('#notifybar').length > 0) {
+        /* Notify bar already exsits... Update it */
+        if($('#notifybar').length > 0) {
 
-			// Update the message
-			$('#notifybar > span').html(message);
+            // Update the message
+            $('#notifybar > span').html(message);
 
-			// Turn on the background
-			$('.notifybar-background').show();
+            // Turn on the background
+            $('.notifybar-background').show();
 
-			$('#notifybar').show();
+            $('#notifybar').show();
 
-			// Remove all previous class and add this class
-			$('#notifybar').attr('class', '').addClass('notifybar-' + type);
-		}
+            // Remove all previous class and add this class
+            $('#notifybar').attr('class', '').addClass('notifybar-' + type);
+        }
 
-		/* Notify bar does not exist... Add it */
-		else {
+        /* Notify bar does not exist... Add it */
+        else {
 
-			// Create the 100x100 background - this makes it so we can click off the bar to close it
-			var background = "<div class='notifybar-background'></div>";
-			$('body').append(background);
+            // Create the 100x100 background - this makes it so we can click off the bar to close it
+            var background = "<div class='notifybar-background'></div>";
+            $('body').append(background);
 
-			// Create the notifybar
-			var notifybar  = "<div id='notifybar' class='notifybar-" + type + "'>";
-			notifybar += "<span>" + message + "</span>";
-			notifybar += "<i class='fa fa-times'></i>";
-			notifybar += "</div>";
+            // Create the notifybar
+            var notifybar  = "<div id='notifybar' class='notifybar-" + type + "'>";
+            notifybar += "<span>" + message + "</span>";
+            notifybar += "<i class='fa fa-times'></i>";
+            notifybar += "</div>";
 
-			$('body').append(notifybar);
+            $('body').append(notifybar);
 
-			// If the bar or background is clicked, close both
-			$('#notifybar, .notifybar-background').click(function() {
-				$('#notifybar, .notifybar-background').hide();
-			});
+            // If the bar or background is clicked, close both
+            $('#notifybar, .notifybar-background').click(function() {
+                $('#notifybar, .notifybar-background').hide();
+            });
 
-		}
+        }
 
-	}
+    }
 
 } // eoc
