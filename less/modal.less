@@ -4,11 +4,17 @@
     position:fixed;
     top:50px;
     z-index:999;
+    
+}
+
+.fl-modal-default {
     padding:20px;
     padding-top:30px;
     color:@black;
-    border:1px solid @silver;
+    border:3px solid @silver;
     border-radius:3px;
+    background-color:white;
+    overflow-y:scroll;
 }
 
 /* Optional - used on a page before the modal trigger. The model trigger can than take content from this box */
@@ -29,24 +35,9 @@
     cursor:pointer;
 }
 
-.fl-modal-default { 
-    background:white;
-}
-
-.fl-modal-success {
-    background:@green;
-}
-
-.fl-modal-error {
-    background:@red;
-}
-
-.fl-modal-warning {
-    background:@orange;
-}
 
 .fl-modal-background {
-    background-color:@silver;
+    background-color:black;
     opacity:.5;
     position:fixed;
     top:0;

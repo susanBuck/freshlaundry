@@ -28,7 +28,8 @@ var Freshlaundry = {
             $('#fl-modal').show();
 
             // Remove all previous classes
-            $('#fl-modal').attr('class', '').addClass('fl-modal-default');
+            $('#fl-modal').attr('class', '');
+            $('#fl-modal').addClass('fl-modal-default');
 
         }
         /* Modal bar does not exist... Add it */
@@ -39,7 +40,9 @@ var Freshlaundry = {
             $('body').append(background);
 
             // Create the modal
-            var modal  = "<div id='fl-modal' class='fl-modal-default'>";
+            var modal = ''
+
+            modal += "<div id='fl-modal' class='fl-modal-default'>";
             modal += "<i id='fl-modal-close' class='fa fa-times'></i>";
             modal += "<span>" + message + "</span>";
             modal += "</div>";
@@ -54,12 +57,10 @@ var Freshlaundry = {
         }
 
         if(addClass) {
-            $('#fl-modal').attr('class', addClass);
+            $('#fl-modal').addClass(addClass);
         }
 
         $('#fl-modal').center();
-
-
 
     },
 
