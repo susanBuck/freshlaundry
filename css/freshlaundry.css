@@ -266,12 +266,14 @@ input[type="submit"]:focus {
   box-shadow: 0;
   outline: none;
 }
+.button,
 button,
 input[type=submit],
 input[type=button] {
   background-color: #39cccc;
   color: rgba(0, 0, 0, 0.5);
   letter-spacing: .15rem;
+  text-decoration: none;
   text-transform: uppercase;
   text-align: center;
   font-size: 16px;
@@ -298,11 +300,13 @@ button.large {
   font-size: 130%;
 }
 /* Hover */
+.button:hover,
 button:hover,
 input[type=submit]:hover,
 input[type=button]:hover {
   background-color: #2ea3a3;
 }
+.button:active,
 button:active,
 input[type=submit]:active,
 input[type=button]:active {
@@ -845,6 +849,8 @@ body.rtl .formError .formErrorArrow {
   position: fixed;
   top: 50px;
   z-index: 999;
+}
+.fl-modal-default {
   padding: 20px;
   padding-top: 30px;
   color: #111111;
