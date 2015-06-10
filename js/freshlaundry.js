@@ -1,6 +1,6 @@
 jQuery.fn.center = function () {
     
-    //this.css("position","absolute");
+    //this.css("position","absolute"); 
     
     //this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
     this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + $(window).scrollLeft()) + "px");
@@ -20,7 +20,7 @@ var Freshlaundry = {
         if($('#fl-modal').length > 0) {
 
             // Update the message
-            $('#fl-modal > span').html(message);
+            $('#fl-modal-inner').html(message);
 
             // Turn on the background
             $('.fl-modal-background').show();
@@ -43,14 +43,14 @@ var Freshlaundry = {
             var modal = ''
 
             modal += "<div id='fl-modal' class='fl-modal-default'>";
-            modal += "<i id='fl-modal-close' class='fa fa-times'></i>";
-            modal += "<span>" + message + "</span>";
+                modal += "<div id='fl-modal-close'><i class='fa fa-times'></i></div>";
+                modal += "<div id='fl-modal-inner'>" + message + "</div>";
             modal += "</div>";
 
             $('body').append(modal);
 
-            // If the bar or background is clicked, close both
-            $('#fl-modal, .fl-modal-background').click(function() {
+            // Close functionality
+            $('#fl-modal, .fl-modal-background, #fl-modal-close').click(function() {
                 $('#fl-modal, .fl-modal-background').hide();
             });
 

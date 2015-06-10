@@ -1,41 +1,55 @@
 @import "colors";
 
-#fl-modal {
-    position:fixed;
-    top:50px;
-    z-index:999;
-    
-}
-
-.fl-modal-default {
-    padding:20px;
-    padding-top:30px;
-    color:@black;
-    border:3px solid @silver;
-    border-radius:3px;
-    background-color:white;
-    overflow-y:scroll;
-}
-
 /* Optional - used on a page before the modal trigger. The model trigger can than take content from this box */
 .fl-modal-content {
     display:none;
 }
 
-/* Close x */
+#fl-modal {
+    position:fixed;
+    top:50px;
+    z-index:999; 
+    
+}
+
+/* Right now we only have one modal style, but if we add 
+more down the road, we'll identify them by classes like this */
+.fl-modal-default {
+    width:50%;
+    height:50%;
+    color:@black;
+    border:3px solid @silver;
+    border-radius:3px;
+    background-color:white;
+}
+
+#fl-modal-inner {
+    padding:10px;
+    padding-top:40px;
+    width:100%;
+    height:100%;
+    overflow-y:scroll;
+}
+
+/* Close Bar */
 #fl-modal-close {
     position:absolute;
-    top:5px;
-    right:5px;
-    color:@gray;
+    top:0px;
+    left:0px;
+    background-color:@silver;
+    padding:5px;
+    padding-top:2px; /* Top border makes the padding look bigger */
+    width:100%;
+    color:lighten(@black,50);
+    text-align:right;
+    cursor:pointer;
 }
 
 #fl-modal-close:hover {
     color:@black;
-    cursor:pointer;
 }
 
-
+/* Page overlay */
 .fl-modal-background {
     background-color:black;
     opacity:.5;

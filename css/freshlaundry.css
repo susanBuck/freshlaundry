@@ -845,35 +845,50 @@ body.rtl .formError .formErrorArrow {
   height: 100%;
   z-index: 998;
 }
+/* Optional - used on a page before the modal trigger. The model trigger can than take content from this box */
+.fl-modal-content {
+  display: none;
+}
 #fl-modal {
   position: fixed;
   top: 50px;
   z-index: 999;
 }
+/* Right now we only have one modal style, but if we add 
+more down the road, we'll identify them by classes like this */
 .fl-modal-default {
-  padding: 20px;
-  padding-top: 30px;
+  width: 50%;
+  height: 50%;
   color: #111111;
   border: 3px solid #dddddd;
   border-radius: 3px;
   background-color: white;
+}
+#fl-modal-inner {
+  padding: 10px;
+  padding-top: 40px;
+  width: 100%;
+  height: 100%;
   overflow-y: scroll;
 }
-/* Optional - used on a page before the modal trigger. The model trigger can than take content from this box */
-.fl-modal-content {
-  display: none;
-}
-/* Close x */
+/* Close Bar */
 #fl-modal-close {
   position: absolute;
-  top: 5px;
-  right: 5px;
-  color: #aaaaaa;
+  top: 0px;
+  left: 0px;
+  background-color: #dddddd;
+  padding: 5px;
+  padding-top: 2px;
+  /* Top border makes the padding look bigger */
+  width: 100%;
+  color: #919191;
+  text-align: right;
+  cursor: pointer;
 }
 #fl-modal-close:hover {
   color: #111111;
-  cursor: pointer;
 }
+/* Page overlay */
 .fl-modal-background {
   background-color: black;
   opacity: .5;
