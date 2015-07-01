@@ -384,16 +384,12 @@ ol {
   font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
 }
 /* Links */
-a:link {
-  color: #111111;
-}
-a:visited {
-  color: #111111;
-}
-a:hover {
-  color: #111111;
-}
+a:link,
+a:visited,
+a:hover,
 a:active {
+  text-decoration: none;
+  border-bottom: 1px solid #aaaaaa;
   color: #111111;
 }
 /* Lists */

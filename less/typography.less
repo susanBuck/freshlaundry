@@ -68,28 +68,18 @@ h6 {
 
 /* Copy */
 p,ul,ol {
-  line-height: 1.7;
-  margin:0;
-  font-family: @serif;
+    line-height: 1.7;
+    margin:0;
+    font-family: @serif;
 }
 
 
 /* Links */
-a:link {
-  color:@black;
-}
-
-a:visited {
-  color:@black;
-}
- 
-a:hover {
-  color:@black;
-}
-
-a:active {
-  color:@black;
-}
+a:link,a:visited,a:hover,a:active { 
+    text-decoration:none;
+    border-bottom:1px solid @gray;
+    color:@black;
+} 
 
 /* Lists */
 ul,
