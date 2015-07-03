@@ -1,3 +1,6 @@
+.highlight {
+  background-color: #ffe787;
+}
 #notifybar {
   position: fixed;
   top: 0;
@@ -17,16 +20,16 @@
   right: 1em;
 }
 .notifybar-default {
-  background: #39cccc;
+  background: #ffe548;
 }
 .notifybar-success {
   background: #2ecc40;
 }
 .notifybar-error {
-  background: #ff4136;
+  background: #b71c1c;
 }
 .notifybar-warning {
-  background: #ff851b;
+  background: #ffc107;
 }
 .notifybar-background {
   position: fixed;

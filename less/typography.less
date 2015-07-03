@@ -44,12 +44,21 @@ h1,h2,h3,h4,h5,h6 {
   padding:0;
   line-height:1;
   font-family: @heading;
+  color:@black;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child, { 
+    margin-top:0;
 }
 
 h1 {
   font-size: 4.0rem;
 }
-
 h2 {
   font-size: 3.0rem;
 }
@@ -58,7 +67,7 @@ h3 {
 }
 h4 {
   font-size: 2.0rem;
-}
+} 
 h5 {
   font-size: 2.0rem;
 }
@@ -76,10 +85,27 @@ p,ul,ol {
 
 /* Links */
 a:link,a:visited,a:hover,a:active { 
-    text-decoration:none;
-    border-bottom:1px solid @gray;
-    color:@black;
+    text-decoration:none; 
+    color:@primary;
 } 
+
+a:hover {
+    color:darken(@primary,25%);
+}
+
+a.important {
+    font-weight:bold;
+    color:@primary;
+}
+
+a.important:hover {
+    color:darken(@primary,25%);
+}
+
+a.traditional {
+    color:@black;
+    border-bottom:1px solid @silver;
+}
 
 /* Lists */
 ul,

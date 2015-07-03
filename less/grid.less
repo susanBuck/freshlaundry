@@ -6,12 +6,12 @@ Scaled down, adapted from http://responsivegridsystem.com
 
 /* GRID ROWS  ============================================================================= */
 .grid-row {
-	clear: both;
-	padding: 0px;
-	margin: 0px;
+    clear: both;
+    padding: 0px;
+    margin: 0px;
 }
 
-
+ 
 
 /*-------------------------------------------------------------------------------------------------
 Solves floating problems, by forcing the section to self clear its children (aka the clearfix hack).
@@ -38,27 +38,27 @@ sing .col:first-child { margin-left: 0; } means you don't need to use class="las
 It works in all browsers since IE6.
 -------------------------------------------------------------------------------------------------*/
 .grid-col {
-	display: block;
-	float: left;
-	margin-top: 1%;
-	margin-right: 0;
-	margin-bottom: 1%;
-	margin-left: 1.6%;
-	padding-bottom: 10px;
-	//background-color: yellow; /* For debugging */
+    display: block;
+    float: left;
+    margin-top: 1%;
+    margin-right: 0;
+    margin-bottom: 1%;
+    margin-left: 1.6%;
+    padding-bottom: 10px;
+    //background-color: yellow; /* For debugging */
 }
 
 /* First item in the row should have a 0 left margin
    all browsers except IE6 and lower */
 .grid-col:first-child {
-	margin-left:0;
+    margin-left:0;
 }
 
 /*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
 @media only screen and (max-width: 480px) {
-	.grid-col {
-		margin: 1% 0 1% 0%;
-	}
+    .grid-col {
+        margin: 1% 0 1% 0%;
+    }
 }
 
 
@@ -68,9 +68,9 @@ It works in all browsers since IE6.
 
 /*  SECTIONS  ============================================================================= */
 .section {
-	clear: both;
-	padding: 0px;
-	margin: 0px;
+    clear: both;
+    padding: 0px;
+    margin: 0px;
 }
 
 /*  GROUPING  ============================================================================= */
@@ -88,9 +88,9 @@ It works in all browsers since IE6.
 
 /*  GRID COLUMN SETUP   ==================================================================== */
 .col {
-	display: block;
-	float:left;
-	margin: 1% 0 1% 1.6%;
+    display: block;
+    float:left;
+    margin: 1% 0 1% 1.6%;
 }
 
 .col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
@@ -99,7 +99,7 @@ It works in all browsers since IE6.
 /*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
 
 @media only screen and (max-width: 480px) {
-	.col {
-		margin: 1% 0 1% 0%;
-	}
+    .col {
+        margin: 1% 0 1% 0%;
+    }
 }

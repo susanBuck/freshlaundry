@@ -1,11 +1,11 @@
 /*
 Basic page structure:
 <body>
-	<nav></nav>
-	<div class='layout-wrapper'>
-		This will default to centered jello; overwrite on individual pages if you want a full layout
-	</div>
-	<footer></footer>
+    <nav></nav>
+    <div class='layout-wrapper'>
+        This will default to centered jello; overwrite on individual pages if you want a full layout
+    </div>
+    <footer></footer>
 </body>
 */
 html {

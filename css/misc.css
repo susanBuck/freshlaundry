@@ -1,16 +1,3 @@
-/* Text selection */
-::selection {
-  background: yellow;
-  /* Safari */
-}
-::-moz-selection {
-  background: yellow;
-  /* Firefox */
-}
-::-webkit-selection {
-  background: yellow;
-  /* Firefox */
-}
 /* Images */
 img {
   border: 0;

@@ -3,9 +3,20 @@ section {
 }
 .color {
   width: 300px;
-  margin-bottom: 5px;
-  padding: 5px;
-  color: rgba(0, 0, 0, 0.5);
+  height: 20px;
+  display: inline-block;
+}
+.color-label,
+.color-text {
+  display: inline-block;
+  font-family: Consolas;
+  height: 20px;
+}
+.color-label {
+  width: 250px;
+}
+.color-text {
+  width: 150px;
 }
 .google-font {
   padding: 5px;

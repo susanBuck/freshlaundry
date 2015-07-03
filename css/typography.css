@@ -54,6 +54,15 @@ h6 {
   padding: 0;
   line-height: 1;
   font-family: Karla;
+  color: #111111;
+}
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  margin-top: 0;
 }
 h1 {
   font-size: 4.0rem;
@@ -87,8 +96,21 @@ a:visited,
 a:hover,
 a:active {
   text-decoration: none;
-  border-bottom: 1px solid #aaaaaa;
+  color: #ff4b3e;
+}
+a:hover {
+  color: #be0d00;
+}
+a.important {
+  font-weight: bold;
+  color: #ff4b3e;
+}
+a.important:hover {
+  color: #be0d00;
+}
+a.traditional {
   color: #111111;
+  border-bottom: 1px solid #dddddd;
 }
 /* Lists */
 ul,

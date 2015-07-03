@@ -1,3 +1,6 @@
+.highlight {
+  background-color: #ffe787;
+}
 /* Optional - used on a page before the modal trigger. The model trigger can than take content from this box */
 .fl-modal-content {
   display: none;

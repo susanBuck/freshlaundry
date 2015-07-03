@@ -178,9 +178,6 @@ td,
 th {
   padding: 0;
 }
-.highlight {
-  background-color: #ffe787;
-}
 .serif {
   font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
 }
@@ -203,11 +200,11 @@ th {
 /*
 Basic page structure:
 <body>
-    <nav></nav>
-    <div class='layout-wrapper'>
-        This will default to centered jello; overwrite on individual pages if you want a full layout
-    </div>
-    <footer></footer>
+	<nav></nav>
+	<div class='layout-wrapper'>
+		This will default to centered jello; overwrite on individual pages if you want a full layout
+	</div>
+	<footer></footer>
 </body>
 */
 html {
@@ -273,7 +270,7 @@ input[type="submit"]:focus {
 button,
 input[type=submit],
 input[type=button] {
-  background-color: #ff4b3e;
+  background-color: #aaaaaa;
   color: rgba(0, 0, 0, 0.5);
   letter-spacing: .15rem;
   text-decoration: none;
@@ -307,13 +304,13 @@ button.large {
 button:hover,
 input[type=submit]:hover,
 input[type=button]:hover {
-  background-color: #cc3c32;
+  background-color: #2ea3a3;
 }
 .button:active,
 button:active,
 input[type=submit]:active,
 input[type=button]:active {
-  background-color: #b3352b;
+  background-color: #288f8f;
 }
 html {
   /*
@@ -361,14 +358,6 @@ h6 {
   font-family: Karla;
   color: #111111;
 }
-h1:first-child,
-h2:first-child,
-h3:first-child,
-h4:first-child,
-h5:first-child,
-h6:first-child {
-  margin-top: 0;
-}
 h1 {
   font-size: 4.0rem;
 }
@@ -401,7 +390,7 @@ a:visited,
 a:hover,
 a:active {
   text-decoration: none;
-  color: #ff4b3e;
+  color: green;
 }
 a:hover {
   color: #be0d00;
@@ -409,9 +398,6 @@ a:hover {
 a.important {
   font-weight: bold;
   color: #ff4b3e;
-}
-a.important:hover {
-  color: #be0d00;
 }
 a.traditional {
   color: #111111;
@@ -499,7 +485,7 @@ textarea {
 }
 input:focus,
 textarea:focus {
-  background-color: #ffffff;
+  background-color: #fff8cc;
   border: 1px solid #aaaaaa;
 }
 /* Radios and checkboxes */
@@ -847,16 +833,16 @@ body.rtl .formError .formErrorArrow {
   right: 1em;
 }
 .notifybar-default {
-  background: #ffe548;
+  background: #39cccc;
 }
 .notifybar-success {
   background: #2ecc40;
 }
 .notifybar-error {
-  background: #b71c1c;
+  background: #ff4136;
 }
 .notifybar-warning {
-  background: #ffc107;
+  background: #ff851b;
 }
 .notifybar-background {
   position: fixed;
@@ -1425,6 +1411,19 @@ more down the road, we'll identify them by classes like this */
   .span_1_of_12 {
     width: 100%;
   }
+}
+/* Text selection */
+::selection {
+  background: yellow;
+  /* Safari */
+}
+::-moz-selection {
+  background: yellow;
+  /* Firefox */
+}
+::-webkit-selection {
+  background: yellow;
+  /* Firefox */
 }
 /* Images */
 img {

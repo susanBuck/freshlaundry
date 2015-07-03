@@ -1,3 +1,6 @@
+.highlight {
+  background-color: #ffe787;
+}
 .serif {
   font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
 }
@@ -6,6 +9,9 @@
 }
 .heading {
   font-family: Karla;
+}
+.code {
+  font-family: Consolas, courier, monospace;
 }
 /* Placeholder attribute styling */
 /* This class is imported in the following styles */
@@ -64,7 +70,7 @@ textarea {
 }
 input:focus,
 textarea:focus {
-  background-color: #fff8cc;
+  background-color: #ffffff;
   border: 1px solid #aaaaaa;
 }
 /* Radios and checkboxes */

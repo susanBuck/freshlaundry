@@ -24,7 +24,7 @@
 <div id='layout-wrapper'>
 
     <section>
-        <a href='https://github.com/susanBuck/freshlaundry'>github.com/susanBuck/freshlaundry</a>
+        <a href='https://github.com/susanBuck/freshlaundry'>http://github.com/susanBuck/freshlaundry</a>
     </section>
 
     <section>
@@ -101,10 +101,8 @@
 
     <section>
         <h2>Colors</h2>
-
-        Via <a href='http://clrs.cc/'>http://clrs.cc</a>
-
         <div id='results'></div>
+
     </section>
 
     <section>
@@ -132,9 +130,24 @@
 
         <h2>Paragraph</h2>
         <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis vulputate orci, et placerat orci porttitor id. Suspendisse semper bibendum eleifend. Nullam gravida tempor elit, et fermentum urna commodo nec. Vivamus venenatis orci dui, in suscipit magna laoreet id. Donec et erat libero. Phasellus viverra enim vitae justo ultricies, vitae volutpat enim elementum. Duis eleifend risus eget porttitor congue. Maecenas et tortor eget mauris condimentum maximus et non ante. Sed eleifend molestie magna vel tincidunt. Integer viverra sollicitudin lectus facilisis lobortis.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis vulputate orci, et placerat orci porttitor id. Suspendisse semper bibendum eleifend. Nullam gravida tempor elit, et fermentum urna commodo nec. Vivamus venenatis orci dui, in suscipit magna <a href='#'>laoreet</a> id. Donec et erat libero. Phasellus viverra enim vitae justo ultricies, vitae volutpat enim elementum. Duis eleifend risus eget porttitor congue. <a href='#'>Maecenas et tortor</a> eget mauris condimentum maximus et non ante. Sed eleifend molestie magna vel tincidunt. Integer viverra sollicitudin lectus facilisis lobortis.
         </p>
 
+        <h2>Links</h2>
+
+        <div>
+            <a href='#'>Regular Link</a><br>
+            <a href='#' class='important'>Important Link</a><br>
+            <a href='#' class='traditional'>Traditional Link</a>
+        </div>
+
+        <br><br>
+
+        <p>
+            <a href='#'>Regular Link</a><br>
+            <a href='#' class='important'>Important Link</a><br>
+            <a href='#' class='traditional'>Traditional Link</a>
+        </p>
 
         <h2>Blockquote</h2>
         <blockquote>
@@ -240,34 +253,30 @@
     <script src='../js/freshlaundry.js'></script>
 
     <script>
-            cool = {
-                aqua: '7FDBFF',
-                blue: '0074D9',
-                navy: '001F3F',
-                teal: '39CCCC',
-                green: '2ECC40',
-                olive: '3D9970',
-                lime:  '01FF70'
+
+            palette = {
+                primary: 'FF4b33',
+                secondary: 'AAAAAA',
             }
 
-            warm = {
-                yellow: 'FFDC00',
-                orange: 'FF851B',
-                red: 'FF4136',
-                fuchsia: 'F012BE',
-                purple: 'B10DC9',
-                maroon: '85144B',
+            ux = {
+                red: 'B71C1C',
+                green: '2ECC40',
+                orange: 'FFC107',
+                yellow: 'FFE548',
+                highlight:'FFE787',
+
             }
 
             grays = {
-                white: 'fff',
-                silver: 'ddd',
-                gray: 'aaa',
-                black: '111',
+                black: '111111',
+                gray: 'AAAAAA',
+                silver: 'DDDDDD',
+                white: 'FFFFFF',
             }
 
-            colors = [cool,warm,grays]
-            names = ['Cools','Warms','Grays']
+            colors = [palette,grays,ux]
+            names = ['Palette','Grays','UX']
 
             content = '';
 
@@ -276,8 +285,11 @@
                 content += '<h3>' + names[temps] + '</h3>';
 
                 for(color in colors[temps]) {
-
-                    content += "<div class='color' style='background-color:#"+colors[temps][color]+"'>@"+color+":  #"+colors[temps][color]+";</div>";
+                    content += '<div>';
+                    content += '<span class="color-label">@' + color + ' ' + colors[temps][color] + '</span>';
+                    content += '<span class="color-text" style="color:#' + colors[temps][color] + '">Lorem ipsum</span>';
+                    content += '<span class="color" style="background-color:#' + colors[temps][color] + '"></span>';
+                    content += '</div>';
                 }
             }
 
