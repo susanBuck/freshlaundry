@@ -1,3 +1,6 @@
+.highlight {
+  background-color: #ffe787;
+}
 .serif {
   font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
 }
@@ -90,27 +93,62 @@ ol {
   margin: 0;
   font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
 }
+/*
+u = underline
+g = greyscale 
+b = bold
+o = outline, make it look like a button
+*/
 /* Links */
 a:link,
 a:visited,
 a:hover,
 a:active {
   text-decoration: none;
-  color: #ff4b3e;
+  color: #6f0820;
+  font-weight: regular;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #6f0820;
 }
-a:hover {
-  color: #be0d00;
+a:link.n,
+a:visited.n,
+a:hover.n,
+a:active.n {
+  border-bottom-width: 0px;
 }
-a.important {
-  font-weight: bold;
-  color: #ff4b3e;
-}
-a.important:hover {
-  color: #be0d00;
-}
-a.traditional {
+a:link.g,
+a:visited.g,
+a:hover.g,
+a:active.g {
+  border-bottom-color: #aaaaaa;
   color: #111111;
-  border-bottom: 1px solid #dddddd;
+}
+a:link.b,
+a:visited.b,
+a:hover.b,
+a:active.b {
+  font-weight: bold;
+}
+a:link.o,
+a:visited.o,
+a:hover.o,
+a:active.o {
+  border: 1px solid #b60d34;
+  padding: 10px;
+  border-radius: 25px;
+}
+a:link.o:hover,
+a:visited.o:hover,
+a:hover.o:hover,
+a:active.o:hover {
+  background-color: #e61042;
+}
+a:link:hover,
+a:visited:hover,
+a:hover:hover,
+a:active:hover {
+  color: #3f0412;
 }
 /* Lists */
 ul,

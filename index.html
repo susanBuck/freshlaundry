@@ -23,21 +23,20 @@
 
 <div id='layout-wrapper'>
 
-    <section>
-        <a href='https://github.com/susanBuck/freshlaundry'>http://github.com/susanBuck/freshlaundry</a>
-    </section>
 
     <section>
         <h2>Notes</h2>
-        <p>View source to see specifics of how different elements are coded.</p>
-
-        <p>
-            Freshlaundry needs the following components:
+        <ul>
+        <li><a href='http://freshlaundry.thewcc.dev/index-color.html'>Color Demo</a>
+        <li>Github: <a href='https://github.com/susanBuck/freshlaundry'>http://github.com/susanBuck/freshlaundry</a>
+        <li>View source to see specifics of how different elements are coded.</li>
+        <li>Freshlaundry needs the following components:
             <ul>
                 <li>font-awesome</li>
-                <li>Karla Google Font (see details below)</li>
+                <li>Karla Google Font</li>
             </ul>
-        </p>
+        </li>
+        </ul>
 
 
     </section>
@@ -79,9 +78,9 @@
 
         <ul>
 
-            <li><a href='javascript:void(0)' onClick='Freshlaundry.modal("Basic example")'>Basic example</a>
-            <li><a href='javascript:void(0)' onClick='Freshlaundry.modal($(".fl-modal-content").html())'>With more content</a>
-            <li><a href='javascript:void(0)' onClick='Freshlaundry.modal($(".fl-modal-content").html(),"sampleModalClass")'>With a custom class</a>
+            <li><a href='javascript:void(0)' class='u' onClick='Freshlaundry.modal("Basic example")'>Basic example</a>
+            <li><a href='javascript:void(0)' class='u' onClick='Freshlaundry.modal($(".fl-modal-content").html())'>With more content</a>
+            <li><a href='javascript:void(0)' class='u' onClick='Freshlaundry.modal($(".fl-modal-content").html(),"sampleModalClass")'>With a custom class</a>
 
         </li>
 
@@ -107,11 +106,6 @@
 
     <section>
         <h2>Fonts</h2>
-
-        Need this Google font:<br>
-        <pre class='google-font'>&lt;link href='http://fonts.googleapis.com/css?family=Karla:700,400' rel='stylesheet' type='text/css'></pre>
-
-
         <p class='font heading'>.heading: </p>
         <p class='font serif'>.serif: </p>
         <p class='font sans'>.sans: </p>
@@ -130,24 +124,78 @@
 
         <h2>Paragraph</h2>
         <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis vulputate orci, et placerat orci porttitor id. Suspendisse semper bibendum eleifend. Nullam gravida tempor elit, et fermentum urna commodo nec. Vivamus venenatis orci dui, in suscipit magna <a href='#'>laoreet</a> id. Donec et erat libero. Phasellus viverra enim vitae justo ultricies, vitae volutpat enim elementum. Duis eleifend risus eget porttitor congue. <a href='#'>Maecenas et tortor</a> eget mauris condimentum maximus et non ante. Sed eleifend molestie magna vel tincidunt. Integer viverra sollicitudin lectus facilisis lobortis.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis vulputate orci, et placerat orci porttitor id. Suspendisse semper bibendum eleifend. Nullam gravida tempor elit, et fermentum urna commodo nec. Vivamus venenatis orci dui, in suscipit magna laoreet id. Donec et erat libero. Phasellus viverra enim vitae justo ultricies, vitae volutpat enim elementum. Duis eleifend risus eget porttitor congue. Maecenas et tortor eget mauris condimentum maximus et non ante. Sed eleifend molestie magna vel tincidunt. Integer viverra sollicitudin lectus facilisis lobortis.
         </p>
 
         <h2>Links</h2>
-
-        <div>
-            <a href='#'>Regular Link</a><br>
-            <a href='#' class='important'>Important Link</a><br>
-            <a href='#' class='traditional'>Traditional Link</a>
-        </div>
-
-        <br><br>
+        <p>
+        There are 5 different link styles with these options: underline/no-underline, color/black, bold/regular.
+        </p>
 
         <p>
-            <a href='#'>Regular Link</a><br>
-            <a href='#' class='important'>Important Link</a><br>
-            <a href='#' class='traditional'>Traditional Link</a>
+        The styles are indicated by a single letter class, where <code>n = no underline (aka &ldquo;naked&rdquo;)</code>, <code>g = grayscale</code>, <code>b = bold</code>, <code>o = outline</code> . 
         </p>
+
+        <h3>Example combinations:</h3>
+
+        <div class='link-example'>
+            <a href='#' class=''>(Default) Colored link with underline</a><br>
+            Use in paragraphs when the link is important and it's likely the user will need/want to click it.
+            <code>
+            <pre>
+            &lt;a href='#'>Foobar&lt;/a>
+            </pre>
+            </code>
+        </div>
+
+        <div class='link-example'>
+            <a href='#' class='n'>Colored link without underline</a><br>
+            Use in menus, footers and other "interface" elements.
+
+            <code>
+            <pre>
+            &lt;a href='#' class='n'>Foobar&lt;/a>
+            </pre>
+            </code>
+        </div>
+
+
+         <div class='link-example'>
+            <a href='#' class='o'>Outline link</a><br><br>
+            Creates a button with a outline, giving it a button-look. Use in interface when the action is important.
+
+            <code>
+            <pre>
+            &lt;a href='#' class='o'>Foobar&lt;/a>
+            </pre>
+            </code>
+        </div>
+        
+        
+        <div class='link-example'>    
+            <a href='#' class='g'>Grey link</a><br>
+            Use in paragraphs when the link is not important or essential to the content. For example, a courtesy link to another site.
+
+            <code>
+            <pre>
+            &lt;a href='#' class='g'>Foobar&lt;/a>
+            </pre>
+            </code>
+        </div>
+
+        <div class='link-example'>    
+            <a href='#' class='b g'>Bold link</a><br>
+            Add <code>b</code> to any of the above combinations for a bold link.
+
+            <code>
+            <pre>
+            &lt;a href='#' class='b g'>Foobar&lt;/a>
+            </pre>
+            </code>
+        </div>
+       
+        
+        
 
         <h2>Blockquote</h2>
         <blockquote>
@@ -275,8 +323,8 @@
                 white: 'FFFFFF',
             }
 
-            colors = [palette,grays,ux]
-            names = ['Palette','Grays','UX']
+            colors = [grays,ux]
+            names = ['Grays','UX']
 
             content = '';
 

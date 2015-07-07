@@ -1,0 +1,33 @@
+.highlight {
+  background-color: #ffe787;
+}
+.primary-block {
+  width: 100px;
+  height: 100px;
+}
+.secondary-block {
+  width: 50px;
+  height: 50px;
+}
+.logo-monogram {
+  width: 89px;
+  padding: 10px;
+  background-color: #b60d34;
+}
+.logo-crest {
+  width: 167px;
+  padding: 10px;
+  background-color: #b60d34;
+}
+.tiles div {
+  display: inline-block;
+}
+.primary-block-light {
+  background-color: #e61042;
+}
+.primary-block {
+  background-color: #b60d34;
+}
+.primary-block-dark {
+  background-color: #860a26;
+}

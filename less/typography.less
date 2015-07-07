@@ -82,30 +82,60 @@ p,ul,ol {
     font-family: @serif;
 }
 
+/*
+u = underline
+g = greyscale 
+b = bold
+o = outline, make it look like a button
+*/
 
 /* Links */
 a:link,a:visited,a:hover,a:active { 
+
+    // Defaults
     text-decoration:none; 
-    color:@primary;
+    color:darken(@primary,15%);
+    font-weight:regular;
+    border-bottom-width:1px;
+    border-bottom-style:solid;
+    border-bottom-color:darken(@primary,15%);
+
+    // Options
+
+    // n = no underline, aka "naked"
+    &.n {
+      border-bottom-width:0px;
+      
+    }
+
+    // g = Gray
+    &.g {
+      border-bottom-color:@gray;
+      color:@black;
+    }
+
+    // b = Bold
+    &.b {
+      font-weight:bold;
+    }
+
+    // o = Outline
+    &.o {
+      border:1px solid @primary;
+      padding:10px;
+      border-radius:25px;
+    }
+
+    &.o:hover {
+      background-color:lighten(@primary,10%);
+    }
+
+    // Regardless of greyscale or color, the hover is the same
+    &:hover {
+      color:darken(@primary,25%);
+    }
 } 
 
-a:hover {
-    color:darken(@primary,25%);
-}
-
-a.important {
-    font-weight:bold;
-    color:@primary;
-}
-
-a.important:hover {
-    color:darken(@primary,25%);
-}
-
-a.traditional {
-    color:@black;
-    border-bottom:1px solid @silver;
-}
 
 /* Lists */
 ul,
