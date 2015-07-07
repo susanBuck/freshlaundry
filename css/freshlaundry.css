@@ -407,11 +407,11 @@ a:visited,
 a:hover,
 a:active {
   text-decoration: none;
-  color: #6f0820;
+  color: #b60d34;
   font-weight: regular;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: #6f0820;
+  border-bottom-color: #b60d34;
 }
 a:link.n,
 a:visited.n,
@@ -436,7 +436,7 @@ a:link.o,
 a:visited.o,
 a:hover.o,
 a:active.o {
-  border: 1px solid #b60d34;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 25px;
 }
@@ -444,13 +444,15 @@ a:link.o:hover,
 a:visited.o:hover,
 a:hover.o:hover,
 a:active.o:hover {
-  background-color: #e61042;
+  background-color: #eaeaea;
+  border-color: #dddddd;
 }
 a:link:hover,
 a:visited:hover,
 a:hover:hover,
 a:active:hover {
-  color: #3f0412;
+  color: #860a26;
+  border-bottom-color: #860a26;
 }
 /* Lists */
 ul,

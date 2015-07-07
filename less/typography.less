@@ -94,14 +94,14 @@ a:link,a:visited,a:hover,a:active {
 
     // Defaults
     text-decoration:none; 
-    color:darken(@primary,15%);
+    color:@primary;
     font-weight:regular;
     border-bottom-width:1px;
     border-bottom-style:solid;
-    border-bottom-color:darken(@primary,15%);
+    border-bottom-color:@primary;
 
     // Options
-
+ 
     // n = no underline, aka "naked"
     &.n {
       border-bottom-width:0px;
@@ -112,7 +112,7 @@ a:link,a:visited,a:hover,a:active {
     &.g {
       border-bottom-color:@gray;
       color:@black;
-    }
+    } 
 
     // b = Bold
     &.b {
@@ -121,18 +121,20 @@ a:link,a:visited,a:hover,a:active {
 
     // o = Outline
     &.o {
-      border:1px solid @primary;
+      border:1px solid @silver;
       padding:10px;
       border-radius:25px;
     }
 
     &.o:hover {
-      background-color:lighten(@primary,10%);
+      background-color:lighten(@silver,5%);
+      border-color:@silver;
     }
 
     // Regardless of greyscale or color, the hover is the same
     &:hover {
-      color:darken(@primary,25%);
+      color:@primary-darker;
+      border-bottom-color:@primary-darker;
     }
 } 
 
