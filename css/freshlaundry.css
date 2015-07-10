@@ -274,7 +274,7 @@ button,
 input[type=submit],
 input[type=button] {
   background-color: #b60d34;
-  color: rgba(0, 0, 0, 0.5);
+  color: white;
   letter-spacing: .15rem;
   text-decoration: none;
   text-transform: uppercase;
@@ -370,21 +370,27 @@ h6:first-child {
   margin-top: 0;
 }
 h1 {
+  font-size: 40px;
   font-size: 4.0rem;
 }
 h2 {
+  font-size: 30px;
   font-size: 3.0rem;
 }
 h3 {
+  font-size: 20px;
   font-size: 2.0rem;
 }
 h4 {
+  font-size: 20px;
   font-size: 2.0rem;
 }
 h5 {
+  font-size: 20px;
   font-size: 2.0rem;
 }
 h6 {
+  font-size: 20px;
   font-size: 2.0rem;
 }
 /* Copy */
@@ -436,7 +442,7 @@ a:link.o,
 a:visited.o,
 a:hover.o,
 a:active.o {
-  border: 1px solid #dddddd;
+  border: 2px solid #b60d34;
   padding: 10px;
   border-radius: 25px;
 }
@@ -444,8 +450,9 @@ a:link.o:hover,
 a:visited.o:hover,
 a:hover.o:hover,
 a:active.o:hover {
-  background-color: #eaeaea;
-  border-color: #dddddd;
+  background-color: #f7f7f7;
+  border-color: #860a26;
+  color: #860a26;
 }
 a:link:hover,
 a:visited:hover,

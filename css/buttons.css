@@ -17,8 +17,8 @@ input[type="submit"]:focus {
 button,
 input[type=submit],
 input[type=button] {
-  background-color: #ff4b3e;
-  color: rgba(0, 0, 0, 0.5);
+  background-color: #b60d34;
+  color: white;
   letter-spacing: .15rem;
   text-decoration: none;
   text-transform: uppercase;
@@ -51,11 +51,11 @@ button.large {
 button:hover,
 input[type=submit]:hover,
 input[type=button]:hover {
-  background-color: #cc3c32;
+  background-color: #920a2a;
 }
 .button:active,
 button:active,
 input[type=submit]:active,
 input[type=button]:active {
-  background-color: #b3352b;
+  background-color: #7f0924;
 }

@@ -57,21 +57,27 @@ h6:first-child, {
 }
 
 h1 {
+  font-size:40px;
   font-size: 4.0rem;
 }
 h2 {
+  font-size:30px;
   font-size: 3.0rem;
 }
 h3 {
+  font-size:20px;
   font-size: 2.0rem;
 }
 h4 {
+  font-size:20px;
   font-size: 2.0rem;
 } 
 h5 {
+  font-size:20px;
   font-size: 2.0rem;
 }
 h6 {
+  font-size:20px;
   font-size: 2.0rem;
 }
 
@@ -121,14 +127,16 @@ a:link,a:visited,a:hover,a:active {
 
     // o = Outline
     &.o {
-      border:1px solid @silver;
+      border:2px solid @primary;
       padding:10px;
       border-radius:25px;
     }
 
     &.o:hover {
-      background-color:lighten(@silver,5%);
-      border-color:@silver;
+      background-color:lighten(@silver,10%);
+      border-color:@primary-darker;
+      color:@primary-darker;
+      
     }
 
     // Regardless of greyscale or color, the hover is the same
