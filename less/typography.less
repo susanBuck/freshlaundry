@@ -52,7 +52,7 @@ h2:first-child,
 h3:first-child,
 h4:first-child,
 h5:first-child,
-h6:first-child, { 
+h6:first-child, {
     margin-top:0;
 }
 
@@ -71,7 +71,7 @@ h3 {
 h4 {
   font-size:20px;
   font-size: 2.0rem;
-} 
+}
 h5 {
   font-size:20px;
   font-size: 2.0rem;
@@ -90,16 +90,16 @@ p,ul,ol {
 
 /*
 u = underline
-g = greyscale 
+g = greyscale
 b = bold
 o = outline, make it look like a button
 */
 
 /* Links */
-a:link,a:visited,a:hover,a:active { 
+a:link,a:visited,a:hover,a:active {
 
     // Defaults
-    text-decoration:none; 
+    text-decoration:none;
     color:@primary;
     font-weight:regular;
     border-bottom-width:1px;
@@ -107,18 +107,17 @@ a:link,a:visited,a:hover,a:active {
     border-bottom-color:@primary;
 
     // Options
- 
+
     // n = no underline, aka "naked"
     &.n {
       border-bottom-width:0px;
-      
     }
 
     // g = Gray
     &.g {
       border-bottom-color:@gray;
       color:@black;
-    } 
+    }
 
     // b = Bold
     &.b {
@@ -136,7 +135,7 @@ a:link,a:visited,a:hover,a:active {
       background-color:lighten(@silver,10%);
       border-color:@primary-darker;
       color:@primary-darker;
-      
+
     }
 
     // Regardless of greyscale or color, the hover is the same
@@ -144,7 +143,7 @@ a:link,a:visited,a:hover,a:active {
       color:@primary-darker;
       border-bottom-color:@primary-darker;
     }
-} 
+}
 
 
 /* Lists */

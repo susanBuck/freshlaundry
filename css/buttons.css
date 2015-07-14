@@ -14,6 +14,7 @@ input[type="submit"]:focus {
   outline: none;
 }
 .button,
+a.button,
 button,
 input[type=submit],
 input[type=button] {
@@ -37,25 +38,69 @@ input[type=button] {
   -moz-transition: all .2s linear;
   -webkit-transition: all .2s linear;
 }
-button.small {
+.button.small,
+a.button.small,
+button.small,
+input[type=submit].small,
+input[type=button].small {
   font-size: 60%;
 }
-button.default {
+.button.default,
+a.button.default,
+button.default,
+input[type=submit].default,
+input[type=button].default {
   font-size: 100%;
 }
-button.large {
+.button.large,
+a.button.large,
+button.large,
+input[type=submit].large,
+input[type=button].large {
   font-size: 130%;
 }
-/* Hover */
+.button:link,
+a.button:link,
+button:link,
+input[type=submit]:link,
+input[type=button]:link {
+  color: white;
+  border-bottom: 0px;
+}
 .button:hover,
+a.button:hover,
 button:hover,
 input[type=submit]:hover,
 input[type=button]:hover {
   background-color: #920a2a;
+  color: white;
 }
 .button:active,
+a.button:active,
 button:active,
 input[type=submit]:active,
 input[type=button]:active {
   background-color: #7f0924;
+  color: white;
+}
+.button.green,
+a.button.green,
+button.green,
+input[type=submit].green,
+input[type=button].green {
+  background-color: #2ecc40;
+}
+.button.green:hover,
+a.button.green:hover,
+button.green:hover,
+input[type=submit].green:hover,
+input[type=button].green:hover {
+  background-color: #25a333;
+}
+.button.green:active,
+a.button.green:active,
+button.green:active,
+input[type=submit].green:active,
+input[type=button].green:active {
+  background-color: #208f2d;
 }
