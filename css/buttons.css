@@ -104,3 +104,20 @@ input[type=submit].green:active,
 input[type=button].green:active {
   background-color: #208f2d;
 }
+.button.loading,
+a.button.loading,
+button.loading,
+input[type=submit].loading,
+input[type=button].loading {
+  background: #dddddd url('//d2v9gwqwifvt42.cloudfront.net/texture-strange-bullseyes.png') repeat 0 0;
+  -webkit-animation: slide 20s linear infinite;
+  cursor: wait;
+}
+@-webkit-keyframes slide {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -400px 0;
+  }
+}

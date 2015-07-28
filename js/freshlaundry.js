@@ -1,15 +1,79 @@
 jQuery.fn.center = function () {
-    
-    //this.css("position","absolute"); 
-    
+
     //this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
     this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + $(window).scrollLeft()) + "px");
 
     return this;
 }
 
+// Preload loading image
+if($('.ajax-loading').length) {
+    $('<img/>')[0].src = '//d2v9gwqwifvt42.cloudfront.net/texture-strange-bullseyes.png';
+}
 
 var Freshlaundry = {
+
+    /**
+	*
+	*/
+    loadingButton: function(el,boolLoading) {
+
+
+
+        // Default to true of boolLoading was not set
+        boolLoading = typeof boolLoading !== 'undefined' ? boolLoading : true;
+
+        if(boolLoading) {
+
+            // Set width so we can restore it when done
+            var width = el.outerWidth();
+            el.css('width', width + 1); // quirk: w/o the extra 1, the button label will span two lines
+
+            // Disable
+            el.prop('disabled',true);
+            el.addClass('loading');
+
+    	    var loading_label = 'Loading...';
+            var saved_label = '';
+
+            // Different approaches for chaging the text of an input vs button
+            if(el.is('input')) {
+                saved_label = el.val();
+                el.val(loading_label);
+            }
+            else {
+                saved_label = el.html();
+                el.html(loading_label);
+            }
+
+            el.attr('data-saved_label',saved_label);
+
+            el.attr('data-loading',1);
+
+        }
+        else {
+
+            // Enable
+            el.prop('disabled',false);
+            el.removeClass('loading');
+
+            // What was the label before it was switched to loading?
+            saved_label = el.attr('data-saved_label');
+
+            // Different approaches for chaging the text of an input vs button
+            if(el.is('input')) {
+                el.val(saved_label);
+            }
+            else {
+                el.html(saved_label);
+            }
+
+            el.attr('data-loading',0);
+
+        }
+
+    },
+
 
     /**
     *

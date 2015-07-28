@@ -1,4 +1,5 @@
 @import "colors";
+@import "_cdn";
 
 /* Remove browser defaults */
 button,button:active,button:focus,
@@ -10,6 +11,7 @@ input[type="submit"],input[type="submit"]:active,input[type="submit"]:focus {
 }
 
 .button, a.button, button, input[type=submit], input[type=button] {
+
     background-color:@primary;
     //color:rgba(0, 0, 0, 0.5);
     color:white;
@@ -76,4 +78,14 @@ input[type="submit"],input[type="submit"]:active,input[type="submit"]:focus {
         background-color:@green * .7;
     }
 
+    &.loading {
+        background: @silver url('@{cdn}texture-strange-bullseyes.png') repeat 0 0;
+        -webkit-animation: slide 20s linear infinite;
+		cursor:wait;
+	}
+
+    @-webkit-keyframes slide {
+        from { background-position: 0 0; }
+        to { background-position: -400px 0; }
+    }
 }

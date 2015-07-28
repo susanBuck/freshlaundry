@@ -101,13 +101,25 @@
         <button class='green'>Green button</button>
 
         <a href='javascript:void(0)' class='button green'>Green link button</a>
+
+        <h2>Ajax Buttons</h2>
+        
+        <button class='small ajax-loading' id='ajax-button1'>Ajax Button</button>
+        <button class='medium ajax-loading' id='ajax-button2'>Ajax Button</button>
+        <button class='large ajax-loading' id='ajax-button3'>Ajax Button</button>
+
+        <ol>
+            <li>Add the class `ajax-loading` to the button</li>
+            <li>Turn on with `Freshlaundry.loadingButton(el,true)`</li>
+            <li>Turn off with `Freshlaundry.loadingButton(el,false)`</li>
+        </ol>
+
     </section>
 
 
     <section>
         <h2>Colors</h2>
         <div id='results'></div>
-
     </section>
 
     <section>
@@ -349,10 +361,18 @@
 
             $('#results').html(content)
 
-
-
             $('.font').each(function() {
                 $(this).append($(this).css('font-family'));
+            });
+
+            $('#ajax-button1,#ajax-button2,#ajax-button3').click(function() {
+
+                el = $(this);
+
+                Freshlaundry.loadingButton(el);
+
+                setTimeout(function(){ Freshlaundry.loadingButton(el,false); }, 1000);
+
             });
 
         </script>
