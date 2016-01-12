@@ -59,6 +59,7 @@ label {
 /* Text inputs and text areas */
 input[type='text'],
 input[type='password'],
+input[type='email'],
 textarea {
   width: 200px;
   border: 1px solid #dddddd;
