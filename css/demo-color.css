@@ -12,12 +12,19 @@
 .logo-monogram {
   width: 89px;
   padding: 10px;
-  background-color: #b60d34;
 }
 .logo-crest {
   width: 167px;
   padding: 10px;
+}
+.primary {
   background-color: #b60d34;
+}
+.grey {
+  background-color: #aaaaaa;
+}
+.black {
+  background-color: #111111;
 }
 .tiles div {
   display: inline-block;

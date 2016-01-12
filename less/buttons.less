@@ -79,10 +79,15 @@ input[type="submit"],input[type="submit"]:active,input[type="submit"]:focus {
     }
 
     &.loading {
+        color:white;
         background: @silver url('@{cdn}texture-strange-bullseyes.png') repeat 0 0;
         -webkit-animation: slide 20s linear infinite;
 		cursor:wait;
 	}
+
+    &.loading:hover {
+        color:white;
+    }
 
     @-webkit-keyframes slide {
         from { background-position: 0 0; }

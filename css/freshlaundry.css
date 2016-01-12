@@ -285,8 +285,8 @@ body {
 }
 */
 body > div {
-  font-size: 20px;
-  font-size: 2.0rem;
+  font-size: 18px;
+  font-size: 1.8rem;
 }
 /* Headings */
 h1,
@@ -536,9 +536,17 @@ a.button.loading,
 button.loading,
 input[type=submit].loading,
 input[type=button].loading {
+  color: white;
   background: #dddddd url('//d2v9gwqwifvt42.cloudfront.net/texture-strange-bullseyes.png') repeat 0 0;
   -webkit-animation: slide 20s linear infinite;
   cursor: wait;
+}
+.button.loading:hover,
+a.button.loading:hover,
+button.loading:hover,
+input[type=submit].loading:hover,
+input[type=button].loading:hover {
+  color: white;
 }
 @-webkit-keyframes slide {
   from {

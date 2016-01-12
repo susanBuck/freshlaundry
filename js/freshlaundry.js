@@ -18,16 +18,10 @@ var Freshlaundry = {
 	*/
     loadingButton: function(el,boolLoading) {
 
-
-
         // Default to true of boolLoading was not set
         boolLoading = typeof boolLoading !== 'undefined' ? boolLoading : true;
 
         if(boolLoading) {
-
-            // Set width so we can restore it when done
-            var width = el.outerWidth();
-            el.css('width', width + 1); // quirk: w/o the extra 1, the button label will span two lines
 
             // Disable
             el.prop('disabled',true);
