@@ -1546,9 +1546,6 @@ img {
   border: 0;
 }
 /* Code blocks */
-code {
-  vertical-align: bottom;
-}
 /* Clear both */
 .clear {
   clear: both;
