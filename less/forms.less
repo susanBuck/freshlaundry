@@ -1,13 +1,13 @@
 @import "colors";
-@import "fonts"; 
+@import "fonts";
 
 /* Placeholder attribute styling */
 /* This class is imported in the following styles */
 .placeholder {
-    font-size:12px;  
+    font-size:12px;
     font-size:1.2rem;
 }
- 
+
 ::-webkit-input-placeholder {
     .placeholder;
 }
@@ -19,20 +19,27 @@
 ::-moz-placeholder {  /* Firefox 19+ */
     .placeholder;
 }
- 
+
 :-ms-input-placeholder {
     .placeholder;
 }
 
 fieldset {
-    margin-bottom:10px; 
+    margin-bottom:40px;
     border:0;
     margin-left:0;
     padding:0;
 }
 
+legend {
+    font-size:20px;
+    font-size:2.0rem;
+    font-family:@heading;
+    font-weight:bold;
+}
+
 /* Labels */
-label.required::after { 
+label.required::after {
     content: "*";
 }
 
@@ -56,7 +63,7 @@ input[type='text'],input[type='password'],input[type='email'],textarea {
     border-radius:3px;
 }
 
-input:focus,textarea:focus { 
+input:focus,textarea:focus {
     background-color:lighten(@yellow,40%);
     border:1px solid @gray;
 }
@@ -74,9 +81,9 @@ label.radio,label.checkbox {
 
 input[type='radio'],input[type='checkbox'] {
     margin-right:5px;
-    
+
     /* Next two lines prevent misalignment with text */
-    vertical-align: middle; 
+    vertical-align: middle;
     margin-top: -2px;
 }
 
