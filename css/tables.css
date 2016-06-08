@@ -1,3 +1,18 @@
+.highlight {
+  background-color: #ffe787;
+}
+.serif {
+  font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+.sans {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.heading {
+  font-family: Karla;
+}
+.code {
+  font-family: Consolas, courier, monospace;
+}
 table,
 th,
 td {
@@ -11,13 +26,13 @@ table {
   display: table;
 }
 table.bordered tr {
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid #aaaaaa;
 }
 table.striped tbody tr:nth-child(odd) {
-  background-color: #333;
+  background-color: #dddddd;
 }
 table.hoverable tbody tr:hover {
-  background-color: #333;
+  background-color: #dddddd;
 }
 table.centered thead tr th,
 table.centered tbody tr td {
@@ -28,9 +43,8 @@ thead {
 }
 td,
 th {
-  padding: 15px 5px;
+  padding: 5px 5px;
   display: table-cell;
   text-align: left;
   vertical-align: middle;
-  border-radius: 2px;
 }
