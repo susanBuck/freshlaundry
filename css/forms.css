@@ -53,7 +53,31 @@ legend {
 label.required::after {
   content: "*";
 }
+.feedback {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  letter-spacing: .5px;
+  padding-top: 2px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+div.error {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  letter-spacing: .5px;
+  padding-top: 2px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #b71c1c;
+}
+div.success {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  letter-spacing: .5px;
+  padding-top: 2px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #2ecc40;
+}
 label {
+  margin-top: 20px;
   display: block;
   font-size: 12px;
   font-size: 1.2rem;
@@ -61,6 +85,9 @@ label {
   color: #aaaaaa;
   font-weight: bold;
   text-transform: uppercase;
+}
+label.error {
+  color: #b71c1c;
 }
 /* Text inputs and text areas */
 input[type='text'],
@@ -75,10 +102,18 @@ textarea {
   padding: 5px;
   border-radius: 3px;
 }
-input:focus,
+input[type='text']:focus,
+input[type='password']:focus,
+input[type='email']:focus,
 textarea:focus {
-  background-color: #ffffff;
+  background-color: #fffbe1;
   border: 1px solid #aaaaaa;
+}
+input[type='text'].error,
+input[type='password'].error,
+input[type='email'].error,
+textarea.error {
+  border-left: 3px solid #b71c1c;
 }
 /* Radios and checkboxes */
 label.radio,

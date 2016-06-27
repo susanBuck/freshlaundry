@@ -43,7 +43,26 @@ label.required::after {
     content: "*";
 }
 
+.feedback {
+    font-family:@sans;
+    letter-spacing:.5px;
+    padding-top:2px;
+    font-size:1.4rem;
+    font-weight:bold;
+}
+
+div.error {
+    .feedback;
+    color:@red;
+}
+
+div.success {
+    .feedback;
+    color:@green;
+}
+
 label {
+    margin-top:20px;
     display:block;
     font-size:12px;
     font-size:1.2rem;
@@ -51,21 +70,30 @@ label {
     color:@gray;
     font-weight:bold;
     text-transform:uppercase;
+
+    &.error {
+        color:@red;
+    }
 }
 
 /* Text inputs and text areas */
-input[type='text'],input[type='password'],input[type='email'],textarea {
+input[type='text'], input[type='password'], input[type='email'], textarea {
     width:200px;
     border:1px solid @silver;
     display:block;
     outline: none !important; /* Kill default fuzzy blue outline on focus */
     padding:5px;
     border-radius:3px;
-}
 
-input:focus,textarea:focus {
-    background-color:lighten(@yellow,40%);
-    border:1px solid @gray;
+    &:focus {
+        background-color:lighten(@yellow,30%);
+        border:1px solid @gray;
+    }
+
+    &.error {
+        border-left:3px solid @red;
+    }
+
 }
 
 /* Radios and checkboxes */
