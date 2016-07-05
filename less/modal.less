@@ -8,11 +8,10 @@
 #fl-modal {
     position:fixed;
     top:50px;
-    z-index:999; 
-    
+    z-index:999;
 }
 
-/* Right now we only have one modal style, but if we add 
+/* Right now we only have one modal style, but if we add
 more down the road, we'll identify them by classes like this */
 .fl-modal-default {
     width:50%;
@@ -24,11 +23,18 @@ more down the road, we'll identify them by classes like this */
 }
 
 #fl-modal-inner {
-    padding:10px; 
+    padding:10px;
     padding-top:40px;
     width:100%;
     height:100%;
     overflow-y:scroll;
+}
+
+@media(max-width: 320px) {
+    .fl-modal-default {
+        border:1px solid red;
+        width:85%;
+    }
 }
 
 /* Close Bar */

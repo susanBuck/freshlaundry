@@ -93,7 +93,7 @@ var Freshlaundry = {
         /* Modal bar does not exist... Add it */
         else {
 
-            // Create the 100x100 background - this makes it so we can click off the bar to close it
+            // Create the 100%x100% background - this makes it so we can click off the bar to close it
             var background = "<div class='fl-modal-background'></div>";
             $('body').append(background);
 
@@ -108,7 +108,7 @@ var Freshlaundry = {
             $('body').append(modal);
 
             // Close functionality
-            $('#fl-modal, .fl-modal-background, #fl-modal-close').click(function() {
+            $('.fl-modal-background, #fl-modal-close i').click(function() {
                 $('#fl-modal, .fl-modal-background').hide();
             });
 
