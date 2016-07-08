@@ -529,6 +529,9 @@ ol {
   margin: 0;
   font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
 }
+p + p {
+  margin-top: 10px;
+}
 /*
 u = underline
 g = greyscale
