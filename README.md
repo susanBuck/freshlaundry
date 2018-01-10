@@ -9,10 +9,11 @@ Then link `freshlaundry/dist/freshlaundry.css` and `freshlaundry/dist/freshlaund
 ## Editing freshlaundry
 Edit files in `/src/less` and/or `/src/js`
 
-Run `npm run dev` 
+Run `npm run watch` 
 
 
 ## Usage
+See `/demo`
 
 ### Notifybar
 ```js
