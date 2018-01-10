@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>freshlaundry demo</title>
+
+    <link rel='stylesheet' href='/dist/freshlaundry.css'>
+    <link rel='stylesheet' href='demo.css'>
+    <link rel='stylesheet' href='/node_modules/font-awesome/css/font-awesome.min.css'>
+
+    <link href='http://fonts.googleapis.com/css?family=Karla:700,400' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+<menu>
+    <h1>freshlaundry demo</h1>
+</menu>
+
+<div id='layout-wrapper'>
+
+    <section>
+        <h2>Notes</h2>
+        <ul>
+            <li><a href='https://github.com/susanBuck/freshlaundry'><i class='fa fa-github'></i> github.com/susanBuck/freshlaundry</a>
+            <li>View source to see specifics of how different elements are coded.</li>
+        </ul>
+    </section>
+
+    <section>
+
+        <h2>Notify Bar</h2>
+
+        <ul>
+            <li><a href='javascript:void(0)' onClick='Freshlaundry.notifybar("This is a default message","default")'>Default</a>
+            <li><a href='javascript:void(0)'
+                   onClick='Freshlaundry.notifybar("This is an error message","error")'>Error</a>
+            <li><a href='javascript:void(0)' onClick='Freshlaundry.notifybar("This is a success message","success")'>Success</a>
+            <li><a href='javascript:void(0)' onClick='Freshlaundry.notifybar("This is a warning message","warning")'>Warning</a>
+        </ul>
+
+    </section>
+
+    <section>
+
+        <h2>Modal</h2>
+
+        <div class='fl-modal-content'>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in pulvinar libero. Pellentesque
+                habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in pulvinar libero. Pellentesque
+                habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in pulvinar libero. Pellentesque
+                habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in pulvinar libero. Pellentesque
+                habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in pulvinar libero. Pellentesque
+                habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            </p>
+        </div>
+
+        <ul>
+            <li><a href='javascript:void(0)' class='u' onClick='Freshlaundry.modal("Basic example")'>Basic example</a>
+            <li><a href='javascript:void(0)' class='u' onClick='Freshlaundry.modal($(".fl-modal-content").html())'>With
+                more content</a>
+            <li><a href='javascript:void(0)' class='u'
+                   onClick='Freshlaundry.modal($(".fl-modal-content").html(),"sampleModalClass")'>With a custom
+                class</a>
+
+            </li>
+        </ul>
+
+    </section>
+
+    <section id='buttons'>
+        <h2>Buttons</h2>
+
+        <button class='small'>Small Button</button>
+        <button>Default Button</button>
+        <button class='large'>Large Button</button>
+
+        <input type='submit' value='Submit button'>
+
+        <a href='javascript:void(0)' class='button'>Link button</a>
+
+        <button class='green'>Green button</button>
+
+        <a href='javascript:void(0)' class='button green'>Green link button</a>
+
+        <h2>Ajax Buttons</h2>
+
+        <button class='small ajax-loading' id='ajax-button1'>Ajax Button</button>
+        <button class='medium ajax-loading' id='ajax-button2'>Ajax Button</button>
+        <button class='large ajax-loading' id='ajax-button3'>Ajax Button</button>
+
+        <ol>
+            <li>Add the class `ajax-loading` to the button</li>
+            <li>Turn on with `Freshlaundry.loadingButton(el,true)`</li>
+            <li>Turn off with `Freshlaundry.loadingButton(el,false)`</li>
+        </ol>
+
+    </section>
+
+    <section>
+        <h2>Colors</h2>
+        <div id='colors'></div>
+    </section>
+
+    <section>
+        <h2>Fonts</h2>
+        <p class='font heading'>.heading: </p>
+        <p class='font serif'>.serif: </p>
+        <p class='font sans'>.sans: </p>
+        <p class='font code'>.code: </p>
+    </section>
+
+    <section>
+        <h2>Typography</h2>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+
+        <h2>Paragraph</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis vulputate orci, et placerat orci
+            porttitor id. Suspendisse semper bibendum eleifend. Nullam gravida tempor elit, et fermentum urna commodo
+            nec. Vivamus venenatis orci dui, in suscipit magna laoreet id. Donec et erat libero. Phasellus viverra enim
+            vitae justo ultricies, vitae volutpat enim elementum. Duis eleifend risus eget porttitor congue. Maecenas et
+            tortor eget mauris condimentum maximus et non ante. Sed eleifend molestie magna vel tincidunt. Integer
+            viverra sollicitudin lectus facilisis lobortis.
+        </p>
+
+        <h2>Links</h2>
+        <p>
+            There are 5 different link styles with these options: underline/no-underline, color/black, bold/regular.
+        </p>
+
+        <p>
+            The styles are indicated by a single letter class, where <code>n = no underline (aka
+            &ldquo;naked&rdquo;)</code>, <code>g = grayscale</code>, <code>b = bold</code>, <code>o = outline</code> .
+        </p>
+
+        <h3>Example combinations:</h3>
+
+        <div class='link-example'>
+            <a href='#' class=''>(Default) Colored link with underline</a><br>
+            Use in paragraphs when the link is important and it's likely the user will need/want to click it.
+            <code>
+            <pre>
+            &lt;a href='#'>Foobar&lt;/a>
+            </pre>
+            </code>
+        </div>
+
+        <div class='link-example'>
+            <a href='#' class='n'>Colored link without underline</a><br>
+            Use in menus, footers and other "interface" elements.
+
+            <code>
+            <pre>
+            &lt;a href='#' class='n'>Foobar&lt;/a>
+            </pre>
+            </code>
+        </div>
+
+        <div class='link-example'>
+            <a href='#' class='o'>Outline link</a><br><br>
+            Creates a button with a outline, giving it a button-look. Use in interface when the action is important.
+
+            <code>
+            <pre>
+            &lt;a href='#' class='o'>Foobar&lt;/a>
+            </pre>
+            </code>
+        </div>
+
+        <div class='link-example'>
+            <a href='#' class='g'>Grey link</a><br>
+            Use in paragraphs when the link is not important or essential to the content. For example, a courtesy link
+            to another site.
+
+            <code>
+            <pre>
+            &lt;a href='#' class='g'>Foobar&lt;/a>
+            </pre>
+            </code>
+        </div>
+
+        <div class='link-example'>
+            <a href='#' class='b g'>Bold link</a><br>
+            Add <code>b</code> to any of the above combinations for a bold link.
+
+            <code>
+            <pre>
+            &lt;a href='#' class='b g'>Foobar&lt;/a>
+            </pre>
+            </code>
+        </div>
+
+        <h2>Blockquote</h2>
+        <blockquote>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in pulvinar libero. Pellentesque habitant
+            morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        </blockquote>
+
+        <h2>Short list</h2>
+        <ul>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Lorem ipsum dolor sit amet</li>
+        </ul>
+
+        <h2>Long list</h2>
+        <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis vulputate orci, et placerat orci
+                porttitor id. Suspendisse semper bibendum eleifend. Nullam gravida tempor elit, et fermentum urna
+                commodo nec.
+            </li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis vulputate orci, et placerat orci
+                porttitor id. Suspendisse semper bibendum eleifend. Nullam gravida tempor elit, et fermentum urna
+                commodo nec.
+            </li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis vulputate orci, et placerat orci
+                porttitor id. Suspendisse semper bibendum eleifend. Nullam gravida tempor elit, et fermentum urna
+                commodo nec.
+            </li>
+        </ul>
+
+    </section>
+
+    <section>
+
+        <h2>Forms</h2>
+
+        <fieldset>
+            <label class='required' for='textInput'>Text input</label>
+            <input type='text' name='textInput' id='textInput'>
+            <span class="fine-print">Some help text.</span>
+        </fieldset>
+
+        <fieldset>
+            <label for='radio'>Choose one</label>
+            <label class='radio'><input type='radio' name='radio'>Yes</label>
+            <label class='radio'><input type='radio' name='radio'>No</label>
+        </fieldset>
+
+        <fieldset>
+            <label for='checkbox'>Choose</label>
+            <label class='checkbox'><input type='checkbox' name='radio'>Yes</label>
+            <label class='checkbox'><input type='checkbox' name='radio'>No</label>
+        </fieldset>
+
+        <fieldset>
+            <label for='textarea'>Description</label>
+            <textarea id='textarea'></textarea>
+        </fieldset>
+
+        <input type='submit' value='Submit'>
+
+        <ul>
+            <li>Indicate a field is required by adding the class "required" to its label.
+            <li>Wrap fields and their labels in &lt;fieldset>s
+            <li>Add the class "radio" or "checkbox" to labels for checkboxes/radios so they don't have the typical label
+                styles.
+            <li>Add the class "fine-print" to a span or other element below a form field to style per-field help text.
+        </ul>
+
+        <section>
+
+            <section>
+                <h2>Tables</h2>
+
+                <table>
+                    <thead>
+                    <tr>
+                        <th data-field="id">Name</th>
+                        <th data-field="name">Item Name</th>
+                        <th data-field="price">Item Price</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td>Alvin</td>
+                        <td>Eclair</td>
+                        <td>$0.87</td>
+                    </tr>
+                    <tr>
+                        <td>Alan</td>
+                        <td>Jellybean</td>
+                        <td>$3.76</td>
+                    </tr>
+                    <tr>
+                        <td>Jonathan</td>
+                        <td>Lollipop</td>
+                        <td>$7.00</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+
+</div> <!-- /.layout-wrapper -->
+
+<footer>
+    Footer
+</footer>
+
+<script src='/node_modules/jquery/dist/jquery.js'></script>
+<script src='/dist/freshlaundry.js'></script>
+<script src='/demo/demo.js'></script>
+
+</body>
+</html>

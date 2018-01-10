@@ -1,0 +1,43 @@
+section {
+    margin-bottom: 50px;
+}
+.color {
+    width: 300px;
+    height: 20px;
+    display: inline-block;
+}
+.color-label,
+.color-text {
+    display: inline-block;
+    font-family: Consolas;
+    height: 20px;
+}
+.color-label {
+    width: 250px;
+}
+.color-text {
+    width: 150px;
+}
+.google-font {
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+/* Overwrite default centered container with a responsive 100% */
+#layout-wrapper {
+    width: 100%;
+    padding: 20px;
+}
+/* Make buttons stack */
+#buttons button,
+#buttons input {
+    margin-top: 10px;
+    display: block;
+}
+.sampleModalClass {
+    width: 50%;
+    height: 50%;
+    background-color: red;
+}
+.link-example {
+    margin-bottom: 20px;
+}
