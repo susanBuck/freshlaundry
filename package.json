@@ -1,4 +1,6 @@
 {
+  "name": "freshlaundry",
+  "version": "1",
   "devDependencies": {
     "gulp": "^3.8.10",
     "gulp-less": "^2.0.1",
