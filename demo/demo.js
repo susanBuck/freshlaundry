@@ -1,3 +1,70 @@
+/*
+* Setup
+*/
+// Instantiate freshlaundry, setting `demo` as the namespace
+fl = new fl('demo');
+
+// Create a `demo` namespace with a variable `environment`
+// Mimics what we do in a Laravel app
+window.demo = {};
+demo.environment = 'local';
+
+// Attach some mimic'd server errors to the window
+demo.errors = {'birthDate' : 'Server says this is bad.'};
+
+/*
+* Test some fl.util functionality
+*/
+fl.util.console(data = demo.environment, label = 'Environment');
+
+
+/*
+* Setup validation on form
+*/
+fl.validate.attach($('#demo'), true);
+
+
+// Demo notify bars
+$('.demoNotifyBar').click(function() {
+    var type = $(this).html();
+    fl.widget.notifyBar('This is a ' + type + ' notify bar', type);
+});
+
+
+// Demo modals
+$('#demoBasicModal').click(function() {
+    fl.widget.modal('Basic example');
+});
+
+$('#demoMoreContentModal').click(function() {
+    var content = $(".fl-modal-content").html();
+    fl.widget.modal(content);
+});
+
+$('#demoCustomClassModal').click(function() {
+    var content = $(".fl-modal-content").html();
+    fl.widget.modal('Example with a custom class', 'sampleModalClass');
+});
+
+
+// Demo ajax buttons
+$('.ajaxButtonDemo').click(function () {
+
+    el = $(this);
+
+    fl.ajax.toggleButton(el);
+
+    // Demo turning off after 1 second
+    setTimeout(function () {
+        fl.ajax.toggleButton(el, false);
+    }, 1000);
+
+});
+
+
+/*
+Programmatically build some of the demo elements
+ */
 palette = {
     primary: 'FF4b33',
     secondary: 'AAAAAA'
@@ -40,16 +107,4 @@ $('#colors').html(content)
 
 $('.font').each(function () {
     $(this).append($(this).css('font-family'));
-});
-
-$('#ajax-button1,#ajax-button2,#ajax-button3').click(function () {
-
-    el = $(this);
-
-    Freshlaundry.loadingButton(el);
-
-    setTimeout(function () {
-        Freshlaundry.loadingButton(el, false);
-    }, 1000);
-
 });

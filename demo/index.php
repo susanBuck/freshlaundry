@@ -25,26 +25,60 @@
     <section>
         <h2>Notes</h2>
         <ul>
-            <li><a href='https://github.com/susanBuck/freshlaundry'><i class='fa fa-github'></i> github.com/susanBuck/freshlaundry</a>
+            <li><a href='https://github.com/susanBuck/freshlaundry'><i class='fa fa-github'></i>
+                github.com/susanBuck/freshlaundry</a>
             <li>View source to see specifics of how different elements are coded.</li>
         </ul>
     </section>
 
     <section>
 
-        <h2>Notify Bar</h2>
+        <h1>Validate</h1>
+        <form id='demo'>
 
-        <ul>
-            <li><a href='javascript:void(0)' onClick='Freshlaundry.notifybar("This is a default message","default")'>Default</a>
-            <li><a href='javascript:void(0)'
-                   onClick='Freshlaundry.notifybar("This is an error message","error")'>Error</a>
-            <li><a href='javascript:void(0)' onClick='Freshlaundry.notifybar("This is a success message","success")'>Success</a>
-            <li><a href='javascript:void(0)' onClick='Freshlaundry.notifybar("This is a warning message","warning")'>Warning</a>
-        </ul>
+            <fieldset>
+                <label for='required'>server error</label>
+                <input type='text' name='birthDate' value=''>
+            </fieldset>
 
+            <fieldset>
+                <label for='required'>required</label>
+                <input type='text' name='required' data-rules='required' value='abc'>
+            </fieldset>
+
+            <fieldset>
+                <label for='email'>email</label>
+                <input type='email' name='email' data-rules='email' value='test@gmail.com'>
+            </fieldset>
+
+            <fieldset>
+                <label for='alphaNum'>alphaNum</label>
+                <input type='text' name='alphaNum' data-rules='alphaNum' placeholder='abc123'>
+            </fieldset>
+
+            <fieldset>
+                <label for='creditCard'>creditCard</label>
+                <input type='text' name='creditCard' data-rules='creditCard' placeholder='creditCard'
+                       value='4444444444444444'>
+            </fieldset>
+
+            <button>Submit</button>
+        </form>
     </section>
 
     <section>
+
+        <h1>Widget</h1>
+
+        <h2>Notify Bar</h2>
+
+        <ul>
+            <?php $notifyBarTypes = ['default', 'warning', 'success', 'error']; ?>
+
+            <?php foreach($notifyBarTypes as $type): ?>
+                <li><a href='javascript:void(0)' class='demoNotifyBar'><?=$type?></a>
+            <?php endforeach; ?>
+        </ul>
 
         <h2>Modal</h2>
 
@@ -72,16 +106,15 @@
         </div>
 
         <ul>
-            <li><a href='javascript:void(0)' class='u' onClick='Freshlaundry.modal("Basic example")'>Basic example</a>
-            <li><a href='javascript:void(0)' class='u' onClick='Freshlaundry.modal($(".fl-modal-content").html())'>With
-                more content</a>
-            <li><a href='javascript:void(0)' class='u'
-                   onClick='Freshlaundry.modal($(".fl-modal-content").html(),"sampleModalClass")'>With a custom
-                class</a>
-
-            </li>
+            <li><a href='javascript:void(0)' class='u' id='demoBasicModal'>Basic example</a>
+            <li><a href='javascript:void(0)' class='u' id='demoMoreContentModal'>With more content</a>
+            <li><a href='javascript:void(0)' class='u' id='demoCustomClassModal'>With a custom class</a>
         </ul>
 
+    </section>
+
+    <section id='util'>
+        <h2>Util.js</h2>
     </section>
 
     <section id='buttons'>
@@ -101,16 +134,9 @@
 
         <h2>Ajax Buttons</h2>
 
-        <button class='small ajax-loading' id='ajax-button1'>Ajax Button</button>
-        <button class='medium ajax-loading' id='ajax-button2'>Ajax Button</button>
-        <button class='large ajax-loading' id='ajax-button3'>Ajax Button</button>
-
-        <ol>
-            <li>Add the class `ajax-loading` to the button</li>
-            <li>Turn on with `Freshlaundry.loadingButton(el,true)`</li>
-            <li>Turn off with `Freshlaundry.loadingButton(el,false)`</li>
-        </ol>
-
+        <button class='small ajax-loading ajaxButtonDemo'>Small ajax loading button</button>
+        <button class='medium ajax-loading ajaxButtonDemo'>Medium ajax loading button</button>
+        <button class='large ajax-loading ajaxButtonDemo'>Large ajax loading button</button>
     </section>
 
     <section>

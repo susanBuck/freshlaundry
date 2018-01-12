@@ -8,8 +8,10 @@ mix.less('src/less/freshlaundry.less', 'dist/freshlaundry.css');
 
 // Concatenate all .js files into one
 mix.scripts([
-    'src/js/common.js',
-    'src/js/freshlaundry.js',
-    'src/js/retina.js'
+    'src/js/Validate.js',
+    'src/js/Ajax.js',
+    'src/js/Util.js',
+    'src/js/Widget.js',
+    'src/js/Freshlaundry.js' // Has to come last
 ], 'dist/freshlaundry.js');
 

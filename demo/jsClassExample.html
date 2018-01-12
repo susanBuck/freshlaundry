@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript "Class" example</title>
+    <meta charset='utf-8'>
+<body>
+
+<div id='results'></div>
+
+<script>
+    // Our "Class" called User
+    // Uses a "functional class pattern" (https://javascript.info/class-patterns#functional-class-pattern)
+    function User(name, birthday, el) {
+
+        /**
+         * Private property
+         */
+        var target = el; // internal only
+
+
+        /**
+        * Sort-of Public property
+        * Can only be used when invoked via the instantiated User object
+        * Sort-of public because it can't be invoked from within User
+        */
+        this.target = el; // external only
+
+
+        /**
+        * Truly Public property
+        */
+        var target = el; // internal
+        this.target = target; // external
+
+        // Alternative to the above - create a getter method to allow public access to private property
+        this.getTarget = function() {
+            return target;
+        }
+
+
+        /**
+         * Private method
+         * Can only be used from within User
+         */
+        function calcAge() {
+            return new Date().getFullYear() - birthday.getFullYear();
+        }
+
+        /*
+         * Sort-of Public method
+         * Can only be used when invoked via the instantiated User object
+         * Sort-of public because it can't be invoked from within User
+         */
+        this.sayHi = function () {
+            message = 'Hi ' + name + '! You are ' + calcAge() + '.';
+            target.innerHTML = message;
+            changeColor('orange');
+            console.log('Target from within sayHi: ' + target);
+        };
+
+        /**
+         * Truly Public method
+         * Can be used from within User and/or when invoked via the instantiated User object
+         */
+        // Have to first make it private so it's usable w/in User
+        function changeColor(color) {
+            target.style.backgroundColor = color;
+            console.log('Target from within changeColor: ' + target);
+        }
+
+        // Then create a @public version that invokes the @private version
+        this.changeColor = function (color) {
+            return changeColor(color)
+        }
+    }
+</script>
+
+<script>
+    // Test
+    var el = document.getElementById('results');
+    let user = new User('Caitlin', new Date(1998, 10, 28), el);
+
+    user.changeColor('green');
+    user.sayHi();
+
+    console.log('Target from outside class: ' + user.target);
+    console.log('Target via User.getTarget: ' + user.getTarget());
+
+</script>
+
+</body>
+</html>
