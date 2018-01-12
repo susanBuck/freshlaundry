@@ -392,8 +392,8 @@ textarea {
 /*
 Basic page structure:
 <body>
-    <nav></nav>
-    <div class='layout-wrapper'>
+    <menu></menu>
+    <div id='layout-wrapper'>
         This will default to centered jello; overwrite on individual pages if you want a full layout
     </div>
     <footer></footer>
@@ -823,7 +823,7 @@ label {
   font-size: 12px;
   font-size: 1.2rem;
   letter-spacing: 1px;
-  color: #aaa;
+  color: #111;
   font-weight: bold;
   text-transform: uppercase;
 }
