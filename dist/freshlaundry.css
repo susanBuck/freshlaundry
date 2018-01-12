@@ -791,7 +791,7 @@ legend {
   font-weight: bold;
 }
 /* Labels */
-label.required::after {
+label.required::before {
   content: "*";
 }
 .feedback {
