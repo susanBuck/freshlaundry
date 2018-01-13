@@ -109,10 +109,9 @@ function Validate() {
         el.removeClass('error');
 
         if (rules) {
-            rules = rules.split(',');
-
+            rules = rules.split('|');
             $.each(rules, function (index, rule) {
-                //console.log('Field name:' + name + '; Rule:' + rule + '; Value:' + value);
+                console.log('Field name:' + name + '; Rule:' + rule + '; Value:' + value);
                 validators[rule](value, el);
             });
         }
@@ -194,7 +193,7 @@ function Validate() {
      * @param rule
      */
     // Make public
-    this.error = function () {
+    this.error = function (message, el, rule) {
         return error(message, el, rule);
     }
 
@@ -214,7 +213,7 @@ function Validate() {
 
         // Add error message after the field;
         // The check for 0 is making sure this error is not already being displayed
-        if (errorEl.length == 0 && existingErrorEls.length == 0) {
+        if (errorEl.length === 0 && existingErrorEls.length === 0) {
             var errorElContent = "<div class='error errors " + errorClass + "' id='" + errorId + "'>" + message + "</div>";
             el.after(errorElContent);
         }
@@ -313,7 +312,7 @@ function Validate() {
 
             var valid = false
 
-            //spaces and dashes may be valid characters, but must be stripped to calculate the checksum.
+            // Spaces and dashes may be valid characters, but must be stripped to calculate the checksum.
             var cardNumber = value.replace(/ +/g, '').replace(/-+/g, '');
             var numDigits = cardNumber.length;
 

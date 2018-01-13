@@ -37,29 +37,46 @@
         <form id='demo'>
 
             <fieldset>
-                <label for='required'>server error</label>
-                <input type='text' name='birthDate' value=''>
+                <label for='required'>City</label>
+                <span class='fine-print'>server error</span>
+                <input type='text' name='city' value=''>
+
             </fieldset>
 
             <fieldset>
-                <label for='required'>required</label>
-                <input type='text' name='required' data-rules='required' value='abc'>
+                <label for='required'>State</label>
+                <span class='fine-print'>manual error via JS</span>
+                <input type='text' name='state' value=''>
             </fieldset>
 
             <fieldset>
-                <label for='email'>email</label>
+                <label for='firstName' class='required'>First name</label>
+                <span class='fine-print'>rule: required</span>
+                <input type='text' name='firstName' data-rules='required' value='abc'>
+            </fieldset>
+
+            <fieldset>
+                <label for='email'>Email</label>
+                <span class='fine-print'>rule: email</span>
                 <input type='email' name='email' data-rules='email' value='test@gmail.com'>
             </fieldset>
 
             <fieldset>
-                <label for='alphaNum'>alphaNum</label>
-                <input type='text' name='alphaNum' data-rules='alphaNum' placeholder='abc123'>
+                <label for='alphaNum'>Username</label>
+                <span class='fine-print'>rule: alphaNum</span>
+                <input type='text' name='username' data-rules='alphaNum' placeholder='abc123'>
             </fieldset>
 
             <fieldset>
-                <label for='creditCard'>creditCard</label>
-                <input type='text' name='creditCard' data-rules='creditCard' placeholder='creditCard'
-                       value='4444444444444444'>
+                <label for='creditCard'>Credit card</label>
+                <span class='fine-print'>rule: creditCard</span>
+                <input type='text' name='creditCard' data-rules='creditCard' placeholder='creditCard' value='4242424242424242'>
+            </fieldset>
+
+            <fieldset>
+                <label for='creditCard'>Slug</label>
+                <span class='fine-print'>rules: required|alphaNum</span>
+                <input type='text' name='slug' data-rules='required|alphaNum'>
             </fieldset>
 
             <button>Submit</button>

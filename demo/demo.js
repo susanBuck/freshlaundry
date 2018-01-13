@@ -9,29 +9,35 @@ fl = new fl('demo');
 window.demo = {};
 demo.environment = 'local';
 
-// Attach some mimic'd server errors to the window
-demo.errors = {'birthDate' : 'Server says this is bad.'};
 
 /*
-* Test some fl.util functionality
+* Util
 */
 fl.util.console(data = demo.environment, label = 'Environment');
 
 
 /*
-* Setup validation on form
+* Validate
 */
+// Attach some mimic'd server errors to the window
+demo.errors = {'city' : 'Server says this is bad.'};
+
+// Attach the validator to the form
 fl.validate.attach($('#demo'), true);
 
+// Test manually throwing an error
+fl.validate.error('JS Says this is bad', $('input[name="state"]'));
 
-// Demo notify bars
+
+
+/*
+* Widget
+ */
 $('.demoNotifyBar').click(function() {
     var type = $(this).html();
     fl.widget.notifyBar('This is a ' + type + ' notify bar', type);
 });
 
-
-// Demo modals
 $('#demoBasicModal').click(function() {
     fl.widget.modal('Basic example');
 });
@@ -47,7 +53,9 @@ $('#demoCustomClassModal').click(function() {
 });
 
 
-// Demo ajax buttons
+/*
+* Ajax
+ */
 $('.ajaxButtonDemo').click(function () {
 
     el = $(this);
@@ -64,6 +72,7 @@ $('.ajaxButtonDemo').click(function () {
 
 /*
 Programmatically build some of the demo elements
+TODO: Convert to PHP now that demo is a PHP file instead of HTML
  */
 palette = {
     primary: 'FF4b33',
