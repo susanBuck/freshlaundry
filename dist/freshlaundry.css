@@ -821,7 +821,7 @@ label.error {
   color: #B71C1C;
 }
 label.success {
-  color: green;
+  color: #111;
 }
 /* Text inputs and text areas */
 input[type='text'],
