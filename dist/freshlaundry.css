@@ -550,11 +550,11 @@ a:visited,
 a:hover,
 a:active {
   text-decoration: none;
-  color: #B60D34;
+  color: #00A89B;
   font-weight: regular;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: #B60D34;
+  border-bottom-color: #00A89B;
 }
 a:link.n,
 a:visited.n,
@@ -579,7 +579,7 @@ a:link.o,
 a:visited.o,
 a:hover.o,
 a:active.o {
-  border: 2px solid #B60D34;
+  border: 2px solid #00A89B;
   padding: 10px;
   border-radius: 25px;
 }
@@ -588,15 +588,15 @@ a:visited.o:hover,
 a:hover.o:hover,
 a:active.o:hover {
   background-color: #f7f7f7;
-  border-color: #860a26;
-  color: #860a26;
+  border-color: #00756c;
+  color: #00756c;
 }
 a:link:hover,
 a:visited:hover,
 a:hover:hover,
 a:active:hover {
-  color: #860a26;
-  border-bottom-color: #860a26;
+  color: #00756c;
+  border-bottom-color: #00756c;
 }
 /* Lists */
 ul,
@@ -642,7 +642,7 @@ button,
 input[type=submit],
 input[type=button] {
   cursor: pointer;
-  background-color: #B60D34;
+  background-color: #00A89B;
   color: white;
   letter-spacing: .15rem;
   text-decoration: none;
@@ -697,7 +697,7 @@ a.button:hover,
 button:hover,
 input[type=submit]:hover,
 input[type=button]:hover {
-  background-color: #920a2a;
+  background-color: #00867c;
   color: white;
 }
 .button:active,
@@ -705,7 +705,7 @@ a.button:active,
 button:active,
 input[type=submit]:active,
 input[type=button]:active {
-  background-color: #7f0924;
+  background-color: #00766d;
   color: white;
 }
 .button.green,
