@@ -17,7 +17,7 @@ function Validate() {
         if (errors) {
             $.each(errors, function (index, message) {
                 el = $('input[name="' + index + '"]');
-                error(message, el);
+                feedback(message, el);
             });
         }
 
@@ -98,20 +98,19 @@ function Validate() {
     }
     function validate(el) {
 
+        var id = el.attr('id');
+        var label = $('label[for=' + id + ']');
         var value = el.val();
         var name = el.attr('name');
         var rules = el.data('rules');
-        var existingErrors = getExistingErrors(el);
 
-        // Clean slate - remove any errors and error styling
-        existingErrors.remove();
-        $('label[for=' + el.attr('id') + ']').removeClass('error');
-        el.removeClass('error');
-
+        // Go through the rules we need to validate
         if (rules) {
             rules = rules.split('|');
             $.each(rules, function (index, rule) {
                 console.log('Field name:' + name + '; Rule:' + rule + '; Value:' + value);
+
+                // Invoke the validation method for this rule
                 validators[rule](value, el);
             });
         }
@@ -135,87 +134,51 @@ function Validate() {
 
 
     /**
-     * @private
-     * @param el
-     * @returns {*|jQuery|HTMLElement}
-     */
-    function getExistingErrors(el) {
-        errorClass = getErrorMessageClass(el);
-        return $('.' + errorClass);
-    }
-
-
-    /**
+     * Helper method that helps "variablize" the id given to the feedback divs
      * @private
      * @param el
      * @param rule
      * @returns {string}
      */
-    function getErrorMessageId(el, rule) {
-        return el.attr('name') + '-' + rule + '-error';
+    function getFeedbackId(el) {
+        return el.attr('name') + '-feedback';
     }
 
 
     /**
-     * @private
-     * @param el
-     * @returns {string}
-     */
-    function getErrorMessageClass(el) {
-        return el.attr('name') + '-error';
-    }
-
-
-    /**
-     * Currently not doing anything on success, because each time it validates
-     * it clears all previous errors.
-     *
-     * But leaving because each validation does invoke success -
-     * Maybe down the road we want the option to explicitly
-     * flag a field as passed (e.g. make it green)
-     * @private
-     * @param el
-     * @param rule
-     */
+    * Display feedback for a form field
+    * Adds a feedback div right below the field, as well as style the label for the field
+    * @private
+    * @param message
+    * @param el
+    * @param type `error` (default) or `success`
+    */
     // Make public
-    this.success = function () {
-        return success(el, rule);
+    this.feedback = function (message, el, type = 'error') {
+        return feedback(message, el, type);
     }
-    function success(el, rule) {
+    function feedback(message, el, type = 'error') {
 
-    }
+        feedbackId = getFeedbackId(el);
+        feedbackEl = $('#' + feedbackId);
 
+        // Clean slate - remove any existing feedback styling on the field
+        el.removeClass('error');
+        el.removeClass('success');
 
-    /**
-     * @private
-     * @param message
-     * @param el
-     * @param rule
-     */
-    // Make public
-    this.error = function (message, el, rule) {
-        return error(message, el, rule);
-    }
+        // Clean slate - remove any existing feedback
+        feedbackEl.remove();
 
-    function error(message, el, rule) {
+        // Style the field itself
+        el.addClass(type);
 
-        name = el.attr('name');
-        errorId = getErrorMessageId(el, rule);
-        errorClass = getErrorMessageClass(el);
-        errorEl = $('#' + errorId);
-        existingErrorEls = $('.' + errorClass);
+        // Style this field's label
+        $('label[for=' + el.attr('id') + ']').addClass(type);
 
-        // Style the field itself as an error
-        el.addClass('error');
-
-        // Style this field's label as an error
-        $('label[for=' + el.attr('id') + ']').addClass('error');
-
-        // Add error message after the field;
-        // The check for 0 is making sure this error is not already being displayed
-        if (errorEl.length === 0 && existingErrorEls.length === 0) {
-            var errorElContent = "<div class='error errors " + errorClass + "' id='" + errorId + "'>" + message + "</div>";
-            el.after(errorElContent);
+        // Add feedback message after the field
+        if(message !== '') {
+            var feedbackElContent = "<div class='feedback " + type + "' id='" + feedbackId + "'>" + message + "</div>";
+            el.after(feedbackElContent);
         }
     }
 
@@ -242,11 +205,10 @@ function Validate() {
         var url = '/user/email-is-unique?email=' + value;
 
         $.getJSON(url, function (json) {
-            if (json.pass == 'True') {
-                success(el, rule);
-            }
-            else {
-                error('This email is already registered.', el, rule);
+            if (json.pass === 'True') {
+                feedback('', el, 'success');
+            } else {
+                feedback('This email is already registered.', el, 'error');
             }
         });
 
@@ -260,10 +222,11 @@ function Validate() {
 
             var rule = 'required';
 
-            if ($.trim(value).length == 0 || value == "")
-                error('This field is required.', el, rule);
-            else
-                success(el, rule);
+            if ($.trim(value).length === 0 || value === "") {
+                feedback('This field is required.', el, 'error');
+            } else {
+                feedback('', el, 'success');
+            }
         },
 
 
@@ -275,11 +238,10 @@ function Validate() {
             var rule = 'email';
 
             var re = /\S+@\S+\.\S+/;
-            if (re.test(email)) {
-                success(el, rule);
-            }
-            else {
-                error('Invalid email.', el, rule);
+            if (!re.test(email)) {
+                feedback('Invalid email.', el, rule);
+            } else {
+                feedback('', el, 'success');
             }
         },
 
@@ -293,11 +255,14 @@ function Validate() {
 
             var re = /[^a-zA-Z0-9]/;
 
-            if (re.test(value)) {
-                error('Only letters and numbers are allowed.', el, rule);
+            if (value === '') {
+                return false;
             }
-            else {
-                success(el, rule);
+
+            if (re.test(value)) {
+                feedback('Only letters and numbers are allowed.', el, 'error');
+            } else {
+                feedback('', el, 'success');
             }
 
         },
@@ -321,21 +286,20 @@ function Validate() {
                 var sum = 0, i = numDigits - 1, pos = 1, digit, luhn = new String();
                 do {
                     digit = parseInt(cardNumber.charAt(i));
-                    luhn += (pos++ % 2 == 0) ? digit * 2 : digit;
+                    luhn += (pos++ % 2 === 0) ? digit * 2 : digit;
                 } while (--i >= 0)
 
                 for (i = 0; i < luhn.length; i++) {
                     sum += parseInt(luhn.charAt(i));
                 }
-                valid = sum % 10 == 0;
+                valid = sum % 10 === 0;
             }
             if (!valid) {
-                error('Invalid credit card number.', el, rule);
+                feedback('Invalid credit card number.', el, 'error');
+            } else {
+                feedback('', el, 'success');
             }
-
         }
-
-
 }
 
 

@@ -51,14 +51,12 @@ label.required::before {
     font-weight:bold;
 }
 
-div.error {
-    .feedback;
-    color:@red;
+div.success {
+    color:@green;
 }
 
-div.success {
-    .feedback;
-    color:@green;
+div.error {;
+    color:@red;
 }
 
 label {
@@ -74,6 +72,10 @@ label {
     &.error {
         color:@red;
     }
+
+    &.success {
+        color:green;
+    }
 }
 
 /* Text inputs and text areas */
@@ -86,12 +88,16 @@ input[type='text'], input[type='password'], input[type='email'], textarea {
     border-radius:3px;
 
     &:focus {
-        background-color:lighten(@yellow,30%);
+        background-color:lighten(@yellow, 30%);
         border:1px solid @gray;
     }
 
     &.error {
         border-left:3px solid @red;
+    }
+
+    &.success {
+        border-left:3px solid @green;
     }
 
 }

@@ -25,8 +25,9 @@ demo.errors = {'city' : 'Server says this is bad.'};
 // Attach the validator to the form
 fl.validate.attach($('#demo'), true);
 
-// Test manually throwing an error
-fl.validate.error('JS Says this is bad', $('input[name="state"]'));
+// Test manually throwing error/success feedback
+fl.validate.feedback('JS says this is bad', $('input[name="state"]'));
+fl.validate.feedback('JS says this is good', $('input[name="zip"]'), 'success');
 
 
 

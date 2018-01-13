@@ -801,21 +801,11 @@ label.required::before {
   font-size: 1.4rem;
   font-weight: bold;
 }
-div.error {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  letter-spacing: .5px;
-  padding-top: 2px;
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #B71C1C;
-}
 div.success {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  letter-spacing: .5px;
-  padding-top: 2px;
-  font-size: 1.4rem;
-  font-weight: bold;
   color: #2ECC40;
+}
+div.error {
+  color: #B71C1C;
 }
 label {
   margin-top: 20px;
@@ -829,6 +819,9 @@ label {
 }
 label.error {
   color: #B71C1C;
+}
+label.success {
+  color: green;
 }
 /* Text inputs and text areas */
 input[type='text'],
@@ -855,6 +848,12 @@ input[type='password'].error,
 input[type='email'].error,
 textarea.error {
   border-left: 3px solid #B71C1C;
+}
+input[type='text'].success,
+input[type='password'].success,
+input[type='email'].success,
+textarea.success {
+  border-left: 3px solid #2ECC40;
 }
 /* Radios and checkboxes */
 label.radio,

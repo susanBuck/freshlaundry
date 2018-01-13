@@ -40,13 +40,18 @@
                 <label for='required'>City</label>
                 <span class='fine-print'>server error</span>
                 <input type='text' name='city' value=''>
-
             </fieldset>
 
             <fieldset>
                 <label for='required'>State</label>
                 <span class='fine-print'>manual error via JS</span>
                 <input type='text' name='state' value=''>
+            </fieldset>
+
+            <fieldset>
+                <label for='required'>Zip</label>
+                <span class='fine-print'>manual success via JS</span>
+                <input type='text' name='zip' value=''>
             </fieldset>
 
             <fieldset>
@@ -63,20 +68,20 @@
 
             <fieldset>
                 <label for='alphaNum'>Username</label>
-                <span class='fine-print'>rule: alphaNum</span>
+                <span class='fine-print'>rule: alphaNum. <br>This can be blank and still be valid since it's not "required"</span>
                 <input type='text' name='username' data-rules='alphaNum' placeholder='abc123'>
-            </fieldset>
-
-            <fieldset>
-                <label for='creditCard'>Credit card</label>
-                <span class='fine-print'>rule: creditCard</span>
-                <input type='text' name='creditCard' data-rules='creditCard' placeholder='creditCard' value='4242424242424242'>
             </fieldset>
 
             <fieldset>
                 <label for='creditCard'>Slug</label>
                 <span class='fine-print'>rules: required|alphaNum</span>
                 <input type='text' name='slug' data-rules='required|alphaNum'>
+            </fieldset>
+
+            <fieldset>
+                <label for='creditCard'>Credit card</label>
+                <span class='fine-print'>rule: creditCard</span>
+                <input type='text' name='creditCard' data-rules='creditCard' placeholder='creditCard' value='4242424242424242'>
             </fieldset>
 
             <button>Submit</button>
