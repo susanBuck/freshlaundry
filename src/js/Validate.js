@@ -239,7 +239,7 @@ function Validate() {
 
             var re = /\S+@\S+\.\S+/;
             if (!re.test(email)) {
-                feedback('Invalid email.', el, rule);
+                feedback('Invalid email.', el, 'error');
             } else {
                 feedback('', el, 'success');
             }
