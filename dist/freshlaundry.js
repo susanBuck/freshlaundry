@@ -108,7 +108,7 @@ function Validate() {
         if (rules) {
             rules = rules.split('|');
             $.each(rules, function (index, rule) {
-                console.log('Field name:' + name + '; Rule:' + rule + '; Value:' + value);
+                //console.log('Field name:' + name + '; Rule:' + rule + '; Value:' + value);
 
                 // Invoke the validation method for this rule
                 validators[rule](value, el);

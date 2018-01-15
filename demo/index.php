@@ -26,14 +26,48 @@
         <h2>Notes</h2>
         <ul>
             <li><a href='https://github.com/susanBuck/freshlaundry'><i class='fa fa-github'></i>
-                github.com/susanBuck/freshlaundry</a>
+                    github.com/susanBuck/freshlaundry</a>
             <li>View source to see specifics of how different elements are coded.</li>
         </ul>
     </section>
 
     <section>
 
-        <h1>Validate</h1>
+        <h2>Forms</h2>
+
+        <fieldset>
+            <label class='required' for='textInput'>Text input</label>
+            <input type='text' name='textInput' id='textInput'>
+            <span class="fine-print">Some help text.</span>
+        </fieldset>
+
+        <fieldset>
+            <label for='radio'>Choose one</label>
+            <ul class='radios'>
+                <li><input type='radio' name='radio' id='optionA'><label for='optionA'>Option A</label>
+                <li><input type='radio' name='radio' id='optionB'><label for='optionB'>Option B</label>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <label for='checkbox'>Choose</label>
+            <ul class='checkboxes'>
+                <li><input type='checkbox' name='radio' id='optionC'><label for='optionC'>Option C</label>
+                <li><input type='checkbox' name='radio' id='optionD'><label for='optionD'>Option D</label>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <label for='textarea'>Description</label>
+            <textarea id='textarea'></textarea>
+        </fieldset>
+
+        <input type='submit' value='Submit'>
+
+    </section>
+
+    <section>
+        <h1>Forms with Validation</h1>
         <form id='demo'>
 
             <fieldset>
@@ -81,7 +115,8 @@
             <fieldset>
                 <label for='creditCard'>Credit card</label>
                 <span class='fine-print'>rule: creditCard</span>
-                <input type='text' name='creditCard' data-rules='creditCard' placeholder='creditCard' value='4242424242424242'>
+                <input type='text' name='creditCard' data-rules='creditCard' placeholder='creditCard'
+                       value='4242424242424242'>
             </fieldset>
 
             <button>Submit</button>
@@ -97,9 +132,11 @@
         <ul>
             <?php $notifyBarTypes = ['default', 'warning', 'success', 'error']; ?>
 
-            <?php foreach($notifyBarTypes as $type): ?>
-                <li><a href='javascript:void(0)' class='demoNotifyBar'><?=$type?></a>
-            <?php endforeach; ?>
+            <?php foreach ($notifyBarTypes
+
+            as $type): ?>
+            <li><a href='javascript:void(0)' class='demoNotifyBar'><?= $type ?></a>
+                <?php endforeach; ?>
         </ul>
 
         <h2>Modal</h2>
@@ -200,7 +237,9 @@
 
         <p>
             The styles are indicated by a single letter class, where <code>n = no underline (aka
-            &ldquo;naked&rdquo;)</code>, <code>g = grayscale</code>, <code>b = bold</code>, <code>o = outline</code> .
+                                                                           &ldquo;naked&rdquo;)</code>,
+            <code>g = grayscale</code>, <code>b = bold</code>, <code>o = outline</code>
+            .
         </p>
 
         <h3>Example combinations:</h3>
@@ -292,75 +331,36 @@
     </section>
 
     <section>
+        <h2>Tables</h2>
 
-        <h2>Forms</h2>
+        <table>
+            <thead>
+            <tr>
+                <th data-field="id">Name</th>
+                <th data-field="name">Item Name</th>
+                <th data-field="price">Item Price</th>
+            </tr>
+            </thead>
 
-        <fieldset>
-            <label class='required' for='textInput'>Text input</label>
-            <input type='text' name='textInput' id='textInput'>
-            <span class="fine-print">Some help text.</span>
-        </fieldset>
-
-        <fieldset>
-            <label for='radio'>Choose one</label>
-            <label class='radio'><input type='radio' name='radio'>Yes</label>
-            <label class='radio'><input type='radio' name='radio'>No</label>
-        </fieldset>
-
-        <fieldset>
-            <label for='checkbox'>Choose</label>
-            <label class='checkbox'><input type='checkbox' name='radio'>Yes</label>
-            <label class='checkbox'><input type='checkbox' name='radio'>No</label>
-        </fieldset>
-
-        <fieldset>
-            <label for='textarea'>Description</label>
-            <textarea id='textarea'></textarea>
-        </fieldset>
-
-        <input type='submit' value='Submit'>
-
-        <ul>
-            <li>Indicate a field is required by adding the class "required" to its label.
-            <li>Wrap fields and their labels in &lt;fieldset>s
-            <li>Add the class "radio" or "checkbox" to labels for checkboxes/radios so they don't have the typical label
-                styles.
-            <li>Add the class "fine-print" to a span or other element below a form field to style per-field help text.
-        </ul>
-
-        <section>
-
-            <section>
-                <h2>Tables</h2>
-
-                <table>
-                    <thead>
-                    <tr>
-                        <th data-field="id">Name</th>
-                        <th data-field="name">Item Name</th>
-                        <th data-field="price">Item Price</th>
-                    </tr>
-                    </thead>
-
-                    <tbody>
-                    <tr>
-                        <td>Alvin</td>
-                        <td>Eclair</td>
-                        <td>$0.87</td>
-                    </tr>
-                    <tr>
-                        <td>Alan</td>
-                        <td>Jellybean</td>
-                        <td>$3.76</td>
-                    </tr>
-                    <tr>
-                        <td>Jonathan</td>
-                        <td>Lollipop</td>
-                        <td>$7.00</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </section>
+            <tbody>
+            <tr>
+                <td>Alvin</td>
+                <td>Eclair</td>
+                <td>$0.87</td>
+            </tr>
+            <tr>
+                <td>Alan</td>
+                <td>Jellybean</td>
+                <td>$3.76</td>
+            </tr>
+            <tr>
+                <td>Jonathan</td>
+                <td>Lollipop</td>
+                <td>$7.00</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
 
 </div> <!-- /.layout-wrapper -->
 

@@ -38,11 +38,6 @@ legend {
     font-weight: bold;
 }
 
-/* Labels */
-label.required::before {
-    content: "*";
-}
-
 .feedback {
     font-family: @sans;
     letter-spacing: .5px;
@@ -50,6 +45,17 @@ label.required::before {
     font-size: 1.4rem;
     font-weight: bold;
 }
+
+// Descriptive text under an individual field
+.fine-print {
+    font-size: 1.3rem;
+    font-family: @sans;
+    display: block;
+    margin-top: .2rem;
+    color:lighten(@black, 50%);
+    font-style: italic;
+}
+
 
 div.success {
     color: @green;
@@ -78,7 +84,13 @@ label {
     }
 }
 
-/* Text inputs and text areas */
+label.required::before {
+    content: "*";
+}
+
+/*----------------------------------------------------
+Text inputs and text areas
+-----------------------------------------------------*/
 input[type='text'], input[type='password'], input[type='email'], textarea {
     width: 200px;
     border: 1px solid @silver;
@@ -102,18 +114,9 @@ input[type='text'], input[type='password'], input[type='email'], textarea {
 
 }
 
-/* Radios and checkboxes */
-label.radio, label.checkbox {
-    color: @black;
-    margin-top: 3px;
-    margin-bottom: 5px;
-    text-transform: none;
-    font-weight: normal;
-    padding: 0;
-    font-size: 13px;
-    font-size: 1.3rem;
-}
-
+/*----------------------------------------------------
+Radios and Checkboxes
+-----------------------------------------------------*/
 input[type='radio'], input[type='checkbox'] {
     margin-right: 5px;
 
@@ -122,10 +125,31 @@ input[type='radio'], input[type='checkbox'] {
     margin-top: -2px;
 }
 
-/* Descriptive text under an individual field */
-.fine-print {
-    font-size: 1.4rem;
-    font-family: @sans;
-    display: block;
-    margin-top: .2rem;
+ul.checkboxes, ul.radios {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    // Labels directly after CHECKED radio/checkboxes should be bold
+    input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
+        font-weight: bold;
+    }
+
+    // Labels for radio/checkboxes should be styled differently typical labels.
+    li {
+        label {
+            font-family: @sans;
+            color: @black;
+            margin-top: 3px;
+            margin-bottom: 5px;
+            text-transform: none;
+            font-weight: normal;
+            padding: 0;
+            font-size: 13px;
+            font-size: 1.3rem;
+            display: inline;
+        }
+    }
 }
+
+

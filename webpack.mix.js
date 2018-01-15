@@ -12,6 +12,7 @@ mix.scripts([
     'src/js/Ajax.js',
     'src/js/Util.js',
     'src/js/Widget.js',
+    'src/js/Form.js',
     'src/js/Freshlaundry.js' // Has to come last
 ], 'dist/freshlaundry.js');
 

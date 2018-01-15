@@ -790,16 +790,20 @@ legend {
   font-family: Karla;
   font-weight: bold;
 }
-/* Labels */
-label.required::before {
-  content: "*";
-}
 .feedback {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: .5px;
   padding-top: 2px;
   font-size: 1.4rem;
   font-weight: bold;
+}
+.fine-print {
+  font-size: 1.3rem;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: block;
+  margin-top: .2rem;
+  color: #919191;
+  font-style: italic;
 }
 div.success {
   color: #2ECC40;
@@ -823,7 +827,12 @@ label.error {
 label.success {
   color: #111;
 }
-/* Text inputs and text areas */
+label.required::before {
+  content: "*";
+}
+/*----------------------------------------------------
+Text inputs and text areas
+-----------------------------------------------------*/
 input[type='text'],
 input[type='password'],
 input[type='email'],
@@ -855,9 +864,31 @@ input[type='email'].success,
 textarea.success {
   border-left: 3px solid #2ECC40;
 }
-/* Radios and checkboxes */
-label.radio,
-label.checkbox {
+/*----------------------------------------------------
+Radios and Checkboxes
+-----------------------------------------------------*/
+input[type='radio'],
+input[type='checkbox'] {
+  margin-right: 5px;
+  /* Next two lines prevent misalignment with text */
+  vertical-align: middle;
+  margin-top: -2px;
+}
+ul.checkboxes,
+ul.radios {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+ul.checkboxes input[type="radio"]:checked + label,
+ul.radios input[type="radio"]:checked + label,
+ul.checkboxes input[type="checkbox"]:checked + label,
+ul.radios input[type="checkbox"]:checked + label {
+  font-weight: bold;
+}
+ul.checkboxes li label,
+ul.radios li label {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #111;
   margin-top: 3px;
   margin-bottom: 5px;
@@ -866,20 +897,7 @@ label.checkbox {
   padding: 0;
   font-size: 13px;
   font-size: 1.3rem;
-}
-input[type='radio'],
-input[type='checkbox'] {
-  margin-right: 5px;
-  /* Next two lines prevent misalignment with text */
-  vertical-align: middle;
-  margin-top: -2px;
-}
-/* Descriptive text under an individual field */
-.fine-print {
-  font-size: 1.4rem;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  display: block;
-  margin-top: .2rem;
+  display: inline;
 }
 table,
 th,
