@@ -1,11 +1,11 @@
-    @import "colors";
+@import "colors";
 @import "fonts";
 
 /* Placeholder attribute styling */
 /* This class is imported in the following styles */
 .placeholder {
-    font-size:12px;
-    font-size:1.2rem;
+    font-size: 12px;
+    font-size: 1.2rem;
 }
 
 ::-webkit-input-placeholder {
@@ -16,7 +16,7 @@
     .placeholder;
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
+::-moz-placeholder { /* Firefox 19+ */
     .placeholder;
 }
 
@@ -25,17 +25,17 @@
 }
 
 fieldset {
-    margin-bottom:20px;
-    border:0;
-    margin-left:0;
-    padding:0;
+    margin-bottom: 20px;
+    border: 0;
+    margin-left: 0;
+    padding: 0;
 }
 
 legend {
-    font-size:20px;
-    font-size:2.0rem;
-    font-family:@heading;
-    font-weight:bold;
+    font-size: 20px;
+    font-size: 2.0rem;
+    font-family: @heading;
+    font-weight: bold;
 }
 
 /* Labels */
@@ -44,77 +44,78 @@ label.required::before {
 }
 
 .feedback {
-    font-family:@sans;
-    letter-spacing:.5px;
-    padding-top:2px;
-    font-size:1.4rem;
-    font-weight:bold;
+    font-family: @sans;
+    letter-spacing: .5px;
+    padding-top: 2px;
+    font-size: 1.4rem;
+    font-weight: bold;
 }
 
 div.success {
-    color:@green;
+    color: @green;
 }
 
 div.error {;
-    color:@red;
+    color: @red;
 }
 
 label {
-    margin-top:20px;
-    display:block;
-    font-size:12px;
-    font-size:1.2rem;
-    letter-spacing:1px;
-    color:@black;
-    font-weight:bold;
-    text-transform:uppercase;
+    margin-top: 20px;
+    display: block;
+    font-size: 12px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: @black;
+    font-weight: bold;
+    text-transform: uppercase;
 
     &.error {
-        color:@red;
+        color: @red;
     }
 
     &.success {
-        color:@black;
+        color: @black;
     }
 }
 
 /* Text inputs and text areas */
 input[type='text'], input[type='password'], input[type='email'], textarea {
-    width:200px;
-    border:1px solid @silver;
-    display:block;
+    width: 200px;
+    border: 1px solid @silver;
+    display: block;
     outline: none !important; /* Kill default fuzzy blue outline on focus */
-    padding:5px;
-    border-radius:3px;
+    padding: 5px;
+    border-radius: 3px;
 
     &:focus {
-        background-color:lighten(@yellow, 30%);
-        border:1px solid @gray;
+        background-color: lighten(@yellow, 30%);
+        border: 1px solid @gray;
     }
 
     &.error {
-        border-left:3px solid @red;
+        border-left: 3px solid @red;
     }
 
     &.success {
-        border-left:3px solid @green;
+        border-left: 3px solid @green;
     }
 
 }
 
 /* Radios and checkboxes */
-label.radio,label.checkbox {
-    color:@black;
-    margin-bottom:5px;
-    text-transform:none;
-    font-weight:normal;
-    padding:0;
-    font-size:13px;
-    font-size:1.3rem;
+label.radio, label.checkbox {
+    color: @black;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    text-transform: none;
+    font-weight: normal;
+    padding: 0;
+    font-size: 13px;
+    font-size: 1.3rem;
 }
 
-input[type='radio'],input[type='checkbox'] {
-    margin-right:5px;
+input[type='radio'], input[type='checkbox'] {
+    margin-right: 5px;
 
     /* Next two lines prevent misalignment with text */
     vertical-align: middle;

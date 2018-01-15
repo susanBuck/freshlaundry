@@ -859,6 +859,7 @@ textarea.success {
 label.radio,
 label.checkbox {
   color: #111;
+  margin-top: 3px;
   margin-bottom: 5px;
   text-transform: none;
   font-weight: normal;
