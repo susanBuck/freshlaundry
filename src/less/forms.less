@@ -54,6 +54,7 @@ legend {
     margin-top: .2rem;
     color:lighten(@black, 50%);
     font-style: italic;
+    line-height: 1.5;
 }
 
 
@@ -132,14 +133,13 @@ ul.checkboxes, ul.radios {
 
     // Labels directly after CHECKED radio/checkboxes should be bold
     input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
-        font-weight: bold;
+        font-weight:600;
     }
 
     // Labels for radio/checkboxes should be styled differently typical labels.
     li {
         label {
             font-family: @sans;
-            color: @black;
             margin-top: 3px;
             margin-bottom: 5px;
             text-transform: none;

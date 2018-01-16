@@ -804,6 +804,7 @@ legend {
   margin-top: .2rem;
   color: #919191;
   font-style: italic;
+  line-height: 1.5;
 }
 div.success {
   color: #2ECC40;
@@ -884,12 +885,11 @@ ul.checkboxes input[type="radio"]:checked + label,
 ul.radios input[type="radio"]:checked + label,
 ul.checkboxes input[type="checkbox"]:checked + label,
 ul.radios input[type="checkbox"]:checked + label {
-  font-weight: bold;
+  font-weight: 600;
 }
 ul.checkboxes li label,
 ul.radios li label {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #111;
   margin-top: 3px;
   margin-bottom: 5px;
   text-transform: none;

@@ -20,7 +20,10 @@ fl.util.console(data = demo.environment, label = 'Environment');
 * Validate
 */
 // Attach some mimic'd server errors to the window
-demo.errors = {'city' : 'Server says this is bad.'};
+demo.errors = {
+    'city' : 'Server says this is bad.',
+    'description' : 'Server says this is bad'
+};
 
 // Attach the validator to the form
 fl.validate.attach($('#demo'), true);

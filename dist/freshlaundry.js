@@ -16,7 +16,7 @@ function Validate() {
         var errors = fl.getVariable('errors');
         if (errors) {
             $.each(errors, function (index, message) {
-                el = $('input[name="' + index + '"]');
+                el = $('[name="' + index + '"]');
                 feedback(message, el);
             });
         }

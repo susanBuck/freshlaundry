@@ -119,6 +119,12 @@
                        value='4242424242424242'>
             </fieldset>
 
+            <fieldset>
+                <label for='description'>Description</label>
+                <span class='fine-print'>Validation on a textarea</span>
+                <textarea name='description' id='description'></textarea>
+            </fieldset>
+
             <button>Submit</button>
         </form>
     </section>
