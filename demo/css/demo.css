@@ -1,15 +1,24 @@
+/*----------------------------------------------------
+Define font classes
+-----------------------------------------------------*/
 .serif {
   font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
 }
 .sans {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-.heading {
-  font-family: 'Karla';
-}
 .code {
-  font-family: Consolas, courier, monospace;
+  font-family: Consolas, 'Courier New', monospace;
 }
+.heading {
+  font-family: 'Karla', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.handwriting {
+  font-family: 'Sriracha', 'Georgia', serif;
+}
+/*----------------------------------------------------
+Apply font classes to HTML elements
+-----------------------------------------------------*/
 html {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -19,7 +28,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Karla';
+  font-family: 'Karla', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 p,
 ul,
@@ -27,7 +36,7 @@ ol {
   font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
 }
 blockquote {
-  font-family: 'Karla';
+  font-family: 'Karla', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .button,
 a.button,
@@ -42,7 +51,7 @@ td {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 legend {
-  font-family: 'Karla';
+  font-family: 'Karla', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .feedback {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;

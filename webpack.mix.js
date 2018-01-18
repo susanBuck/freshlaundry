@@ -13,7 +13,7 @@ I think it's because of the relationship
 between dist/freshlaundry-fonts.less' and demo/less/demo.less
 To avoid, uncomment this line and run `npm run dev` once if there are changes to fonts
 */
-//mix.copy('src/less/fonts.less', 'dist/freshlaundry-fonts.less');
+mix.copy('src/less/fonts.less', 'dist/freshlaundry-fonts.less');
 
 
 // Concatenate all .js files into one

@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Karla);@import url(https://fonts.googleapis.com/css?family=Sriracha);/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
  * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
@@ -613,10 +613,7 @@ Define font classes
   font-family: Consolas, 'Courier New', monospace;
 }
 .heading {
-  font-family: 'Karla', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-.handwriting {
-  font-family: 'Sriracha', 'Georgia', serif;
+  font-family: 'Helvetica Neue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 /*----------------------------------------------------
 Apply font classes to HTML elements
@@ -630,7 +627,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Karla', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 p,
 ul,
@@ -638,7 +635,7 @@ ol {
   font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
 }
 blockquote {
-  font-family: 'Karla', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .button,
 a.button,
@@ -653,7 +650,7 @@ td {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 legend {
-  font-family: 'Karla', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .feedback {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
