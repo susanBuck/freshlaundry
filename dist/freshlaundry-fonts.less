@@ -1,25 +1,34 @@
-@serif: Georgia, Cambria, 'Times New Roman', Times, serif;
-@sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-@heading: 'Karla';
-@code: Consolas, courier, monospace;
-
+/*----------------------------------------------------
+Define font classes
+-----------------------------------------------------*/
 .serif {
-    font-family:@serif;
+    font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
 }
 
 .sans {
-    font-family:@sans;
-}
-
-.heading {
-    font-family:@heading;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .code {
-    font-family:@code;
+    font-family: Consolas, 'Courier New', monospace;
+}
+
+@headingFont: 'Karla';
+@import url('https://fonts.googleapis.com/css?family=@{headingFont}');
+.heading {
+    font-family: @headingFont, 'Helvetica Neue', Helvetica, Arial, sans-serif
+}
+
+@handwritingFont: 'Sriracha';
+@import url('https://fonts.googleapis.com/css?family=@{handwritingFont}');
+.handwriting {
+    font-family: @handwritingFont, 'Georgia', serif;
 }
 
 
+/*----------------------------------------------------
+Apply font classes to HTML elements
+-----------------------------------------------------*/
 html {
     .sans;
 }
@@ -53,7 +62,7 @@ legend {
 }
 
 .fine-print {
-   .sans
+    .sans
 }
 
 li {
