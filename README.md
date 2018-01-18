@@ -47,9 +47,7 @@ fl.ajax.toggleButton(element el [, boolean loading]);
 fl.validate.attach(element form [, boolean automatic]);
 ```
 
-## Usage
-
-## Image
+## Images
 Link images using their non-retina paths. If a retina version is available, append `?@2x` query string.
 ```
 <img id='main-logo' src='/images/wcc-logo-375-37-punchier.png?@2x'>
@@ -65,7 +63,14 @@ Link images using their non-retina paths. If a retina version is available, appe
 </ul>
 ```
 
+## Fonts
+`/src/less/fonts.less` defines some example fonts and applies them to certain HTML elements and freshlaundry classes.
 
+During `npm run dev`, this file is copied to `/dist/freshlaundry-fonts.less`
+
+This way, in your individual app, you can define a `fonts.less` file that imports `freshlaundry-fonts.less` and then overwrite as needed.
+
+If you don't do this, no `font-family` settings are ever applied by freshlaundry. Instead, your font-family settings will be set to whatever `normalize` sets them to.
 
 ## Modifying freshlaundry
 Edit files in `/src/less` and/or `/src/js`
