@@ -371,18 +371,6 @@ textarea {
 .highlight {
   background-color: #FFE787;
 }
-.serif {
-  font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
-}
-.sans {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-.heading {
-  font-family: Karla;
-}
-.code {
-  font-family: Consolas, courier, monospace;
-}
 * {
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
@@ -451,20 +439,19 @@ footer {
 }
 html {
   /*
-  http://snook.ca/archives/html_and_css/font-size-with-rem
-  The rem unit is relative to the root - the html element
+    http://snook.ca/archives/html_and_css/font-size-with-rem
+    The rem unit is relative to the root - the html element
 
-  Because all browsers have a default font-size of 16px, setting the font-size to 62.5% on the html
-  element gives it a font-size of 10px (10 / 16 * 100 = 62.5)
+    Because all browsers have a default font-size of 16px, setting the font-size to 62.5% on the html
+    element gives it a font-size of 10px (10 / 16 * 100 = 62.5)
 
-  */
+    */
   font-size: 62.5%;
   /* base 10 */
   color: #111;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 /*
-This 1.6rem is causing zoome issues in chrome
+This 1.6rem is causing zoom issues in chrome
 Disabling in favor of body > div selector
 Notes: http://stackoverflow.com/questions/20099844/chrome-not-respecting-rem-font-size-on-body-tag
 https://bountify.co/identify-the-source-of-this-odd-text-sizing-issue-chrome
@@ -477,7 +464,6 @@ body {
 }
 */
 body > div {
-  font-size: 17px;
   font-size: 1.7rem;
 }
 /* Headings */
@@ -492,7 +478,6 @@ h6 {
   margin-top: 5rem;
   padding: 0;
   line-height: 1;
-  font-family: Karla;
   color: #111;
 }
 h1:first-child,
@@ -504,27 +489,21 @@ h6:first-child {
   margin-top: 0;
 }
 h1 {
-  font-size: 40px;
   font-size: 4.0rem;
 }
 h2 {
-  font-size: 30px;
   font-size: 3.0rem;
 }
 h3 {
-  font-size: 20px;
   font-size: 2.0rem;
 }
 h4 {
-  font-size: 20px;
   font-size: 2.0rem;
 }
 h5 {
-  font-size: 20px;
   font-size: 2.0rem;
 }
 h6 {
-  font-size: 20px;
   font-size: 2.0rem;
 }
 /* Copy */
@@ -533,7 +512,6 @@ ul,
 ol {
   line-height: 1.7;
   margin: 0;
-  font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
 }
 p + p {
   margin-top: 10px;
@@ -551,7 +529,7 @@ a:hover,
 a:active {
   text-decoration: none;
   color: #00A89B;
-  font-weight: regular;
+  font-weight: normal;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #00A89B;
@@ -560,7 +538,7 @@ a:link.n,
 a:visited.n,
 a:hover.n,
 a:active.n {
-  border-bottom-width: 0px;
+  border-bottom-width: 0;
 }
 a:link.g,
 a:visited.g,
@@ -621,7 +599,61 @@ blockquote {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   font-style: italic;
-  font-family: Karla;
+}
+.serif {
+  font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+.sans {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.heading {
+  font-family: 'Karla';
+}
+.code {
+  font-family: Consolas, courier, monospace;
+}
+html {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Karla';
+}
+p,
+ul,
+ol {
+  font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+blockquote {
+  font-family: 'Karla';
+}
+.button,
+a.button,
+button,
+input[type=submit],
+input[type=button] {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+table,
+th,
+td {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+legend {
+  font-family: 'Karla';
+}
+.feedback {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.fine-print {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+li label {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 /* Remove browser defaults */
 button,
@@ -631,9 +663,9 @@ input[type="submit"],
 input[type="submit"]:active,
 input[type="submit"]:focus {
   border-style: solid;
-  border-width: 0px;
-  -webkit-box-shadow: 0;
-          box-shadow: 0;
+  border-width: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   outline: none;
 }
 .button,
@@ -643,20 +675,20 @@ input[type=submit],
 input[type=button] {
   cursor: pointer;
   background-color: #00A89B;
-  color: white;
+  color: #fff;
   letter-spacing: .15rem;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  font-size: 16px;
   font-size: 1.6rem;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   border-radius: 2px;
-  margin-top: 20px;
-  padding: 8px;
+  margin-top: 18px;
+  padding-top: 10px;
+  padding-bottom: 6px;
   padding-left: 12px;
   padding-right: 12px;
   display: inline-block;
+  font-weight: bold;
   /* Animation for hover */
   transition: all .2s linear;
   -o-transition: all .2s linear;
@@ -690,7 +722,7 @@ button:link,
 input[type=submit]:link,
 input[type=button]:link {
   color: white;
-  border-bottom: 0px;
+  border-bottom: 0;
 }
 .button:hover,
 a.button:hover,
@@ -757,25 +789,20 @@ input[type=button].loading:hover {
 /* Placeholder attribute styling */
 /* This class is imported in the following styles */
 .placeholder {
-  font-size: 12px;
   font-size: 1.2rem;
 }
 ::-webkit-input-placeholder {
-  font-size: 12px;
   font-size: 1.2rem;
 }
 :-moz-placeholder {
   /* Firefox 18- */
-  font-size: 12px;
   font-size: 1.2rem;
 }
 ::-moz-placeholder {
   /* Firefox 19+ */
-  font-size: 12px;
   font-size: 1.2rem;
 }
 :-ms-input-placeholder {
-  font-size: 12px;
   font-size: 1.2rem;
 }
 fieldset {
@@ -785,13 +812,10 @@ fieldset {
   padding: 0;
 }
 legend {
-  font-size: 20px;
   font-size: 2.0rem;
-  font-family: Karla;
   font-weight: bold;
 }
 .feedback {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: .5px;
   padding-top: 2px;
   font-size: 1.4rem;
@@ -799,7 +823,6 @@ legend {
 }
 .fine-print {
   font-size: 1.3rem;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   display: block;
   margin-top: .2rem;
   color: #919191;
@@ -815,7 +838,6 @@ div.error {
 label {
   margin-top: 20px;
   display: block;
-  font-size: 12px;
   font-size: 1.2rem;
   letter-spacing: 1px;
   color: #111;
@@ -889,13 +911,11 @@ ul.radios input[type="checkbox"]:checked + label {
 }
 ul.checkboxes li label,
 ul.radios li label {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin-top: 3px;
   margin-bottom: 5px;
   text-transform: none;
   font-weight: normal;
   padding: 0;
-  font-size: 13px;
   font-size: 1.3rem;
   display: inline;
 }
@@ -903,9 +923,7 @@ table,
 th,
 td {
   border: none;
-  font-size: 15px;
   font-size: 1.5rem;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 table {
   width: 100%;

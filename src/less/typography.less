@@ -1,22 +1,20 @@
 @import "colors";
-@import "fonts";
 
 html {
-  /*
-  http://snook.ca/archives/html_and_css/font-size-with-rem
-  The rem unit is relative to the root - the html element
+    /*
+    http://snook.ca/archives/html_and_css/font-size-with-rem
+    The rem unit is relative to the root - the html element
 
-  Because all browsers have a default font-size of 16px, setting the font-size to 62.5% on the html
-  element gives it a font-size of 10px (10 / 16 * 100 = 62.5)
+    Because all browsers have a default font-size of 16px, setting the font-size to 62.5% on the html
+    element gives it a font-size of 10px (10 / 16 * 100 = 62.5)
 
-  */
-  font-size:62.5%; /* base 10 */
-  color:@black;
-  font-family:@sans;
+    */
+    font-size: 62.5%; /* base 10 */
+    color: @black;
 }
 
 /*
-This 1.6rem is causing zoome issues in chrome
+This 1.6rem is causing zoom issues in chrome
 Disabling in favor of body > div selector
 Notes: http://stackoverflow.com/questions/20099844/chrome-not-respecting-rem-font-size-on-body-tag
 https://bountify.co/identify-the-source-of-this-odd-text-sizing-issue-chrome
@@ -30,20 +28,17 @@ body {
 */
 
 body > div {
-  font-size:17px;
-  font-size:1.7rem;
+    font-size: 1.7rem;
 }
 
-
 /* Headings */
-h1,h2,h3,h4,h5,h6 {
-  margin:0;
-  margin-bottom:1rem;
-  margin-top:5rem;
-  padding:0;
-  line-height:1;
-  font-family: @heading;
-  color:@black;
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    margin-bottom: 1rem;
+    margin-top: 5rem;
+    padding: 0;
+    line-height: 1;
+    color: @black;
 }
 
 h1:first-child,
@@ -52,43 +47,41 @@ h3:first-child,
 h4:first-child,
 h5:first-child,
 h6:first-child, {
-    margin-top:0;
+    margin-top: 0;
 }
 
 h1 {
-  font-size:40px;
-  font-size:4.0rem;
+    font-size: 4.0rem;
 }
+
 h2 {
-  font-size:30px;
-  font-size:3.0rem;
+    font-size: 3.0rem;
 }
+
 h3 {
-  font-size:20px;
-  font-size:2.0rem;
+    font-size: 2.0rem;
 }
+
 h4 {
-  font-size:20px;
-  font-size:2.0rem;
+    font-size: 2.0rem;
 }
+
 h5 {
-  font-size:20px;
-  font-size:2.0rem;
+    font-size: 2.0rem;
 }
+
 h6 {
-  font-size:20px;
-  font-size:2.0rem;
+    font-size: 2.0rem;
 }
 
 /* Copy */
 p, ul, ol {
-    line-height:1.7;
-    margin:0;
-    font-family:@serif;
+    line-height: 1.7;
+    margin: 0;
 }
 
 p + p {
-    margin-top:10px;
+    margin-top: 10px;
 }
 
 /*
@@ -99,55 +92,54 @@ o = outline, make it look like a button
 */
 
 /* Links */
-a:link,a:visited,a:hover,a:active {
+a:link, a:visited, a:hover, a:active {
 
     // Defaults
-    text-decoration:none;
-    color:@primary;
-    font-weight:regular;
-    border-bottom-width:1px;
-    border-bottom-style:solid;
-    border-bottom-color:@primary;
+    text-decoration: none;
+    color: @primary;
+    font-weight: normal;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: @primary;
 
     // Options
 
     // n = no underline, aka "naked"
     &.n {
-      border-bottom-width:0px;
+        border-bottom-width: 0;
     }
 
     // g = Gray
     &.g {
-      border-bottom-color:@gray;
-      color:@black;
+        border-bottom-color: @gray;
+        color: @black;
     }
 
     // b = Bold
     &.b {
-      font-weight:bold;
+        font-weight: bold;
     }
 
     // o = Outline
     &.o {
-      border:2px solid @primary;
-      padding:10px;
-      border-radius:25px;
+        border: 2px solid @primary;
+        padding: 10px;
+        border-radius: 25px;
     }
 
     &.o:hover {
-      background-color:lighten(@silver,10%);
-      border-color:@primary-darker;
-      color:@primary-darker;
+        background-color: lighten(@silver, 10%);
+        border-color: @primary-darker;
+        color: @primary-darker;
 
     }
 
     // Regardless of greyscale or color, the hover is the same
     &:hover {
-      color:@primary-darker;
-      border-bottom-color:@primary-darker;
+        color: @primary-darker;
+        border-bottom-color: @primary-darker;
     }
 }
-
 
 /* Lists */
 ul,
@@ -155,10 +147,12 @@ ol {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
 }
+
 ul li,
 ol li {
     line-height: 1.7;
 }
+
 ul ul,
 ol ul,
 ul ol,
@@ -169,9 +163,8 @@ ol ol {
 
 /* Quotes */
 blockquote {
-    line-height:1.7;
+    line-height: 1.7;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
-    font-style:italic;
-    font-family: @heading;
+    font-style: italic;
 }

@@ -1,10 +1,8 @@
 @import "colors";
-@import "fonts";
 
 /* Placeholder attribute styling */
 /* This class is imported in the following styles */
 .placeholder {
-    font-size: 12px;
     font-size: 1.2rem;
 }
 
@@ -32,14 +30,11 @@ fieldset {
 }
 
 legend {
-    font-size: 20px;
     font-size: 2.0rem;
-    font-family: @heading;
     font-weight: bold;
 }
 
 .feedback {
-    font-family: @sans;
     letter-spacing: .5px;
     padding-top: 2px;
     font-size: 1.4rem;
@@ -49,14 +44,12 @@ legend {
 // Descriptive text under an individual field
 .fine-print {
     font-size: 1.3rem;
-    font-family: @sans;
     display: block;
     margin-top: .2rem;
-    color:lighten(@black, 50%);
+    color: lighten(@black, 50%);
     font-style: italic;
     line-height: 1.5;
 }
-
 
 div.success {
     color: @green;
@@ -69,7 +62,6 @@ div.error {;
 label {
     margin-top: 20px;
     display: block;
-    font-size: 12px;
     font-size: 1.2rem;
     letter-spacing: 1px;
     color: @black;
@@ -133,23 +125,19 @@ ul.checkboxes, ul.radios {
 
     // Labels directly after CHECKED radio/checkboxes should be bold
     input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
-        font-weight:600;
+        font-weight: 600;
     }
 
     // Labels for radio/checkboxes should be styled differently typical labels.
     li {
         label {
-            font-family: @sans;
             margin-top: 3px;
             margin-bottom: 5px;
             text-transform: none;
             font-weight: normal;
             padding: 0;
-            font-size: 13px;
             font-size: 1.3rem;
             display: inline;
         }
     }
 }
-
-

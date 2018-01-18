@@ -1,48 +1,44 @@
 @import "colors";
-@import "fonts";
 
 // Tables
 table, th, td {
-   border: none;
-   font-size:15px;
-   font-size:1.5rem;
-   font-family: @sans;
+    border: none;
+    font-size: 1.5rem;
 }
 
 table {
-  width:100%;
-  display: table;
+    width: 100%;
+    display: table;
 
-  &.bordered tr {
-    border-bottom: 1px solid @grey;
-  }
-
-  &.striped {
-    tbody tr:nth-child(odd) {
-      background-color: @silver;
+    &.bordered tr {
+        border-bottom: 1px solid @grey;
     }
-  }
 
-  &.hoverable {
-
-    tbody tr {
-      &:hover {
-        background-color: @silver;
-      }
+    &.striped {
+        tbody tr:nth-child(odd) {
+            background-color: @silver;
+        }
     }
-  }
 
-  &.centered {
-    thead tr th, tbody tr td {
-      text-align: center;
-
+    &.hoverable {
+        tbody tr {
+            &:hover {
+                background-color: @silver;
+            }
+        }
     }
-  }
+
+    &.centered {
+        thead tr th, tbody tr td {
+            text-align: center;
+
+        }
+    }
 
 }
 
 thead {
-  border-bottom: 1px solid #999;
+    border-bottom: 1px solid #999;
 }
 
 td, th {
@@ -50,5 +46,4 @@ td, th {
     display: table-cell;
     text-align: left;
     vertical-align: middle;
-    // border-radius: 2px;
 }
