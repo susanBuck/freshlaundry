@@ -8,10 +8,8 @@
     <title>freshlaundry demo</title>
 
     <link rel='stylesheet' href='/dist/freshlaundry.css'>
-    <link rel='stylesheet' href='demo.css'>
+    <link rel='stylesheet' href='/demo/css/demo.css'>
     <link rel='stylesheet' href='/node_modules/font-awesome/css/font-awesome.min.css'>
-
-    <link href='http://fonts.googleapis.com/css?family=Karla:700,400' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
@@ -32,7 +30,6 @@
     </section>
 
     <section>
-
         <h2>Forms</h2>
 
         <fieldset>
@@ -67,7 +64,7 @@
     </section>
 
     <section>
-        <h1>Forms with Validation</h1>
+        <h2>Forms with Validation</h2>
         <form id='demo'>
 
             <fieldset>
@@ -130,10 +127,7 @@
     </section>
 
     <section>
-
-        <h1>Widget</h1>
-
-        <h2>Notify Bar</h2>
+        <h2>Widgets</h2>
 
         <ul>
             <?php $notifyBarTypes = ['default', 'warning', 'success', 'error']; ?>
@@ -141,11 +135,9 @@
             <?php foreach ($notifyBarTypes
 
             as $type): ?>
-            <li><a href='javascript:void(0)' class='demoNotifyBar'><?= $type ?></a>
+            <li><a href='javascript:void(0)' class='demoNotifyBar'><?= $type ?> notify Bar</a>
                 <?php endforeach; ?>
         </ul>
-
-        <h2>Modal</h2>
 
         <div class='fl-modal-content'>
             <p>
@@ -171,15 +163,10 @@
         </div>
 
         <ul>
-            <li><a href='javascript:void(0)' class='u' id='demoBasicModal'>Basic example</a>
-            <li><a href='javascript:void(0)' class='u' id='demoMoreContentModal'>With more content</a>
-            <li><a href='javascript:void(0)' class='u' id='demoCustomClassModal'>With a custom class</a>
+            <li><a href='javascript:void(0)' class='u' id='demoBasicModal'>basic modal example</a>
+            <li><a href='javascript:void(0)' class='u' id='demoMoreContentModal'>modal w/ more content</a>
+            <li><a href='javascript:void(0)' class='u' id='demoCustomClassModal'>modal w/ a custom class</a>
         </ul>
-
-    </section>
-
-    <section id='util'>
-        <h2>Util.js</h2>
     </section>
 
     <section id='buttons'>
@@ -204,21 +191,18 @@
         <button class='large ajax-loading ajaxButtonDemo'>Large ajax loading button</button>
     </section>
 
-    <section>
-        <h2>Colors</h2>
-        <div id='colors'></div>
-    </section>
 
     <section>
-        <h2>Fonts</h2>
-        <p class='font heading'>.heading: </p>
-        <p class='font serif'>.serif: </p>
-        <p class='font sans'>.sans: </p>
-        <p class='font code'>.code: </p>
+        <h2>Font Classes</h2>
+        <p class='font heading'>.heading</p>
+        <p class='font serif'>.serif</p>
+        <p class='font sans'>.sans</p>
+        <p class='font code'>.code</p>
     </section>
 
     <section>
         <h2>Typography</h2>
+
         <h1>Heading 1</h1>
         <h2>Heading 2</h2>
         <h3>Heading 3</h3>

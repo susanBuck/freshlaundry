@@ -11,10 +11,7 @@ Define font classes
   font-family: Consolas, 'Courier New', monospace;
 }
 .heading {
-  font-family: 'Karla', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-.handwriting {
-  font-family: 'Sriracha', 'Georgia', serif;
+  font-family: 'Helvetica Neue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 /*----------------------------------------------------
 Apply font classes to HTML elements
@@ -28,7 +25,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Karla', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 p,
 ul,
@@ -36,7 +33,7 @@ ol {
   font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
 }
 blockquote {
-  font-family: 'Karla', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .button,
 a.button,
@@ -51,7 +48,7 @@ td {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 legend {
-  font-family: 'Karla', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .feedback {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -62,34 +59,13 @@ legend {
 li label {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-section {
-  margin-bottom: 50px;
-}
-.color {
-  width: 300px;
-  height: 20px;
-  display: inline-block;
-}
-.color-label,
-.color-text {
-  display: inline-block;
-  font-family: Consolas;
-  height: 20px;
-}
-.color-label {
-  width: 250px;
-}
-.color-text {
-  width: 150px;
-}
-.google-font {
-  padding: 5px;
-  border: 1px solid #ccc;
-}
 /* Overwrite default centered container with a responsive 100% */
 #layout-wrapper {
   width: 100%;
   padding: 20px;
+}
+section {
+  margin-bottom: 50px;
 }
 /* Make buttons stack */
 #buttons button,
