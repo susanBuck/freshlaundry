@@ -582,6 +582,10 @@ ol {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
+ul.flush,
+ol.flush {
+  margin-top: 0;
+}
 ul li,
 ol li {
   line-height: 1.7;
