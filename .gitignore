@@ -1,4 +1,6 @@
 node_modules/
 .idea/*
+.idea/workspace.xml
 *.sublime-project
 *.sublime-workspace
+.idea/workspace.xml
