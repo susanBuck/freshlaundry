@@ -9,7 +9,7 @@
 
     <link rel='stylesheet' href='/dist/freshlaundry.css'>
     <link rel='stylesheet' href='/demo/css/demo.css'>
-    <link rel='stylesheet' href='/node_modules/font-awesome/css/font-awesome.min.css'>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
 </head>
 <body>
