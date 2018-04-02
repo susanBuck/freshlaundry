@@ -637,11 +637,6 @@ input[type=button] {
   padding-right: 12px;
   display: inline-block;
   font-weight: bold;
-  /* Animation for hover */
-  transition: all .2s linear;
-  -o-transition: all .2s linear;
-  -moz-transition: all .2s linear;
-  -webkit-transition: all .2s linear;
 }
 .button.small,
 a.button.small,
@@ -786,11 +781,10 @@ div.error {
 label {
   margin-top: 20px;
   display: block;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   letter-spacing: 1px;
   color: #111;
   font-weight: bold;
-  text-transform: uppercase;
 }
 label.error {
   color: #B71C1C;

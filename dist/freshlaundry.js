@@ -2,10 +2,9 @@ function Validate() {
 
     /**
      * @param formToValidate
-     * @param namespace The namespace the app uses to set variables to
      * @param automatic
      *      True - Validation occurs when form is submitted
-     False - Validation must be manually invoked, e.g. validator.validateAll()
+     *      False - Validation must be manually invoked, e.g. validator.validateAll()
      Use this if JS is hijacking the form submission
      */
     this.attach = function(formToValidate, automatic = true) {

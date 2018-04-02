@@ -182,8 +182,6 @@
 
         <button class='green'>Green button</button>
 
-        <a href='javascript:void(0)' class='button green'>Green link button</a>
-
         <h2>Ajax Buttons</h2>
 
         <button class='small ajax-loading ajaxButtonDemo'>Small ajax loading button</button>
