@@ -53,6 +53,15 @@ Link images using their non-retina paths. If a retina version is available, appe
 <img id='main-logo' src='/images/wcc-logo-375-37-punchier.png?@2x'>
 ``` 
 
+## Grid
+Example:
+```html
+<div class='grid-row'>
+    <div class='grid-col span_1_of_2'>
+    <div class='grid-col span_1_of_2'>
+</div>
+```
+
 ## Forms
 + Put radios/checkboxes in an unordered list with the class `radios` or `checkboxes`
 + Labels should immediately follow the radio/checkbox input
