@@ -62,6 +62,15 @@ Example:
 </div>
 ```
 
+Force a grid to stack at a certain size:
+```css
+@media (max-width: 700px) {
+    .span_1_of_2 {
+        width: 100%;
+    }
+}
+```
+
 ## Forms
 + Put radios/checkboxes in an unordered list with the class `radios` or `checkboxes`
 + Labels should immediately follow the radio/checkbox input
