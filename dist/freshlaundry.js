@@ -369,8 +369,6 @@ function Ajax() {
             el.attr('data-loading', 0);
         }
     }
-
-
 }
 function Util() {
 

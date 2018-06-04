@@ -65,6 +65,4 @@ function Ajax() {
             el.attr('data-loading', 0);
         }
     }
-
-
 }

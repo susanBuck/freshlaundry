@@ -39,7 +39,7 @@ fl.validate.feedback('JS says this is good', $('input[name="zip"]'), 'success');
  */
 $('.demoNotifyBar').click(function() {
     var type = $(this).html();
-    fl.widget.notifyBar('This is a ' + type + ' notify bar', type);
+    fl.widget.notifyBar('This is a ' + type + ' notify bar. <a href="">Link...</a>', type);
 });
 
 $('#demoBasicModal').click(function() {

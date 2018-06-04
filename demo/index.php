@@ -23,7 +23,7 @@
     <section>
         <h2>Notes</h2>
         <ul>
-            <li><a href='https://github.com/susanBuck/freshlaundry'><i class='fa fa-github'></i>
+            <li><a href='https://github.com/susanBuck/freshlaundry'><i class="fab fa-github"></i>
                     github.com/susanBuck/freshlaundry</a>
             <li>View source to see specifics of how different elements are coded.</li>
         </ul>
