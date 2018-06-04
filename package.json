@@ -16,8 +16,10 @@
   "dependencies": {
     "cross-env": "^5.1.6",
     "jquery": "^3.3.1",
-    "laravel-mix": "^1.0",
-    "less": "^2.7.3",
+    "laravel-mix": "^2.1"
+  },
+  "devDependencies": {
+    "less": "^3.0.4",
     "less-loader": "^4.1.0"
   }
 }
