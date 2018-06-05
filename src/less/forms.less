@@ -59,6 +59,14 @@ div.error {;
     color: @red;
 }
 
+div.warning {;
+    color: @orange;
+}
+
+div.info {;
+    color: @grey;
+}
+
 label {
     margin-top: 20px;
     display: block;
@@ -71,7 +79,11 @@ label {
         color: @red;
     }
 
-    &.success {
+    &.warning {
+        color: @orange;
+    }
+
+    &.success, &.info {
         color: @black;
     }
 }

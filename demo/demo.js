@@ -31,7 +31,8 @@ fl.validate.attach($('#demo'), true);
 // Test manually throwing error/success feedback
 fl.validate.feedback('JS says this is bad', $('input[name="state"]'));
 fl.validate.feedback('JS says this is good', $('input[name="zip"]'), 'success');
-
+fl.validate.feedback('JS says this is a warning', $('input[name="address1"]'), 'warning');
+fl.validate.feedback('JS says this is info', $('input[name="address2"]'), 'info');
 
 
 /*

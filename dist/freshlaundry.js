@@ -164,6 +164,8 @@ function Validate() {
         // Clean slate - remove any existing feedback styling on the field
         el.removeClass('error');
         el.removeClass('success');
+        el.removeClass('warning');
+        el.removeClass('info');
 
         // Clean slate - remove any existing feedback
         feedbackEl.remove();

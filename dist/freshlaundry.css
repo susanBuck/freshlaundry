@@ -778,6 +778,12 @@ div.success {
 div.error {
   color: #B71C1C;
 }
+div.warning {
+  color: #FFC107;
+}
+div.info {
+  color: #aaa;
+}
 label {
   margin-top: 20px;
   display: block;
@@ -789,7 +795,11 @@ label {
 label.error {
   color: #B71C1C;
 }
-label.success {
+label.warning {
+  color: #FFC107;
+}
+label.success,
+label.info {
   color: #111;
 }
 label.required::before {

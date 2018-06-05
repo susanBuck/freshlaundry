@@ -68,51 +68,63 @@
         <form id='demo'>
 
             <fieldset>
-                <label for='required'>City</label>
+                <label for='city'>City</label>
                 <span class='fine-print'>server error</span>
-                <input type='text' name='city' value=''>
+                <input type='text' id='city' name='city' value=''>
             </fieldset>
 
             <fieldset>
-                <label for='required'>State</label>
+                <label for='state'>State</label>
                 <span class='fine-print'>manual error via JS</span>
-                <input type='text' name='state' value=''>
+                <input type='text' id='state' name='state' value=''>
             </fieldset>
 
             <fieldset>
-                <label for='required'>Zip</label>
+                <label for='zip'>Zip</label>
                 <span class='fine-print'>manual success via JS</span>
-                <input type='text' name='zip' value=''>
+                <input type='text' id='zip' name='zip' value=''>
+            </fieldset>
+
+            <fieldset>
+                <label for='address1'>Address 1</label>
+                <span class='fine-print'>manual warning via JS</span>
+                <input type='text' name='address1' value=''>
+            </fieldset>
+
+            <fieldset>
+                <label for='address2'>Address 2</label>
+                <span class='fine-print'>manual info via JS</span>
+                <input type='text' id='address2' name='address2' value=''>
             </fieldset>
 
             <fieldset>
                 <label for='firstName' class='required'>First name</label>
                 <span class='fine-print'>rule: required</span>
-                <input type='text' name='firstName' data-rules='required' value='abc'>
+                <input type='text' id='firstName' name='firstName' data-rules='required' value='abc'>
             </fieldset>
 
             <fieldset>
                 <label for='email'>Email</label>
                 <span class='fine-print'>rule: email</span>
-                <input type='email' name='email' data-rules='email' value='test@gmail.com'>
+                <input type='email' id='email' name='email' data-rules='email' value='test@gmail.com'>
             </fieldset>
 
             <fieldset>
                 <label for='alphaNum'>Username</label>
                 <span class='fine-print'>rule: alphaNum. <br>This can be blank and still be valid since it's not "required"</span>
-                <input type='text' name='username' data-rules='alphaNum' placeholder='abc123'>
+                <input type='text' id='username' name='username' data-rules='alphaNum' placeholder='abc123'>
             </fieldset>
 
             <fieldset>
                 <label for='creditCard'>Slug</label>
                 <span class='fine-print'>rules: required|alphaNum</span>
-                <input type='text' name='slug' data-rules='required|alphaNum'>
+                <input type='text' id='slug' name='slug' data-rules='required|alphaNum'>
             </fieldset>
 
             <fieldset>
                 <label for='creditCard'>Credit card</label>
                 <span class='fine-print'>rule: creditCard</span>
-                <input type='text' name='creditCard' data-rules='creditCard' placeholder='creditCard'
+                <input type='text' id='creditCard' name='creditCard' data-rules='creditCard' placeholder='creditCard'
                        value='4242424242424242'>
             </fieldset>
 
