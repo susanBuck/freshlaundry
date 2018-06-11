@@ -174,7 +174,7 @@ function Validate() {
         el.addClass(type);
 
         // Style this field's label
-        $('label[for=' + el.attr('id') + ']').addClass(type);
+        //$('label[for=' + el.attr('id') + ']').addClass(type);
 
         // Add feedback message after the field
         if(message !== '') {
