@@ -472,7 +472,7 @@ function Widget() {
             var flModal = $('#fl-modal');
 
             // Close functionality
-            $('.fl-modal-background, #fl-modal-close i').click(function () {
+            $('.fl-modal-background, #fl-modal-close').click(function () {
                 $('#fl-modal, .fl-modal-background').hide();
             });
         }
