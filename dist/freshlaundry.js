@@ -463,7 +463,7 @@ function Widget() {
             var modal = ''
 
             modal += "<div id='fl-modal' class='fl-modal-default'>";
-            modal += "<div id='fl-modal-close'><i class='fa fa-times'></i></div>";
+            modal += "<div id='fl-modal-close'>&#10005;</div>";
             modal += "<div id='fl-modal-inner'>" + content + "</div>";
             modal += "</div>";
 
@@ -520,7 +520,7 @@ function Widget() {
             // Create the notifybar
             var notifybar = "<div id='notifybar' class='notifybar-" + type + "'>";
             notifybar += "<span>" + message + "</span>";
-            notifybar += "<i class='fa fa-times'></i>";
+            notifybar += "<span class='close'>&#10005;</span>";
             notifybar += "</div>";
 
             body.append(notifybar);
