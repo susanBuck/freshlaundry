@@ -659,6 +659,13 @@ input[type=submit].large,
 input[type=button].large {
   font-size: 130%;
 }
+.button.subtle,
+a.button.subtle,
+button.subtle,
+input[type=submit].subtle,
+input[type=button].subtle {
+  color: orange;
+}
 .button:link,
 a.button:link,
 button:link,
@@ -704,6 +711,28 @@ input[type=submit].green:active,
 input[type=button].green:active {
   background-color: #208f2d;
 }
+.button.secondary,
+a.button.secondary,
+button.secondary,
+input[type=submit].secondary,
+input[type=button].secondary {
+  display: inline;
+  background-color: white;
+  color: #00A89B;
+  border: 1.5px solid #00A89B;
+  padding: 4px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.button.secondary:hover,
+a.button.secondary:hover,
+button.secondary:hover,
+input[type=submit].secondary:hover,
+input[type=button].secondary:hover {
+  background-color: #00867c;
+  border: 1.5px solid #00867c;
+  color: #fff;
+}
 .button.loading,
 a.button.loading,
 button.loading,
@@ -720,6 +749,33 @@ button.loading:hover,
 input[type=submit].loading:hover,
 input[type=button].loading:hover {
   color: white;
+}
+.button:disabled,
+a.button:disabled,
+button:disabled,
+input[type=submit]:disabled,
+input[type=button]:disabled,
+.button[disabled],
+a.button[disabled],
+button[disabled],
+input[type=submit][disabled],
+input[type=button][disabled] {
+  opacity: .5;
+}
+.button:disabled:hover,
+a.button:disabled:hover,
+button:disabled:hover,
+input[type=submit]:disabled:hover,
+input[type=button]:disabled:hover,
+.button[disabled]:hover,
+a.button[disabled]:hover,
+button[disabled]:hover,
+input[type=submit][disabled]:hover,
+input[type=button][disabled]:hover {
+  background-color: white;
+  color: #00A89B;
+  border: 1px solid #ddd;
+  cursor: not-allowed;
 }
 @-webkit-keyframes slide {
   from {

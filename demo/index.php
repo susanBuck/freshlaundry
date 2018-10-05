@@ -187,6 +187,7 @@
         <button class='small'>Small Button</button>
         <button>Default Button</button>
         <button class='large'>Large Button</button>
+        <button class='secondary'>Secondary Button</button>
 
         <input type='submit' value='Submit button'>
 
