@@ -719,10 +719,10 @@ input[type=button].secondary {
   display: inline;
   background-color: white;
   color: #00A89B;
-  border: 1.5px solid #00A89B;
+  border: 1px solid #00A89B;
   padding: 4px;
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: normal;
 }
 .button.secondary:hover,
 a.button.secondary:hover,
@@ -730,7 +730,7 @@ button.secondary:hover,
 input[type=submit].secondary:hover,
 input[type=button].secondary:hover {
   background-color: #00867c;
-  border: 1.5px solid #00867c;
+  border-color: #00867c;
   color: #fff;
 }
 .button.loading,
