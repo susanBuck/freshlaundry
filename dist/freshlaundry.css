@@ -565,7 +565,7 @@ a:link.o:hover,
 a:visited.o:hover,
 a:hover.o:hover,
 a:active.o:hover {
-  background-color: #f7f7f7;
+  background-color: #ffffff;
   border-color: #00756c;
   color: #00756c;
 }
@@ -739,7 +739,7 @@ button.loading,
 input[type=submit].loading,
 input[type=button].loading {
   color: white;
-  background: #ddd url('//d2v9gwqwifvt42.cloudfront.net/texture-strange-bullseyes.png') repeat 0 0;
+  background: #f7f7f7 url('//d2v9gwqwifvt42.cloudfront.net/texture-strange-bullseyes.png') repeat 0 0;
   -webkit-animation: slide 20s linear infinite;
   cursor: wait;
 }
@@ -774,7 +774,7 @@ input[type=submit][disabled]:hover,
 input[type=button][disabled]:hover {
   background-color: white;
   color: #00A89B;
-  border: 1px solid #ddd;
+  border: 1px solid #f7f7f7;
   cursor: not-allowed;
 }
 @-webkit-keyframes slide {
@@ -869,7 +869,7 @@ input[type='password'],
 input[type='email'],
 textarea {
   width: 200px;
-  border: 1px solid #ddd;
+  border: 1px solid #f7f7f7;
   display: block;
   outline: none !important;
   /* Kill default fuzzy blue outline on focus */
@@ -927,34 +927,32 @@ ul.radios li label {
   font-size: 1.3rem;
   display: inline;
 }
-table,
-th,
-td {
-  border: none;
-  font-size: 1.5rem;
-}
 table {
   width: 100%;
   display: table;
+  border-collapse: collapse;
 }
-table.bordered tr {
-  border-bottom: 1px solid #aaa;
+table.lined tr,
+table.lined tbody tr {
+  border-bottom: 1px solid #eaeaea;
 }
 table.striped tbody tr:nth-child(odd) {
-  background-color: #ddd;
+  background-color: #f7f7f7;
 }
 table.hoverable tbody tr:hover {
-  background-color: #ddd;
+  background-color: #f7f7f7;
+  cursor: pointer;
 }
 table.centered thead tr th,
 table.centered tbody tr td {
   text-align: center;
 }
 thead {
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid #111;
 }
 td,
 th {
+  font-size: 1.5rem;
   padding: 5px 5px;
   display: table-cell;
   text-align: left;

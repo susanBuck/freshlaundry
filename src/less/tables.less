@@ -1,17 +1,14 @@
 @import "colors";
 
-// Tables
-table, th, td {
-    border: none;
-    font-size: 1.5rem;
-}
-
 table {
     width: 100%;
     display: table;
-
-    &.bordered tr {
-        border-bottom: 1px solid @grey;
+    border-collapse:collapse;
+ 
+    &.lined {
+        tr, tbody tr {
+            border-bottom:1px solid darken(@silver, 5%);
+        }
     }
 
     &.striped {
@@ -24,6 +21,7 @@ table {
         tbody tr {
             &:hover {
                 background-color: @silver;
+                cursor:pointer;
             }
         }
     }
@@ -31,17 +29,17 @@ table {
     &.centered {
         thead tr th, tbody tr td {
             text-align: center;
-
         }
     }
 
 }
 
 thead {
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid @black;
 }
 
 td, th {
+    font-size: 1.5rem;
     padding: 5px 5px;
     display: table-cell;
     text-align: left;
