@@ -544,7 +544,7 @@ a:link.g,
 a:visited.g,
 a:hover.g,
 a:active.g {
-  border-bottom-color: #aaa;
+  border-bottom-color: #808080;
   color: #111;
 }
 a:link.b,
@@ -565,7 +565,7 @@ a:link.o:hover,
 a:visited.o:hover,
 a:hover.o:hover,
 a:active.o:hover {
-  background-color: #ffffff;
+  background-color: #ececec;
   border-color: #00756c;
   color: #00756c;
 }
@@ -739,7 +739,7 @@ button.loading,
 input[type=submit].loading,
 input[type=button].loading {
   color: white;
-  background: #f7f7f7 url('//d2v9gwqwifvt42.cloudfront.net/texture-strange-bullseyes.png') repeat 0 0;
+  background: #D3D3D3 url('//d2v9gwqwifvt42.cloudfront.net/texture-strange-bullseyes.png') repeat 0 0;
   -webkit-animation: slide 20s linear infinite;
   cursor: wait;
 }
@@ -774,7 +774,7 @@ input[type=submit][disabled]:hover,
 input[type=button][disabled]:hover {
   background-color: white;
   color: #00A89B;
-  border: 1px solid #f7f7f7;
+  border: 1px solid #D3D3D3;
   cursor: not-allowed;
 }
 @-webkit-keyframes slide {
@@ -824,7 +824,7 @@ legend {
   font-size: 1.3rem;
   display: block;
   margin-top: .2rem;
-  color: #919191;
+  color: #808080;
   font-style: italic;
   line-height: 1.5;
 }
@@ -838,7 +838,7 @@ div.warning {
   color: #FFC107;
 }
 div.info {
-  color: #aaa;
+  color: #808080;
 }
 label {
   margin-top: 20px;
@@ -869,7 +869,7 @@ input[type='password'],
 input[type='email'],
 textarea {
   width: 200px;
-  border: 1px solid #f7f7f7;
+  border: 1px solid #D3D3D3;
   display: block;
   outline: none !important;
   /* Kill default fuzzy blue outline on focus */
@@ -881,7 +881,7 @@ input[type='password']:focus,
 input[type='email']:focus,
 textarea:focus {
   background-color: #fffbe1;
-  border: 1px solid #aaa;
+  border: 1px solid #808080;
 }
 input[type='text'].error,
 input[type='password'].error,
@@ -934,13 +934,13 @@ table {
 }
 table.lined tr,
 table.lined tbody tr {
-  border-bottom: 1px solid #eaeaea;
+  border-bottom: 1px solid #c6c6c6;
 }
 table.striped tbody tr:nth-child(odd) {
-  background-color: #f7f7f7;
+  background-color: #D3D3D3;
 }
 table.hoverable tbody tr:hover {
-  background-color: #f7f7f7;
+  background-color: #D3D3D3;
   cursor: pointer;
 }
 table.centered thead tr th,
