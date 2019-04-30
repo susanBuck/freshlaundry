@@ -9,7 +9,6 @@ function Widget() {
         el.css('left', left);
     }
 
-
     /**
      * Public
      * @param content
@@ -25,7 +24,9 @@ function Widget() {
             var flModal = $('#fl-modal');
 
             // Update the message
-            $('#fl-modal-inner').html(content);
+            if(content != '') {
+                $('#fl-modal-inner').html(content);
+            }
 
             // Turn on the background
             $('.fl-modal-background').show();
@@ -69,6 +70,12 @@ function Widget() {
         this.center(flModal);
     }
 
+    /**
+     *
+     */
+    this.closeModal = function() {
+        $('#fl-modal, .fl-modal-background').hide();
+    }
 
     /**
      * Public
