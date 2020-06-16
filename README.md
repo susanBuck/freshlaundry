@@ -95,3 +95,6 @@ Edit files in `/src/less` and/or `/src/js`
 
 Run `npm run watch` 
 
+## Getting projects to update their copy of freshlaundry
+Note: `npm install` won’t grab the latest from Freshlaundry, but `npm update` will.
+
