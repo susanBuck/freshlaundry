@@ -485,22 +485,22 @@ h6:first-child {
   margin-top: 0;
 }
 h1 {
-  font-size: 4.0rem;
+  font-size: 4rem;
 }
 h2 {
-  font-size: 3.0rem;
+  font-size: 3rem;
 }
 h3 {
-  font-size: 2.0rem;
+  font-size: 2rem;
 }
 h4 {
-  font-size: 2.0rem;
+  font-size: 2rem;
 }
 h5 {
-  font-size: 2.0rem;
+  font-size: 2rem;
 }
 h6 {
-  font-size: 2.0rem;
+  font-size: 2rem;
 }
 /* Copy */
 p,
@@ -620,7 +620,7 @@ input[type=button] {
   cursor: pointer;
   background-color: #00A89B;
   color: #fff;
-  letter-spacing: .15rem;
+  letter-spacing: 0.15rem;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
@@ -755,7 +755,7 @@ a.button[disabled],
 button[disabled],
 input[type=submit][disabled],
 input[type=button][disabled] {
-  opacity: .5;
+  opacity: 0.5;
 }
 .button:disabled:hover,
 a.button:disabled:hover,
@@ -806,11 +806,11 @@ fieldset {
   padding: 0;
 }
 legend {
-  font-size: 2.0rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 .feedback {
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   padding-top: 2px;
   font-size: 1.4rem;
   font-weight: bold;
@@ -818,7 +818,7 @@ legend {
 .fine-print {
   font-size: 1.3rem;
   display: block;
-  margin-top: .2rem;
+  margin-top: 0.2rem;
   color: #808080;
   font-style: italic;
   line-height: 1.5;
@@ -984,11 +984,8 @@ Mixins
 /* src: https://github.com/jakiestfu/Snap.js#installation */
 .scrollable {
   overflow: auto;
-  -webkit-transition-property: top, bottom;
   transition-property: top, bottom;
-  -webkit-transition-duration: .2s, .2s;
-  transition-duration: .2s, .2s;
-  -webkit-transition-timing-function: linear, linear;
+  transition-duration: 0.2s, 0.2s;
   transition-timing-function: linear, linear;
   -webkit-overflow-scrolling: touch;
 }
@@ -1312,7 +1309,7 @@ more down the road, we'll identify them by classes like this */
 /* Page overlay */
 .fl-modal-background {
   background-color: black;
-  opacity: .5;
+  opacity: 0.5;
   position: fixed;
   top: 0;
   left: 0;

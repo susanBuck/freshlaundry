@@ -9,7 +9,9 @@
 
     <link rel='stylesheet' href='/dist/freshlaundry.css'>
     <link rel='stylesheet' href='/demo/css/demo.css'>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+
 
 </head>
 <body>
@@ -23,7 +25,7 @@
     <section>
         <h2>Notes</h2>
         <ul>
-            <li><a href='https://github.com/susanBuck/freshlaundry'><i class="fab fa-github"></i>
+            <li><a href='https://github.com/susanBuck/freshlaundry'></i>
                     github.com/susanBuck/freshlaundry</a>
             <li>View source to see specifics of how different elements are coded.</li>
         </ul>

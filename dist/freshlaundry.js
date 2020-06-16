@@ -7,7 +7,7 @@ function Validate() {
      *      False - Validation must be manually invoked, e.g. validator.validateAll()
      Use this if JS is hijacking the form submission
      */
-    this.attach = function(formToValidate, automatic = true) {
+    this.attach = function (formToValidate, automatic = true) {
 
         var inputsToValidate = getInputsToValidate();
 
@@ -61,7 +61,7 @@ function Validate() {
      * @returns {boolean}
      */
     // Make public
-    this.validateAll = function() {
+    this.validateAll = function () {
         return validateAll();
     }
     function validateAll() {
@@ -177,8 +177,8 @@ function Validate() {
         //$('label[for=' + el.attr('id') + ']').addClass(type);
 
         // Add feedback message after the field
-        if(message !== '') {
-            var feedbackElContent = "<div class='feedback " + type + "' id='" + feedbackId + "'>" + message + "</div>";
+        if (message !== '') {
+            var feedbackElContent = "<div dusk='" + feedbackId + "' class='feedback " + type + "' id='" + feedbackId + "'>" + message + "</div>";
             el.after(feedbackElContent);
         }
     }
