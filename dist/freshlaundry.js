@@ -133,14 +133,19 @@ function Validate() {
 
 
     /**
-     * Helper method that helps "variablize" the id given to the feedback divs
+     * Helper method that helps "variablize" the identify given to the feedback divs
      * @private
      * @param el
-     * @param rule
      * @returns {string}
      */
-    function getFeedbackId(el) {
-        return el.attr('name') + '-feedback';
+    function getFeedbackIdentifier(el) {
+
+        // Use the `name` attribute as the identifier if we have it
+        // If we don't (e.g. credit card inputs where it's omitted for security reasons)
+        // defer to the id
+        let identifier = el.attr('name') !== undefined ? el.attr('name') : el.attr('id');
+
+        return 'feedback-' + identifier;
     }
 
 
@@ -158,8 +163,8 @@ function Validate() {
     }
     function feedback(message, el, type = 'error') {
 
-        feedbackId = getFeedbackId(el);
-        feedbackEl = $('#' + feedbackId);
+        feedbackIdentifier = getFeedbackIdentifier(el);
+        feedbackEl = $('#' + feedbackIdentifier);
 
         // Clean slate - remove any existing feedback styling on the field
         el.removeClass('error');
@@ -170,15 +175,12 @@ function Validate() {
         // Clean slate - remove any existing feedback
         feedbackEl.remove();
 
-        // Style the field itself
+        // Style the field
         el.addClass(type);
-
-        // Style this field's label
-        //$('label[for=' + el.attr('id') + ']').addClass(type);
 
         // Add feedback message after the field
         if (message !== '') {
-            var feedbackElContent = "<div dusk='" + feedbackId + "' class='feedback " + type + "' id='" + feedbackId + "'>" + message + "</div>";
+            var feedbackElContent = "<div dusk='" + feedbackIdentifier + "' class='feedback " + type + "' id='" + feedbackIdentifier + "'>" + message + "</div>";
             el.after(feedbackElContent);
         }
     }
@@ -209,7 +211,7 @@ function Validate() {
             if (json.pass === 'True') {
                 feedback('', el, 'success');
             } else {
-                feedback('This email is already registered.', el, 'error');
+                feedback('This email is already registered', el, 'error');
             }
         });
 
@@ -224,7 +226,7 @@ function Validate() {
             var rule = 'required';
 
             if ($.trim(value).length === 0 || value === "") {
-                feedback('This field is required.', el, 'error');
+                feedback('This field is required', el, 'error');
             } else {
                 feedback('', el, 'success');
             }
@@ -240,7 +242,7 @@ function Validate() {
 
             var re = /\S+@\S+\.\S+/;
             if (!re.test(email)) {
-                feedback('Invalid email.', el, 'error');
+                feedback('Invalid email', el, 'error');
             } else {
                 feedback('', el, 'success');
             }
@@ -261,7 +263,7 @@ function Validate() {
             }
 
             if (re.test(value)) {
-                feedback('Only letters and numbers are allowed.', el, 'error');
+                feedback('Only letters and numbers are allowed', el, 'error');
             } else {
                 feedback('', el, 'success');
             }
@@ -296,7 +298,7 @@ function Validate() {
                 valid = sum % 10 === 0;
             }
             if (!valid) {
-                feedback('Invalid credit card number.', el, 'error');
+                feedback('Invalid credit card number', el, 'error');
             } else {
                 feedback('', el, 'success');
             }
